@@ -1,0 +1,114 @@
+:: StoryTitle
+Lair Of the Medusa George
+
+:: StoryData
+{
+    "startnode": "Start",
+    "creator": "Twine",
+    "creator-version": "2.3.13",
+    "ifid": "A5178ED3-BEF6-4688-A346-F11FDB5E87FE",
+    "zoom": 1
+}
+
+:: StoryInit
+(set: $cover to "https://cdn.yoto.io/myo-cover/bee_blue.gif")
+(set: $defaultVoiceId to "2ndJpEdfYGeJN01QO724")
+(set: $auto to true)
+(set: $resumeTimeout to 1000)
+(set: $lhbTemplate to ", press the left button.");
+(set: $rhbTemplate to ", press the right button.");
+
+:: Start
+You stand at the entrance to an ancient stone labyrinth, the soft whisper of wind through its corridors calling you forward. Legends speak of treasures hidden deep within, but also of unspeakable horrors. Your heart races, but you know this is your destiny. Will you step into the maze?
+[[To turn back|End]]
+[[To enter the maze|FirstCorridor]]
+
+:: FirstCorridor
+The walls are cold to the touch, and the air is heavy with the scent of moss and stone. Ahead, the corridor splits into two dark paths. A faint, eerie light flickers down the left corridor, while a distant growl echoes from the right.
+[[If you wish to head toward the eerie light|ShimmeringLight]]
+[[To Move toward the growl|BeastEncounter]]
+
+:: ShimmeringLight
+You follow the glow until you find a silver shield lying abandoned on the ground. The light seems to reflect off it unnaturally, almost too bright for the dim surroundings. There’s something special about this shield.
+
+[[To Pick up the shield|PolishedShield]]
+[[To Leave it behind|DarkenedTunnel]]
+
+:: PolishedShield
+The shield feels oddly light in your hands, and its polished surface gleams like a mirror. You know it could be of great use. As you proceed deeper into the maze, the walls seem to shift around you, and you find yourself at a fork again.
+
+[[To Go left|WhisperingWalls]]
+[[To Go right|HiddenTrap]]
+
+:: DarkenedTunnel
+You continue without the shield, but the further you go, the heavier the darkness feels. The path narrows until you can barely move. Ahead, you see two paths: one bathed in strange shadows, the other lit by faint torchlight.
+
+[[To Take the shadowy path|CursedPath]]
+[[To Head toward the torchlight|BeastEncounter]]
+
+:: BeastEncounter
+A monstrous creature blocks your path, its eyes glowing red in the dark. It's too late to turn back now. You must fight.
+
+[[To Fight the beast|BeastFight]]
+[[To Try to escape|NarrowEscape]]
+
+:: BeastFight
+You fight bravely, but without a proper weapon, the beast proves too strong. With a final swipe, the monster takes you down.
+
+[[To Try again|Start]]
+
+:: NarrowEscape
+You manage to flee, but the maze feels even more suffocating now. As you round a corner, you come face to face with two more passageways. You feel an ominous chill in the air.
+
+[[To Choose the left passage|StoneStatue]]
+[[To Choose the right passage|HiddenTrap]]
+
+:: HiddenTrap
+As you step forward, the ground suddenly collapses beneath your feet, sending you tumbling into a hidden pit of spikes. There is no escape.
+
+[[To Try again|Start]]
+
+:: WhisperingWalls
+The walls around you seem to hum with whispered voices, though you can't understand their words. You press on cautiously, and the tunnel opens into a vast, dimly lit chamber. In the center, a statue stands, staring blankly ahead.
+
+[[To Investigate the statue|StoneStatue]]
+[[To Ignore the statue and move forward|MedusaChamber]]
+
+:: StoneStatue
+The statue is eerily lifelike, almost as if it was once a living being. You realize with horror that it's one of Medusa's victims, frozen in stone for eternity.
+
+[[To Move forward cautiously|MedusaChamber]]
+[[To Turn back in fear|NarrowEscape]]
+
+:: CursedPath
+The shadows around you seem to come alive, pulling at your clothes and whispering dark secrets into your ears. You feel an overwhelming dread, and ahead, two passageways lie in wait.
+
+[[To Turn left|WhisperingWalls]]
+[[To Turn right|HiddenTrap]]
+
+:: MedusaChamber
+You step into a vast, echoing chamber. There, in the shadows, you see her – Medusa. Her eyes gleam, but you've heard the stories. You avert your gaze, holding the polished shield in front of you. Her reflection in the shield is distorted, but it’s enough to avoid her petrifying gaze.
+
+[[To Use the shield to approach Medusa|FinalBattle]]
+[[To Try to escape the chamber|NarrowEscape]]
+
+:: FinalBattle
+With the shield in hand, you step carefully, guiding yourself by Medusa's reflection. As she lunges at you, you thrust forward with your weapon, striking a fatal blow. Medusa's body crumples to the ground, her cursed form defeated at last.
+
+The maze around you seems to relax, its magic dissipating. You've won, but the exit lies just ahead.
+
+[[To Exit the maze|ExitMaze]]
+[[To search Medusa's body for treasure|SearchMedusa]]
+
+:: SearchMedusa
+You hurriedly search Medusa's body hoping to find some gems or treasure, but your greed has got the better of you, suddenly you feel a cold chill run down your spine, and you realize you've been turned to stone by Medusa's gaze!
+
+[[To Try again|Start]]
+
+:: ExitMaze
+You emerge from the labyrinth, the light of day blinding after the darkness within. You've defeated the Medusa and claimed your victory. The world awaits your next adventure!!!
+
+[[To Start a new journey|Start]]
+
+:: End
+You turn back from the entrance of the labyrinth, deciding that this adventure is not for you. Perhaps another time.

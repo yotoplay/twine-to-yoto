@@ -1,0 +1,140 @@
+:: StoryTitle
+A Hobbity Tale
+
+:: StoryData
+{
+  "ifid": "F84DACAA-11AB-43E3-8AD4-483BDDA4B134",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+:: StoryInit
+(set: $coverImage to (image: "https://cdn.yoto.io/myo-cover/unicorn_yellow.gif"))
+(set: $defaultVoiceId to "2ndJpEdfYGeJN01QO724")
+(set: $auto to true)
+(set: $resumeTimeout to 0)
+(set: $lhbTemplate to ", press the left button.");
+(set: $rhbTemplate to ", press the right button.");
+
+:: Start
+You are a hobbit in the Shire, living a peaceful life in Hobbiton. One day, a wizard named Gandalf appears at your door, telling you of an adventure to the Lonely Mountain. You hesitate, but curiosity draws you in.
+
+[[To Go on the adventure|LeaveHobbiton]]  
+[[To Stay at home|StayHome]]
+
+:: StayHome
+You decide to stay in Hobbiton, where things are familiar and safe. But the thought of adventure lingers in your mind. Eventually, you realize you missed something grand.
+
+[[To Start Over|Start]]
+
+:: LeaveHobbiton
+With a group of dwarves, you leave Hobbiton, your home a distant memory. You travel through the Shire, heading east. The road winds through hills and woods, growing darker and stranger the farther you go.
+
+[[To Continue on the road|EastRoad]]  
+[[To Turn back|StayHome]]
+
+:: EastRoad
+After days of travel, you reach the borders of Rivendell. The last homely house of Elrond stands before you. The elves greet you warmly, offering rest.
+
+[[To Stay and rest|RivendellRest]]  
+[[To Move on quickly|LeaveRivendell]]
+
+:: RivendellRest
+In Rivendell, you receive wise counsel from Elrond. He tells you of the dangerous path ahead, warning of trolls and darker things in Mirkwood. You feel a little more prepared after your stay.
+
+[[To Continue on your journey|LeaveRivendell]]  
+[[To Stay longer in Rivendell|StayTooLong]]
+
+:: StayTooLong
+You grow too comfortable in Rivendell, forgetting about your quest. Time passes, and the adventure slips away from you.
+
+[[To Start Over|Start]]
+
+:: LeaveRivendell
+Leaving Rivendell, you journey into the wild. Soon, you encounter three trolls arguing around a campfire. The dwarves urge you to do something before they are eaten.
+
+[[To Try to steal from the trolls|StealFromTrolls]]  
+[[To Distract them until dawn|DistractTrolls]]
+
+:: StealFromTrolls
+You attempt to steal from the trolls, but they catch you in the act. They throw you into a sack, and you hear them argue over how best to eat you. Just before things go horribly wrong, the sun rises and turns the trolls to stone.
+
+[[To Escape quickly|MirkwoodPath]]
+
+:: DistractTrolls
+You cleverly distract the trolls by keeping them arguing until the sun rises. As the light hits them, they turn to stone. You're safe for now.
+
+[[To Continue through the wild|MirkwoodPath]]
+
+:: MirkwoodPath
+The wild lands give way to the dark, thick forest of Mirkwood. The trees close in around you, the path growing dim. You sense strange movements in the shadows.
+
+[[To Venture deeper into the forest|MirkwoodDeeper]]  
+[[To Turn back to Rivendell|LeaveRivendell]]
+
+:: MirkwoodDeeper
+As you travel deeper into Mirkwood, the darkness becomes oppressive. Suddenly, giant spiders descend from the trees, their webs glistening in the dim light. You are quickly ensnared.
+
+[[To Try to escape|SpiderTrap]]  
+[[To Call for help|SpiderHelp]]
+
+:: SpiderTrap
+You struggle against the webs, but they are too strong. The spiders approach, their legs clicking ominously. There's no escape.
+
+[[To Start Over|Start]]
+
+:: SpiderHelp
+You call out, and the dwarves come to your aid, cutting you free from the webs. Together, you fight off the spiders and continue your journey.
+
+[[To Follow the path onward|EreborApproach]]  
+[[To Rest in the forest|RestInMirkwood]]
+
+:: RestInMirkwood
+You make camp in the dark forest, but it's not long before the spiders return, catching you off-guard as you sleep. You are overwhelmed.
+
+[[To Start Over|Start]]
+
+:: EreborApproach
+After days of travel, you emerge from Mirkwood, and the Lonely Mountain looms ahead. The great dragon Smaug awaits beneath, guarding his hoard of treasure. You must be careful.
+
+[[To Enter the mountain|EnterErebor]]  
+[[To Scout around the outside first|ScoutErebor]]
+
+:: ScoutErebor
+You circle around the mountain, but find no safer entrance. The only way is to confront the dragon inside.
+
+[[To Enter the mountain|EnterErebor]]
+
+:: EnterErebor
+Inside the mountain, you find Smaug asleep atop his vast treasure hoard. His scales glitter in the dim light. You know you must be cautious, but you can't resist the lure of the treasure.
+
+[[To Steal a piece of treasure|StealTreasure]]  
+[[To Look for Smaug's weak spot|FindWeakSpot]]
+
+:: StealTreasure
+You reach out and take a small piece of treasure. Smaug stirs, his great golden eye opening. He spots you immediately and breathes fire.
+
+[[To Start Over|Start]]
+
+:: FindWeakSpot
+You carefully observe Smaug, noticing a small, bare patch in his otherwise impenetrable armor. Armed with this knowledge, you know how to defeat him.
+
+[[To Escape and inform the dwarves|EscapeErebor]]
+
+:: EscapeErebor
+You slip out of the mountain and tell the dwarves of Smaug's weak spot. They prepare to face him, and with a well-aimed shot, Smaug is defeated. The mountain is yours, along with its treasure.
+
+[[To Return home victorious|Victory]]  
+[[To Explore the mountain further|ExploreErebor]]
+
+:: ExploreErebor
+As you wander deeper into the mountain, you lose your way in the endless tunnels of stone. Eventually, you succumb to exhaustion.
+
+[[To Start Over|Start]]
+
+:: Victory
+You have successfully completed your journey, defeated the dragon Smaug, and helped the dwarves reclaim the Lonely Mountain. You are now a legend in your own right.
+
+[[To Start Over|Start]]

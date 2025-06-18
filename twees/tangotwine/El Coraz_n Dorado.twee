@@ -1,0 +1,108 @@
+:: StoryTitle
+El Corazón Dorado
+
+
+:: StoryData
+{
+  "ifid": "AEFE9776-E6CF-45E3-BA37-F90C3DDF4479",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: AskRosario {"position":"625,375","size":"100,100"}
+Rosario pulls you aside, away from prying eyes. "The revolution is real, Juan," she whispers, glancing over her shoulder. "They're planning to strike against the governor during the national festival next week. But there’s a spy in the bar tonight. If you stay, you could be caught in something dangerous."
+
+[[To Stay in the bar and try to uncover the spy|UncoverSpy]] [[To Leave with Rosario to meet the revolutionaries in secret|MeetRevolutionaries]]
+
+
+:: DeclareSupport {"position":"275,775","size":"100,100"}
+Stepping out of the shadows, you announce your presence. "I’m with you," you say firmly. The revolutionaries look at you with suspicion at first, but one of them—a young woman with a pistol at her side—nods. "Good. We need more like you."
+
+They quickly tell you about their plans to strike against the corrupt governor during the upcoming national festival, but there’s a catch. The authorities have planted spies throughout the city, and trust is hard to come by.
+
+[[To Offer your bar as a place to meet safely before the strike|OfferBar]] [[To Ask about other plans to help the revolution succeed|GatherMoreInfo]]
+
+
+:: Eavesdrop {"position":"75,600","size":"100,100"}
+You press yourself against the alley wall, listening closely as the revolutionaries speak in hushed tones. "The governor will never see it coming," one of them says. "We strike at dawn, during the festival parade."
+
+Suddenly, you feel a hand on your shoulder. You turn to see a man with a wide-brimmed hat and a scar across his face. "Listening in on dangerous conversations, aren’t we?"
+
+[[To Fight back and escape|FightBack]] [[To Try to talk your way out of the situation|TalkYourWayOut]]
+
+
+:: FightBack {"position":"400,600","size":"100,100"}
+You push the man off and swing at him, your fists finding their mark. He stumbles back, momentarily dazed, giving you a chance to run. You bolt down the alley, your heart pounding, knowing you’re now tangled in something much larger than yourself.
+
+<<audio play "success">> You escape, but the revolution is still in motion. Will you join the cause or stay in the shadows?
+
+[[To Return to the bar and consider your next move|Intro]]
+
+
+:: FollowRosario {"position":"925,100","size":"100,100"}
+You nod to Rosario, and the two of you quietly exit the bar, moving through the narrow streets of Buenos Aires. The city is restless tonight, with men shouting in the distance and horses galloping down cobbled roads.
+
+Rosario leads you to a small house near the Plaza de Mayo, where several familiar faces are gathered—artists, musicians, and workers, all loyal to the cause of revolution.
+
+[[To Stay and plan with the revolutionaries|PlanRevolution]] [[To Return to the bar and keep playing to gather more information|ReturnToBar]]
+
+
+:: Guitar
+You take a seat on the small stage, your guitar resting on your knee. As your fingers dance across the strings, the crowd seems to forget their troubles, swaying to the rhythm of the tango. Among the faces, you spot a familiar one—Rosario, a dancer known for her connections to political dissenters.
+
+As the song ends, she approaches you, a serious look in her eyes. "Juan, there are eyes watching you tonight. You need to decide which side you're on."
+
+[[To Ask Rosario for more information about the revolutionaries|AskRosario]] 
+[[To Leave the bar with Rosario and see where her loyalties lie|FollowRosario]]
+
+(set: $passage to "Guitar")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+<!--
+
+Here are some comments
+
+The icon is looking nice now!
+
+-->
+
+
+:: Intro {"position":"525,250","size":"100,100"}
+You are Juan Manuel, a young but renowned guitarist known across Buenos Aires for your skill in playing the milonga. The year is 1890, and Argentina is at a crossroads—revolution simmers in the hearts of its people, and the government trembles under pressure.
+
+Tonight, you find yourself in El Corazón Dorado, a tango bar filled with smoke, music, and secrets. As the bandoneón swells, you sense something is wrong. Whispers of rebellion fill the room, and a mysterious letter delivered to you before the show calls you to act.
+
+[[To Stay and play for the crowd, hoping to blend in and gather more information|Guitar]]
+[[To Slip out the back to investigate the alley where revolutionaries are rumored to meet|InvestigateAlley]]
+
+(set: $passage to "Intro")
+
+(print: "<img src='icons/" + $passage + ".png'>")
+(print: "<audio autoplay><source src='audio/" + $passage + ".mp3'></audio>")
+
+
+:: InvestigateAlley {"position":"275,475","size":"100,100"}
+You quietly slip out the back door into the narrow alley behind El Corazón Dorado. The night air is thick with the smell of horses and distant cooking fires. A shadow moves quickly ahead, disappearing into the dim light of a nearby lamppost.
+
+Curiosity piqued, you follow the shadow to a hidden meeting where revolutionaries are discussing plans to overthrow the corrupt regime.
+
+[[To Approach the group and declare your support for the cause|DeclareSupport]] [[To Stay hidden and eavesdrop on their plans|Eavesdrop]]
+
+
+:: Start {"position":"400,75","size":"100,100"}
+[[Click here to begin|Intro]]
+
+
+:: UncoverSpy {"position":"600,600","size":"100,100"}
+You stay in El Corazón Dorado, your eyes scanning the room. There is something off about one of the men sitting at the bar—a stranger who keeps glancing at Rosario, his hand resting nervously on his jacket. Could he be the spy Rosario warned about?
+
+As you approach him, his eyes widen, and he makes a sudden move toward the exit.
+
+[[To Chase him through the streets of Buenos Aires|ChaseSpy]] [[To Confront him directly and demand to know who he is|ConfrontSpy]]

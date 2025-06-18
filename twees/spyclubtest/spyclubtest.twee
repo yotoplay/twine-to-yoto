@@ -1,0 +1,41 @@
+:: StoryTitle
+Spy Club Test
+
+:: StoryData
+{
+    "startnode": "Start",
+    "creator": "Harlowe",
+    "creator-version": "3",
+    "ifid": "7156CC0D-0750-4C90-A345-53353D6A397F",
+    "zoom": 1
+}
+
+:: StoryInit
+(set: $customProperty to "This is a custom value")
+(set: $cover to "https://cdn.yoto.io/myo-cover/cherries_red.gif")
+(set: $resumeTimeout to 1000)
+(set: $defaultVoiceId to "2ndJpEdfYGeJN01QO724")
+(set: $auto to true)
+
+:: 10000
+You are Agent Alex, a spy on a mission to find the hidden treasure before the villains do.
+[[]]
+[[]]
+[[|10000a]]
+
+:: 10000a
+[[To search elsewhere, click the Left button|10001]]
+[[To hear these options again, click the Right button|10000]]
+[[]]
+
+:: 10001
+You continue to explore the cave but can't find anything significant. You decide to return home and plan your next move.
+[[To return to the start to try again, click the Left button|10000]]
+[[]]
+[[|CardEnd]]
+
+:: CardEnd
+This is the end, beautiful friend.
+[[To return to the start, click the Left button|10000]]
+[[]]
+[[|CardEnd]]

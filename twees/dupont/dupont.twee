@@ -1,0 +1,180 @@
+:: StoryTitle
+Hercule Dupont Investigates
+
+:: StoryData
+{
+  "ifid": "F84DACAA-11AB-43E3-8AD4-483BDDA4B134",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+:: StoryInit
+(set: $coverImage to (image: "https://cdn.yoto.io/myo-cover/unicorn_blue.gif"))
+(set: $defaultVoiceId to "2ndJpEdfYGeJN01QO724")
+(set: $auto to true)
+(set: $resumeTimeout to 0)
+(set: $lhbTemplate to ", press the left button.");
+(set: $rhbTemplate to ", press the right button.");
+
+
+:: Start
+You are Belgian detective Hercule Dupont, famous for solving mysteries across Europe. Today, you're in London, called to investigate the murder of Sir Reginald Fenton, a wealthy industrialist found dead in his grand mansion.
+
+As you stand in the shadowy hallway, a thick fog outside the windows obscuring the world beyond, you consider your next move.
+
+[[To Examine the crime scene->CrimeScene]]
+[[To Interview the house staff->InterviewStaff]]
+
+:: CrimeScene
+The drawing room where Sir Reginald was found is pristine, aside from the overturned chair and a faint smell of gunpowder. His body lies near the fireplace, a single bullet wound in his chest.
+
+Something glimmers on the floor beneath the window...
+
+[[To Inspect the object->HiddenClue]]
+[[To Examine the body->BodyInspection]]
+
+:: HiddenClue
+You crouch to inspect the object. It's a small, ornate pocket watch—engraved with the initials "M.D."
+
+The plot thickens. But what do these initials mean?
+
+[[To Go back to the drawing room->CrimeScene]]
+[[To Search for someone with these initials->SearchMysteriousPerson]]
+
+:: BodyInspection
+Sir Reginald’s body is stiff. The bullet wound is clean, but there’s no gun in sight. His eyes are frozen in fear. You sense that he knew his killer.
+
+You hear a noise behind you...
+
+[[To Turn around->HiddenTrap]]
+[[To Ignore it and continue investigating->DetailedInvestigation]]
+
+:: InterviewStaff
+You gather the house staff in the kitchen: the butler, Mrs. Taylor the housekeeper, and Miss Grace, Sir Reginald’s niece.
+
+Their faces are solemn, but you sense unease in the air.
+
+[[To Question the butler->ButlerInterview]]
+[[To Speak to Miss Grace->GraceInterview]]
+
+:: ButlerInterview
+The butler stands with perfect posture, but his eyes are evasive.
+
+"Sir Reginald had many enemies," he says. "But none as dangerous as Lady Margaret."
+
+Lady Margaret, Reginald's widow, had left the mansion in a hurry earlier that evening.
+
+[[To Investigate Lady Margaret->LadyMargaret]]
+[[To Probe further about enemies->EnemiesRevealed]]
+
+:: GraceInterview
+Miss Grace looks pale, her hands shaking.
+
+"I don't know anything," she whispers. "But my aunt... she was acting strangely before she left."
+
+Could Lady Margaret be involved in Sir Reginald's murder?
+
+[[To Investigate Lady Margaret->LadyMargaret]]
+[[To Press Grace further->GraceConfession]]
+
+:: HiddenTrap
+As you turn, something strikes you from behind. The world goes black.
+
+You have died.
+
+[[To Return to the start->Start]]
+
+:: DetailedInvestigation
+Continuing your investigation, you notice a faint scent of perfume—unmistakably feminine—lingering in the air near the body.
+
+Could Lady Margaret have been in the room?
+
+[[To Follow the scent->LadyMargaret]]
+[[To Look for more clues->CrimeScene]]
+
+:: SearchMysteriousPerson
+You begin your search for the mysterious "M.D." Your inquiries lead you to Michael Donovan, a close associate of Sir Reginald, who had recently fallen out with him.
+
+Michael looks nervous when you confront him.
+
+[[To Interrogate Michael->MichaelInterrogation]]
+[[To Return to the mansion to gather more evidence->CrimeScene]]
+
+:: MichaelInterrogation
+Michael admits to an argument but denies killing Sir Reginald.
+
+"I was furious, yes! But murder? That's insane. I left before anything happened," he claims.
+
+[[To Press further->MichaelConfession]]
+[[To Leave and investigate another lead->LadyMargaret]]
+
+:: EnemiesRevealed
+The butler reveals a list of Sir Reginald’s enemies, but most are obscure business rivals.
+
+However, one name stands out: Michael Donovan, a former business partner.
+
+[[To Investigate Michael Donovan->SearchMysteriousPerson]]
+[[To Check Lady Margaret's alibi->LadyMargaret]]
+
+:: LadyMargaret
+You find Lady Margaret at a hotel in the city, smoking a cigarette in a dimly lit lounge.
+
+She’s calm, too calm, considering the circumstances.
+
+[[To Confront Lady Margaret->MargaretConfrontation]]
+[[To Ask about her whereabouts during the murder->MargaretAlibi]]
+
+:: MargaretConfrontation
+Lady Margaret sneers, "Reginald got what he deserved, but I didn’t kill him. Ask Michael. He had far more reason."
+
+[[To Interrogate Michael Donovan->SearchMysteriousPerson]]
+[[To Return to the mansion->CrimeScene]]
+
+:: MargaretAlibi
+Lady Margaret claims she was with friends at the club at the time of the murder.
+
+She presents a shaky alibi, but something doesn't sit right.
+
+[[To Investigate further->CrimeScene]]
+[[To Follow up on the perfume scent->DetailedInvestigation]]
+
+:: GraceConfession
+Tears well up in Miss Grace's eyes. "I knew something terrible would happen! Aunt Margaret and Uncle Reginald had been arguing for days. She left in a rage!"
+
+Is Grace hiding something else?
+
+[[To Press for the truth->GraceFinalConfession]]
+[[To Investigate Lady Margaret->LadyMargaret]]
+
+:: GraceFinalConfession
+Miss Grace breaks down completely. "It was Aunt Margaret! I saw her with the gun!"
+
+Her confession comes too late. Before you can act, a dark figure appears behind you...
+
+You have died.
+
+[[To Return to the start->Start]]
+
+:: MichaelConfession
+Michael cracks under pressure. "Yes, we fought. But I swear I didn’t pull the trigger. It was Lady Margaret! She threatened him days before!"
+
+[[To Confront Lady Margaret->LadyMargaret]]
+[[To Investigate further->CrimeScene]]
+
+:: FinalConfrontation
+After carefully piecing together the evidence, you gather the suspects in the drawing room. It’s time to reveal the truth.
+
+"It was Lady Margaret," you declare. "The pocket watch with Michael's initials was a red herring. Margaret had the most to gain from Sir Reginald’s death, and the perfume proves she was there."
+
+Lady Margaret falters under your gaze, finally admitting her guilt.
+
+Congratulations! You've solved the murder.
+
+[[To Return to the start->Start]]
+
+:: TheEnd
+The mystery is solved. London will sleep easier tonight knowing that justice has been served.
+
+[[To Return to the start->Start]]

@@ -1,0 +1,127 @@
+:: StoryTitle
+Spy Mission: The Secret of the Hidden Treasure
+
+:: StoryData
+{
+  "ifid": "F84DACAA-11AB-43E3-8AD4-483BDDA4B134",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+:: StoryInit
+(set: $cover to "https://cdn.yoto.io/myo-cover/unicorn_blue.gif")
+(set: $defaultVoiceId to "XB0fDUnXU5powFXDhCwa")
+(set: $auto to true)
+
+:: Start {"position":"200,25","size":"100,100"}
+You are Agent Alex, a young spy on a mission to find the hidden treasure before the villains do. Your adventure begins now.
+
+[[To Go to the old library to search for clues|OldLibrary]]
+[[To Investigate the mysterious cave near the beach|MysteriousCave]]
+
+
+:: AskLibrarian {"position":"375,375","size":"100,100"}
+The librarian tells you that many years ago, pirates used to visit this library. They were rumored to have hidden treasures nearby.
+
+[[To Search for more pirate-related books for additional clues|PirateBooks]]
+[[To Thank the librarian and leave to explore the tunnels shown on the map|MysteriousCave]]
+
+
+:: ExamineMap {"position":"125,400","size":"100,100"}
+The map shows a series of tunnels and secret passages beneath the city. It could be a clue to the treasure's location!
+
+[[To Follow the map to the underground tunnels|MysteriousCave]]
+[[To Return home to analyze the map further|Start]]
+
+
+:: ExploreDeeper {"position":"775,75","size":"100,100"}
+As you venture deeper into the cave, you find a locked chest. It looks very old and might contain the treasure.
+
+[[To Try to pick the lock on the chest with your spy tools|PickLock]]
+[[To Look around for a key that might open the chest|FindKey]]
+
+
+:: FindKey {"position":"950,400","size":"100,100"}
+You search the cave thoroughly and find an old key hidden under a rock. It looks like it might fit the chest's lock.
+
+[[To Use the key to open the chest and see what's inside|OpenChest]]
+[[To Keep the key and explore the cave further|ExploreDeeper]]
+
+
+:: FollowPassage {"position":"600,600","size":"100,100"}
+The passage leads you to a small underground chamber with ancient markings on the walls. This must be a part of the treasure map's clues.
+
+[[To Investigate the markings to understand their meaning|InvestigateMarkings]]
+[[To Leave the chamber and search for the hidden treasure elsewhere|SearchElsewhere]]
+
+
+:: InvestigateMarkings {"position":"625,800","size":"100,100"}
+The markings reveal a riddle that points you towards a specific location in the cave. You feel closer to finding the treasure.
+
+[[To Solve the riddle to find the exact location of the treasure|SolveRiddle]]
+[[To Leave the chamber to explore other parts of the cave|SearchElsewhere]]
+
+
+:: MysteriousCave {"position":"475,0","size":"100,100"}
+You enter the dark, damp cave and hear the sound of water dripping. The cave is eerie, but you feel there might be something important hidden inside.
+
+[[To Explore the deeper parts of the cave to find the treasure|ExploreDeeper]]
+[[To Search for any hidden compartments near the cave entrance|SearchEntrance]]
+
+
+:: OldLibrary {"position":"175,200","size":"100,100"}
+You arrive at the old library, a place filled with ancient books and dusty shelves. As you look around, you notice an old map peeking out from a book.
+
+[[To Examine the old map carefully for any hidden messages|ExamineMap]]
+[[To Ask the librarian about the history of this library|AskLibrarian]]
+
+
+:: OpenChest {"position":"1175,100","size":"100,100"}
+The key fits perfectly, and you open the chest to find the hidden treasure! Well done, Agent Alex!
+
+<<audio play "success">>
+[[To Return to the start to embark on a new adventure|Start]]
+
+
+:: OpenHiddenDoor {"position":"325,675","size":"100,100"}
+Behind the hidden door, you find a secret passage leading to another part of the cave. It seems to be a safer route to explore.
+
+[[To Follow the secret passage to its end|FollowPassage]]
+[[To Go back and pick the lock on the chest you found earlier|PickLock]]
+
+
+:: PickLock {"position":"350,150","size":"100,100"}
+You successfully pick the lock using your spy tools and open the chest. Inside, you find the hidden treasure! Congratulations, Agent Alex!
+
+<<audio play "success">>
+[[To Return to the start to embark on a new adventure|Start]]
+
+
+:: PirateBooks {"position":"1100,500","size":"100,100"}
+You read about a dread pirate called Pete, and discover a secret tunnel entrance behind it.
+[[To Takethe tunnel|OpenHiddenDoor]]
+[[To Return to the start to try again|Start]]
+
+
+:: SearchElsewhere {"position":"950,600","size":"100,100"}
+You continue to explore the cave but can't find anything significant. You decide to return home and plan your next move.
+
+<<audio play "failure">>
+[[To Return to the start to try again|Start]]
+
+
+:: SearchEntrance {"position":"550,425","size":"100,100"}
+Near the entrance, you find a small, hidden door. It looks like it hasn't been opened in a long time.
+
+[[To Open the hidden door to see what's inside|OpenHiddenDoor]]
+[[To Go back and explore the deeper parts of the cave|ExploreDeeper]]
+
+
+:: SolveRiddle {"position":"25,625","size":"100,100"}
+After solving the riddle, you find the hidden treasure buried under some rocks. Well done Agent Alex, you have completed your mission successfully!!!
+
+<<audio play "success">>
+[[To Return to the start to embark on a new adventure|Start]]
+

@@ -1,0 +1,12 @@
+node_modules
+.out
+.ignore
+dist
+coverage
+.env
+.env.copy
+sea
+build
+artifacts
+twees/**
+.cursor

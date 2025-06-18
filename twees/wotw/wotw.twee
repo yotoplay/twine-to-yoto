@@ -1,0 +1,233 @@
+:: StoryTitle
+War of the Worlds 
+
+:: StoryData
+{
+  "ifid": "F84DACAA-11AB-43E3-8AD4-483BDDA4B134",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+:: StoryInit
+(set: $coverImage to (image: "https://cdn.yoto.io/myo-cover/unicorn_red.gif"))
+(set: $defaultVoiceId to "2ndJpEdfYGeJN01QO724")
+(set: $auto to true)
+(set: $resumeTimeout to 1000)
+(set: $lhbTemplate to ", press the left button.");
+(set: $rhbTemplate to ", press the right button.");
+
+:: Start
+You find yourself in the midst of a Martian invasion. Alien tripods roam the countryside, causing panic and destruction. Your goal is to survive the chaos and find a way to defeat the invaders.
+[[To Head towards the countryside|Countryside]]
+[[To Stay in the city|City]]
+
+:: Countryside
+You decide to head towards the countryside, hoping it will be safer. As you make your way through the fields, you encounter a fork in the path.
+[[To Take the left path|AbandonedFarmhouse]]
+[[To Take the right path|BurningForest]]
+
+:: City
+You choose to stay in the city, navigating through the crowded streets. Suddenly, you hear the ominous hum of a tripod approaching.
+[[To Hide in a nearby building|BuildingHideout]]
+[[To Run towards the river|RiverEscape]]
+
+:: AbandonedFarmhouse
+You take the left path and soon find an abandoned farmhouse. It looks like a good place to rest and gather your thoughts.
+[[To Enter the farmhouse|FarmhouseInterior]]
+[[To Continue walking|OpenField]]
+
+:: BurningForest
+You take the right path and see the forest ahead ablaze, likely from a Martian heat-ray.
+[[To Find another route|OpenField]]
+[[To Risk entering the forest|ForestFire]]
+
+:: BuildingHideout
+You hide in a nearby building, hoping the tripods won't notice you. Inside, you find a small group of survivors.
+[[To Join the survivors|SurvivorsPlan]]
+[[To Stay hidden alone|LoneSurvivor]]
+
+:: RiverEscape
+You run towards the river, thinking the water might offer some protection. The sound of the tripod's hum grows louder.
+[[To Jump into the river|UnderwaterHiding]]
+[[To Find a boat|BoatEscape]]
+
+:: FarmhouseInterior
+You enter the farmhouse and find it abandoned. There are some supplies that might be useful.
+[[To Search for supplies|FarmhouseSupplies]]
+[[To Rest for a moment|RestingInFarmhouse]]
+
+:: OpenField
+You continue walking through the open field, keeping an eye out for any signs of Martians.
+[[To Find a hidden bunker|HiddenBunker]]
+[[To See a Martian tripod|TripodEncounter]]
+
+:: ForestFire
+You risk entering the burning forest. The heat is intense, and the smoke makes it hard to breathe.
+[[To Find a way through|ThroughTheFlames]]
+[[To Turn back|OpenField]]
+
+:: SurvivorsPlan
+The survivors share their plan to escape the city and head towards the coast, where they hope to find a ship.
+[[To Join their plan|CoastEscape]]
+[[To Stay in the city|City]]
+
+:: LoneSurvivor
+You decide to stay hidden alone, trusting no one. The building creaks ominously as the tripod moves past.
+[[To Explore the building|BuildingExploration]]
+[[To Stay hidden|SilentWait]]
+
+:: UnderwaterHiding
+You jump into the river, submerging yourself to avoid detection. The cold water shocks your system.
+[[To Stay underwater|UnderwaterSurvival]]
+[[To Swim to the other side|OtherSideRiver]]
+
+:: BoatEscape
+You find a small boat and start paddling away from the city. The river current is strong.
+[[To Keep paddling|RiverJourney]]
+[[To Let the current take you|CurrentDrift]]
+
+:: FarmhouseSupplies
+You search the farmhouse and find some food, water, and a map of the area.
+[[To Leave the farmhouse|OpenField]]
+[[To Stay and rest|RestingInFarmhouse]]
+
+:: RestingInFarmhouse
+You rest for a moment, regaining your strength. Outside, you hear distant explosions.
+[[To Investigate the noise|Explosions]]
+[[To Stay hidden|StayHidden]]
+
+:: HiddenBunker
+You find a hidden bunker beneath an old tree. It looks like it could provide shelter.
+[[To Enter the bunker|BunkerInterior]]
+[[To Keep moving|OpenField]]
+
+:: TripodEncounter
+You see a Martian tripod in the distance. It hasn't noticed you yet.
+[[To Hide behind a hill|HillHideout]]
+[[To Run away|OpenField]]
+
+:: ThroughTheFlames
+You push through the burning forest, emerging on the other side, coughing and covered in soot.
+[[To Find a safe place|SafePlace]]
+[[To Keep moving|OpenField]]
+
+:: CoastEscape
+You join the survivors and make your way to the coast, avoiding Martian patrols.
+[[To Board a ship|ShipEscape]]
+[[To Stay on the beach|BeachHideout]]
+
+:: BuildingExploration
+You explore the building and find some useful supplies: food, water, and a flashlight.
+[[To Leave the building|City]]
+[[To Stay and rest|RestingInBuilding]]
+
+:: SilentWait
+You stay hidden, listening to the sounds of destruction outside.
+[[To Wait until it’s safe|SafeToMove]]
+[[To Explore the building|BuildingExploration]]
+
+:: UnderwaterSurvival
+You stay underwater as long as you can, surfacing only when necessary.
+[[To Swim to the other side|OtherSideRiver]]
+[[To Return to the city|City]]
+
+:: OtherSideRiver
+You swim to the other side of the river, finding temporary safety.
+[[To Find shelter|RiverShelter]]
+[[To Keep moving|Countryside]]
+
+:: RiverJourney
+You keep paddling, determined to put as much distance as possible between you and the Martians.
+[[To Reach the coast|CoastArrival]]
+[[To Get swept downstream|SweptAway]]
+
+:: CurrentDrift
+You let the current take you, hoping it leads to safety.
+[[To Washed ashore|Riverbank]]
+[[To Capsized|RiverEscape]]
+
+:: Explosions
+You cautiously investigate the source of the explosions and see a group of humans fighting back against the Martians.
+[[To Join the fight|HumanResistance]]
+[[To Stay hidden|StayHidden]]
+
+:: StayHidden
+You remain hidden, hoping to avoid detection.
+[[To Wait until it’s safe|SafeToMove]]
+[[To Look for supplies|FarmhouseSupplies]]
+
+:: BunkerInterior
+You enter the bunker, finding it well-stocked with supplies and maps.
+[[To Stay in the bunker|BunkerSurvival]]
+[[To Leave the bunker|OpenField]]
+
+:: HillHideout
+You hide behind a hill, watching the Martian tripod move past without noticing you.
+[[To Continue on your path|Countryside]]
+[[To Return to the farmhouse|FarmhouseInterior]]
+
+:: SafePlace
+You find a small cave that provides temporary shelter from the chaos outside.
+[[To Rest in the cave|CaveRest]]
+[[To Continue moving|OpenField]]
+
+:: ShipEscape
+You board a ship with the survivors, sailing away from the Martian invasion.
+[[To Sail to safety|FinalEscape]]
+[[To Stay on the ship|ShipLife]]
+
+:: BeachHideout
+You stay on the beach, hiding among the dunes.
+[[To Wait for help|Rescue]]
+[[To Move inland|Countryside]]
+
+:: RestingInBuilding
+You rest in the building, gathering your strength for the next leg of your journey.
+[[To Leave the building|City]]
+[[To Search for more supplies|BuildingExploration]]
+
+:: SafeToMove
+You wait until it’s safe, then cautiously move out of your hiding spot.
+[[To Find a new path|OpenField]]
+[[To Return to the city|City]]
+
+:: RiverShelter
+You find a small abandoned shed near the river, providing temporary shelter.
+[[To Rest in the shed|ShedRest]]
+[[To Continue moving|Countryside]]
+
+:: CoastArrival
+You reach the coast, finding a ship ready to take on survivors.
+[[To Board the ship|ShipEscape]]
+[[To Stay on the shore|BeachHideout]]
+
+:: SweptAway
+The current becomes too strong, and you are swept away downstream.
+[[To Washed ashore|Riverbank]]
+[[To Capsized|RiverEscape]]
+
+:: Riverbank
+You are washed ashore, exhausted but alive.
+[[To Find shelter|RiverShelter]]
+[[To Move inland|Countryside]]
+
+:: HumanResistance
+You join the group of humans fighting back, feeling a surge of hope.
+[[To Fight the Martians|ResistanceBattle]]
+[[To Retreat to safety|SafePlace]]
+
+:: CaveRest
+You rest in the cave, listening to the distant sounds of destruction.
+[[To Leave the cave|OpenField]]
+[[To Stay and rest|SafePlace]]
+
+:: FinalEscape
+You sail away from the Martian invasion, finding refuge on a distant shore. You have survived the war of the worlds.
+[[To Return to the start|Start]]
+
+:: ShipLife
+You stay on the ship, helping the survivors as best you can.
+[[To Sail to safety|FinalEscape]]
+[[To Return to the city|City]]

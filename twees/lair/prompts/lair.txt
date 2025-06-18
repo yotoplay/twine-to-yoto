@@ -1,0 +1,6 @@
+can you write me a choose your own adventure / fighting fantasy style book with a maximum of 20 passages in harlowe 3.3.8 twee format. 
+Each passage must have only 2 choices, apart from the final winning passage which has just one option to go back to the start. 
+Storyformat must be harlowe 3.3.8. Can you make the story roughly along the lines of an adventure in ancient greece where the 
+you must navigate your way through a dangerous maze, and ultimately defeat a Medusa using a polished shield you find along the way. 
+I only want a short version with a maximum of 20 passages please, with descriptive and atmospheric passages.
+Is it possible make the passage names more descriptive, e.g. HiddenTrap; and use the [[Choice|Passage]] syntax instead of [[Choice->Passage]]

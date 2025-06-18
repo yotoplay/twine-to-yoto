@@ -1,0 +1,5 @@
+can you write me a choose your own adventure / fighting fantasy style book with a maximum of 50 passages in harlowe 3.3.8 twee format. 
+Each passage must have only 2 choices, apart from the final winning passage which has just one option to go back to the start, and a few passages where you die and have to go back to the start.
+Storyformat must be harlowe 3.3.8. Can you make the story a murder mystery set in 1930s london with a belgian detective like poirot in the Agatha Christie style, with the winning passage is you solving the murder?
+I only want a version with a maximum of 50 passages please, with descriptive and atmospheric passages.
+Is it possible make the passage names more descriptive, e.g. HiddenTrap; 

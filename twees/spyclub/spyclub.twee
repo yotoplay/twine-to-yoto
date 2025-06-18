@@ -1,0 +1,1226 @@
+:: StoryTitle
+Spy Club
+
+
+:: StoryData
+{
+  "ifid": "8CC1573D-A02C-4FB0-AED8-0E58B2F6CD3C",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "00000",
+  "zoom": 1
+}
+:: StoryInit
+(set: $customProperty to "This is a custom value")
+(set: $cover to "https://cdn.yoto.io/myo-cover/cherries_red.gif")
+(set: $resumeTimeout to 1000)
+(set: $defaultVoiceId to "2ndJpEdfYGeJN01QO724")
+(set: $auto to true)
+
+:: 00000 {"position":"175,25","size":"100,100"}
+[[]]
+[[]]
+[[|10000]]
+
+
+:: 10000 {"position":"175,150","size":"100,100"}
+Hello Team Yoto! Welcome to the Spy Club vertical slice. 
+
+To situate you – our players have already met  Jane, Zola, Rohan and Ollie –  regular kids, at Fleming High, a regular secondary school on the outskirts of London. They are, also, members of Spy Club an after school club led by Mr Boyd, their geography teacher. 
+
+The players would have experienced a few lessons where they listen to Spy Club learning to sneak, creep, code solve and switch. It’s all just a bit of fun, isn’t it? Isn't it.
+
+For the fithe lesson, the gang race to Mr Boyd’s room but he’s not at his desk, or staring at his atlas like he loves to do. He’s not there, and neither is the atlas. He’s gone. Mr Boyd’s classroom has been stripped bare – except for a small package sitting on his desk, right in the middle.
+
+Inside, the gang finds two key cards, a torn out page from the Trade Craft catalogue – a long-closed tool shop at the edge of town and a business with a strange sympbol and cryptic cut outs...
+
+Spy Club know what they have do and where they have to go. Our adventure begins here, right now! 
+
+===========
+
+EXT. TRADE CRAFT. DAY.
+Jane, Zora, Rohan and Ollie are outside Trade Craft. There’s the distant sound of traffic, and it’s slightly windy.
+
+JANE
+(slightly breathless)
+We’re here. This is it.
+OLLIE
+(whispering in awe)
+Trade Craft! Amazing!
+ROHAN
+(confused)
+Amazing? Amazing where?
+ZORA
+(quietly)
+I’ve definitely driven past here with my dad on the way to Code Collective...
+ROHAN
+(disappointed)
+This is Trade Craft? Why is there a chair in the window, like...
+JANE
+Oh, you were expecting something different, Rohan?
+ROHAN
+No, no – it’s just so...
+JANE
+So...?
+ROHAN
+So rusty. So old. So tired-
+ZORA
+(bit exasperated)
+So what!? Mr Boyd might be in there – and he might be in big trouble. Remember? The reason why we're here??
+JANE
+Thank you, Zora. At least someone is focussed. 
+ROHAN
+I’m focussed too, Jane. I promise I’m on it. We’re totally going to bring back Boyd. We’re gonna save him, and the day. We just... need to get in first.
+OLLIE
+Erm, we could try opening the doors?
+ROHAN
+Yeah, let's just push one...
+JANE
+Zora – you’re closest. Choose!
+[[|10000a]]
+[[|10000a]]
+[[|10000a]]
+
+
+:: 10000a {"position":"175,275","size":"100,100"}
+[[ZORA I'll try the left door|10001]]
+[[ZORA I'll try the right door|10002]]
+[[10000a]]
+
+
+:: 10001 {"position":"175,425","size":"100,100"}
+The sound of ZORA pushing the door, and the sound of a shop bell trilling.
+ZORA
+All right, we’re in.
+ROHAN
+Well that was easy.
+ZORA(quietly)Famous last words...
+
+[[]]
+[[]]
+[[|10100]]
+
+
+:: 10002 {"position":"25,425","size":"100,100"}
+ZORA
+(straining)
+No, that doesn’t work.
+JANE
+Try the other side?
+
+[[ZORA: Okay|10001]]
+[[]]
+[[]]
+
+
+:: 10100 {"position":"375,25","size":"100,100"}
+INT. TRADECRAFT. DAY
+ROHAN
+(coughing)
+Mr Boyd can’t be here...no one’s here. No one’s been in this old shop for years, decades, centuries!
+OLLIE
+A millennium maybe!
+ZORA
+(gulping)
+I think I just ate a spider and its web...
+OLLIE
+Ooh, what kind of spider, was it Zora? A Zebra spider? A cardinal? A False Widow?
+JANE
+What did I say about focus...
+ROHAN
+(eagerly)
+I’m on it Jane! Dust and spiders – they’re in the past now. Once upon a time, this was a tool shop. I mean, there’s rusted bits and bobs everywhere, but, you know – that chair in that left window is throwing me off – 
+ZORA
+And is that a bird box in the right window? Oh! Wait a second, this wall feels weird...
+OLLIE
+Guys...
+JANE
+Hmmm. Check out that ceiling. I reckon if I get on this counter, I can jump up and push one of the panels and crawl through. I’ll need a leg up.
+ROHAN
+I’ll help! I’ll give you a leg up.
+ZORA
+(muttering under breath)
+Of course you will.
+OLLIE
+Guys.
+ROHAN
+What’s that supposed to mean?
+OLLIE
+(shouting)
+Guys! No forget it – Jane! Climb down – look at this book on the desk.
+JANE
+That’s weird. It’s open, and a page is torn out...wait. Do you think-
+ZORA
+(from a slight distance)
+-that this is something to do with the stuff Mr Boyd-
+ROHAN
+(also from a slight distance)
+- or his kidnapper -
+ZORA
+Left for us in his classroom?
+OLLIE
+It has to be. Jane – you have the items, right?
+JANE
+(sfx rifling through her bag)
+Mmm-hmm.
+OLLIE
+Put our torn out page in this book. It’s going to be an exact match, I know it!
+JANE
+(sfx paper rustling, maybe some ‘wonder/discovery’ music)
+Ollie, you’re right, it is! Oh wow. Spy Club, we are definitely in the right place. Mr Boyd is here...somewhere...
+ZORA: Erm... this wall is weird...
+
+[[]]
+[[]]
+[[|10101]]
+
+
+:: 10101 {"position":"375,150","size":"100,100"}
+ZORA
+When I touch it, it feels...warm? It’s so odd. There has to be something behind it.
+(sfx knocking on metal)
+It’s hollow. I'm going to touch it. Now, if I push it...
+(sfx little metal door swings open)
+(whispering)
+A secret panel!
+ROHAN
+Oh snap! It opened. 
+ZORA
+(louder now, to the group)
+There are two buttons in here. Hmmm...what happens if I just -
+JANE
+(interrupting)
+No! Don’t touch any buttons, Zora! Not yet! 
+ROHAN
+Yeah, for real. We don’t know what they open or close or delete or...kill.
+OLLIE
+(bit excited)
+Kill!? Oooh, you think so?
+JANE
+Take it easy, Rohan. You too, Ollie. Be cool.
+ROHAN
+I'm trying...
+JANE
+We've got this...we just need to think.
+OLLIE: There's something strange about this book...
+
+[[]]
+[[]]
+[[|10102]]
+
+
+:: 10102 {"position":"375,275","size":"100,100"}
+OLLIE
+(Talking to himself)
+This Trade Craft catalogue...hmmm.
+(sfx flipping through the pages)
+Why tear out a page? And why this page, in particular? What makes it special? There’s gotta be something about it, but what?
+(Talking to the group)
+JANE: I'm checking out the drawer. Look though it with me?
+
+[[]]
+[[]]
+[[|10104]]
+
+
+:: 10104 {"position":"375,400","size":"100,100"}
+JANE
+(sfx pulling a drawer open and riffling through the paper based contents)
+OLLIE
+What are those? Receipts?
+JANE
+Not sure...they all look like notes about the tools that Trade Craft used to hire but –
+ROHAN
+(interjecting from a distance)
+I told you it was an old tool shop, didn’t I?
+JANE
+But maybe it’s not so old...
+OLLIE
+Not old...what do you mean?
+JANE
+(sfx spreading the papers on the desk)
+Look at the dates on them. Look!
+OLLIE
+(muttering to himself at first)
+Tuesday the twenty...WAIT! No way! That’s today!? These are clues, they have to be. No one really hired tools, from here, today. It can’t be.
+ZORA
+(from a distance)
+What are the tools, Jane?
+JANE
+Plastic Wrench, Metal Screwdriver, Plastic Screwdriver, Wooden Wrench, Plastic Hammer
+ROHAN: This window situation is just...weird. Watch me, I'm going in.
+
+[[]]
+[[]]
+[[|10105]]
+
+
+:: 10104h {"position":"475,900","size":"100,100"}
+JANE
+Yep, these tools match the ones on the page. Let’s take a careful note. Plastic Wrench, Metal Screwdriver, Plastic Screwdriver, Wooden Wrench, Plastic Hammer
+ROHAN: What does that spell out?
+[[]]
+[[]]
+[[|10105h]]
+
+
+:: 10105 {"position":"375,525","size":"100,100"}
+ROHAN
+(Squeezing himself into a tight gap noise)
+ZORA
+Rohan, what are you doing? Why are you going into the display? I know I’ve called you a dummy before – and a show off – but I didn't mean literally.
+ROHAN
+(plopping himself down)
+Very funny, Zora. Ironic too, right? I’m just taking a quick five on this chair, while I think and look at that bird box over there, on the right. Who do you think made it? The craftsmanship is impeccable.
+ZORA
+(sarcastically)
+Is it? Is it really?
+OLLIE
+It's pretty cool. Perfect fit for a Great Tit.
+ROHAN
+(stifling a laugh)
+ZORA Don't, Rohan.
+
+[[]]
+[[]]
+[[|10105a]]
+
+
+:: 10105a {"position":"375,650","size":"100,100"}
+[[JANE: There's loads of stuff in this drawer!|10104]]
+[[ZORA: I've figured out which button to press on the wall...I think?|10106]]
+[[]]
+
+
+:: 10105h {"position":"600,900","size":"100,100"}
+ROHAN If my code-breaking skills are on point, then I am looking right at it… Or rather, looking LEFT at it!
+
+[[]]
+[[]]
+[[|10108]]
+
+
+:: 10106 {"position":"700,275","size":"100,100"}
+sfx Electrical buzzing, wire touching zaps.
+ZORA
+(nervous)
+This panel’s getting hotter.
+(sfx loud electrical snap)
+Eeek! Oh my gosh.
+OLLIE
+(from a distance)
+Careful, Zora. Step back!
+ZORA We have to do something. Quickly! This might blow
+
+[[]]
+[[]]
+[[|10106a]]
+
+
+:: 10106a {"position":"700,400","size":"100,100"}
+[[]]
+[[]]
+[[|10108]]
+
+
+:: 10108 {"position":"700,525","size":"100,100"}
+ZORA(deep breath in, long exhale)
+Okay...the left button, or the right one?
+[[]]
+[[]]
+[[|10108a]]
+
+
+:: 10108a {"position":"700,650","size":"100,100"}
+[[ZORA: The left button |10109]]
+[[ZORA: The right button |10110]]
+[[10108a]]
+
+
+:: 10109 {"position":"825,650","size":"100,100"}
+ROHAN
+Wait, Zora. Why the left button? How are you so sure?
+ZORA
+You, Rohan. You in that window, on that chair. 
+ROHAN
+Awww, really? I'm so flattered.
+JANE
+Say more, Zora...
+ZORA
+The tool hire list was a code.
+OLLIE
+Exactly, I knew it!
+ZORA
+And, the page from the Trade Craft catalogue that Mr Boyd –
+ROHAN
+– or the kidnappers, remember –
+ZORA
+Left for us. That helped us spell out chair.
+ROHAN
+And I'm sitting on the chair. Ah, on the left! I knew there was something about this chair!
+JANE
+That makes sense, Zora. Do it.
+ZORA
+(deep breath)
+Okay...
+(sfx electrical crackling)
+(quietly)
+It's so hot.
+(sfx button being pressed)
+(sfx sound of a door swinging open, tools clanging against it as it does)
+ZORA: We did it! (sfx laser sounds).
+Oh no...
+[[]]
+[[]]
+[[|10200]]
+
+
+:: 10110 {"position":"225,900","size":"100,100"}
+ZORA(deep sigh) Oh no! That's not right! (sfx electrical snap)
+[[]]
+[[]]
+[[|10110a]]
+
+
+:: 10110a {"position":"225,775","size":"100,100"}
+[[ZORA: I know what I have to do. I think. |10108a]]
+[[ZORA: I need help here.|10112]]
+
+
+:: 10112 {"position":"350,900","size":"100,100"}
+OLLIE
+It's okay, Zora. You're doing great!
+
+JANE
+Ollie, the Trade Craft catalogue is the key to this, right? 
+
+OLLIE
+For sure – and those tool hire notes we found feel like a code to me.
+
+JANE:
+Exactly.
+
+OLLIE:
+Hmmm.
+
+[[]]
+[[]]
+[[|10104h]]
+
+
+:: 10200 {"position":"1050,50","size":"100,100"}
+SFX intense laser sounds
+ROHAN
+(shouting)
+What in the fresh hell is this now?
+(SFX laser sounds particularly close)
+ZORA
+(breathless)
+Eeek. Oh no!
+OLLIE
+Zora, step back!
+JANE
+(shouting)
+Everyone behind me now. Those...those are lasers.
+ZORA
+(whispering)
+Oh my gosh. And we have to get through them.
+OLLIE
+(awed)
+Awesome.
+ROHAN
+Awesome? You want to die today, Oliver? Nope. No no. This is too dramatic – even for me. I'm out. Mr Boyd can find his own way home. 
+ZORA
+But what if he's in danger?
+ROHAN
+Erm, hello. Are we not in danger?
+JANE
+Maybe. Maybe not.  But we've come this far, we've got to keep going. Spy Club, strike!
+[[|10201]]
+[[|10201]]
+[[|10201]]
+
+
+:: 10201 {"position":"1050,175","size":"100,100"}
+LASER BLOCKS BOTH DOORS
+5 seconds
+
+[[|10202]]
+[[|10202]]
+[[|10203]]
+
+
+:: 10202 {"position":"925,300","size":"100,100"}
+Laser Failstate
+
+[[]]
+[[]]
+[[|10202h]]
+
+
+:: 10202a {"position":"1350,300","size":"100,100"}
+JANE 
+(exasperated) 
+Rohan! Why did you go?
+OLLIE
+He's got a death wish.
+ZORA 
+Seriously...
+ROHAN
+I'm sorry! I'm sorry. I saw the door open, and I just went for it.
+JANE 
+Just be careful. I want you to be safe.
+ROHAN
+(whispering to himself with glee)
+She cares about me...
+JANE Okay, Spy Club. Focus – we're going again. 
+
+[[]]
+[[]]
+[[|10211]]
+
+
+:: 10202h {"position":"925,425","size":"100,100"}
+JANE: Let’s try to wait for a gap in the lasers. They seem to be following some kind of pattern. 
+
+[[]]
+[[]]
+[[|10201]]
+
+
+:: 10203 {"position":"1050,300","size":"100,100"}
+LASER BLOCKS BOTH DOORS
+(but left is flickering)
+3 seconds
+
+[[|10202]]
+[[|10202]]
+[[|10204]]
+
+
+:: 10204 {"position":"1050,425","size":"100,100"}
+LEFT DOOR IS OPEN
+2 seconds
+
+[[|10204b]]
+[[|10202]]
+[[|10201]]
+
+
+:: 10204b {"position":"1050,550","size":"100,100"}
+Doors open
+[[]]
+[[]]
+[[|10205]]
+
+
+:: 10205 {"position":"1050,675","size":"100,100"}
+ZORA
+(panting)
+This is intense.
+ROHAN
+(panting)
+Extremely.
+(whispering)
+I'm scared.
+OLLIE
+(panting)
+But it's amazing though. Jane – you good?
+JANE
+(gleeful)
+I'm great. I love this.
+JANE: Let's keep it going.
+[[]]
+[[]]
+[[|10206]]
+
+
+:: 10206 {"position":"1225,175","size":"100,100"}
+LASER BLOCKS BOTH DOORS
+5 seconds
+
+[[|10208a]]
+[[|10208a]]
+[[|10207]]
+
+
+:: 10207 {"position":"1225,300","size":"100,100"}
+LASER RIGHT MOVES, BOTH DOORS STILL BLOCKED
+3 seconds
+
+[[|10208a]]
+[[|10208a]]
+[[|10208]]
+
+
+:: 10208 {"position":"1225,425","size":"100,100"}
+LASER MOVES, RIGHT DOOR NOW OPEN
+2 seconds
+
+[[|10208a]]
+[[|10209]]
+[[|10210]]
+
+
+:: 10208a {"position":"1225,675","size":"100,100"}
+Laser Failstate
+
+[[]]
+[[]]
+[[|10208h]]
+
+
+:: 10208h {"position":"1225,800","size":"100,100"}
+ROHAN: This pattern’s weirder than the one before! Like, both lasers are moving – but one side is moving faster than the other? 
+
+[[]]
+[[]]
+[[|10206]]
+
+
+:: 10209 {"position":"1350,425","size":"100,100"}
+Doors Open
+
+[[]]
+[[]]
+[[|10209a]]
+
+
+:: 10209a {"position":"1350,550","size":"100,100"}
+SFX lasers 
+ROHAN
+(fake dramatic crying)
+Whyyyyyyy?
+JANE
+Spy Club, we're smashing this! Trust me. Rohan, you especially.
+ROHAN
+(brightening)
+You think so? Thanks, Jane!
+ZORA
+(panting)
+How much further is it do you think?
+OLLIE
+How would we tell...
+JANE
+All we have to do is stay focussed –
+ROHAN
+Laser focused...??
+JANE: And hold tight, here we go again
+[[]]
+[[]]
+[[|10211]]
+
+
+:: 10210 {"position":"1225,550","size":"100,100"}
+LASER NOW RE-COVERING RIGHT
+3 seconds
+
+[[|10208a]]
+[[|10208a]]
+[[|10206]]
+
+
+:: 10211 {"position":"1475,50","size":"100,100"}
+LASER BLOCKS EXIT
+4 seconds
+
+[[|10211a]]
+[[[|10211a]]
+[[|10212]]
+
+
+:: 10211a {"position":"1475,550","size":"100,100"}
+Laser failstate
+[[]]
+[[]]
+[[|10211h]]
+
+
+:: 10211h {"position":"1475,675","size":"100,100"}
+ZORA: This pattern seems just like the first one – but there’s something not right about the door… I think we need to be more patient!
+[[]]
+[[]]
+[[|10211]]
+
+
+:: 10212 {"position":"1475,175","size":"100,100"}
+LASER BLOCKS EXIT
+2 seconds
+
+[[|10211a]]
+[[|10211a]]
+[[|10213]]
+
+
+:: 10213 {"position":"1475,300","size":"100,100"}
+EXIT RIGHT IS OPEN BUT LASER STILL ON
+
+1.5 seconds
+
+[[|10211a]]
+[[|10202a]]
+[[|10214]]
+
+
+:: 10214 {"position":"1475,425","size":"100,100"}
+EXIT RIGHT IS OPEN LASER IS OFF
+
+1.5 seconds
+
+[[|10211a]]
+[[|10215]]
+[[|10211]]
+
+
+:: 10215 {"position":"1600,425","size":"100,100"}
+ROHAN
+(deep breathing, meekly)
+ROHAN: I want my mum.
+[[]]
+[[]]
+[[|10216]]
+
+
+:: 10216 {"position":"1725,50","size":"100,100"}
+SFX Lasers powering down. The sound of door slamming (or like a shutter shutting idk) behind them. 
+ROHAN
+(jumpy)
+Wait. What was that? 
+OLLIE
+Or...who was that?
+ROHAN
+(groans)
+Stop...
+OLLIE
+(slight chuckle)
+JANE
+I think that's a good thing. If that door's closed, we can't go back that way.
+ZORA
+That's a good thing?
+ROHAN
+Doesn't sound like it to me. Sound like we're trapped and we're going to live in this little  dark room for ever!
+JANE
+Be positive, look on the bright side. We won't face those lasers again. 
+ZORA
+So wait, we're safe?  It's over?
+SFX the sounds of lasers starting up.
+ROHAN 
+(groans)
+It's the opposite of over. 
+JANE On your marks, Spy Club...
+[[]]
+[[]]
+[[|10217]]
+
+
+:: 10217 {"position":"1725,175","size":"100,100"}
+TWO LAYERS OF LASER BLOCK THE DOORS
+4 seconds
+
+[[|10218]]
+[[|10218]]
+[[|10219]]
+
+
+:: 10218 {"position":"1600,175","size":"100,100"}
+Failstate for lasers
+
+[[]]
+[[]]
+[[|10218h]]
+
+
+:: 10218h {"position":"1600,300","size":"100,100"}
+JANE: OK, two sets of lasers, two sets of doors – one smaller than the other. 
+We have to jump past the red lasers and then the blue ones… 
+ROHAN: Eurgh. Why do the doors have to get smaller? It’s giving cat flap.
+
+
+[[]]
+[[]]
+[[|10217]]
+
+
+:: 10219 {"position":"1725,300","size":"100,100"}
+LASERS MOVEMENT STILL BLOCKING DOORS
+3 seconds
+
+[[|10218]]
+[[|10218]]
+[[|10220]]
+
+
+:: 10220 {"position":"1725,425","size":"100,100"}
+LASERS HAVE OPENED UP LEFT AND RIGHT
+3 seconds
+
+[[|10221]]
+[[|10222]]
+[[|10223]]
+
+
+:: 10221 {"position":"1725,550","size":"100,100"}
+JUMP LEFT, SHORT BREAK TO JUMP AGAIN 
+0.3 seconds
+
+[[|10221b]]
+[[|10225]]
+[[|10225]]
+
+
+:: 10221b {"position":"1725,675","size":"100,100"}
+Doors open
+[[]]
+[[]]
+[[|10224]]
+
+
+:: 10222 {"position":"1850,425","size":"100,100"}
+JUMP RIGHT, CAN JUMP AGAIN 
+1 second
+
+[[|10225]]
+[[|10225]]
+[[|10225]]
+
+
+:: 10223 {"position":"1850,550","size":"100,100"}
+STEP BACK, TWO LAYERS OF LASER NOW
+0.3 seconds
+
+[[|10218]]
+[[|10218]]
+[[|10226]]
+
+
+:: 10224 {"position":"1725,800","size":"100,100"}
+SFX lasers powering down.
+SFX Children landing in a heap on the floor and groaning)
+
+JANE
+(muffled)
+Are we safe? Is everyone okay? 
+ROHAN
+(panting heavily)
+I would be if Ollie didn't have both of his elbows in my back! Owww!
+OLLIE
+Sorry, Ro! I'm getting up, I'm getting up. 
+ZORA
+(panting)
+That was such a tight squeeze – I can't believe we all made it.
+SFX: Kids getting to their feet. 
+OLLIE
+(panting)
+We did it! We actually got through it!
+ROHAN
+(dusting himself off)
+I knew we would. No problem. Light work. Easy peasy. 
+JANE
+I never doubted us. 
+ZORA
+(panting)
+Not even once?
+JANE
+Not even once. 
+ZORA
+I was so scared.
+ROHAN
+I wasn't. 
+ZORA
+If you say so, Rohan. 
+JANE
+We don't need to be afraid. We can do this – we can do anything when we've got each other.
+OLLIE: And now we all we have to get is Mr Boyd...
+
+[[]]
+[[]]
+[[|10300]]
+
+
+:: 10225 {"position":"1600,675","size":"100,100"}
+ROHAN
+(panting)
+Ooh, boo! That laser came from above! Unfair!
+ZORA
+Nothing about this is fair...
+OLLIE
+...and that's what makes it so fun!
+JANE Concentrate Spy Club – we're going again.
+[[]]
+[[]]
+[[|10217]]
+
+
+:: 10226 {"position":"1850,675","size":"100,100"}
+TWO LAYERS OF LASER
+3 seconds
+
+[[|10218]]
+[[|10218]]
+[[|10217]]
+
+
+:: 10300 {"position":"2025,25","size":"100,100"}
+SFX echo. Footsteps.
+ROHAN
+You know...about that...I don’t even know if I get Mr Boyd.
+(quietly)
+Or want to get him...
+ZORA
+(incredulous)
+Are you serious? What do you mean?
+ROHAN
+(sigh)
+I mean – look around you. Where even are we, Zora?
+OLLIE
+(enthusiastic)
+Trade Craft, duh!
+ROHAN
+Erm...no. Not duh. We’re not in that old shop any more. This place is dark, it’s freezing cold - and doesn’t it seems like it’s shrinking around us? Also, like...how long is this corridor, even? Where does it go? Back to the street? To Mr Boyd? Or are we marching towards certain, inevitable deaths?
+(a beat)
+I do like how my voice sounds in here, though. 
+ZORA
+Of course you do.
+ROHAN
+Yeah, it really projects. But, seriously, guys...what is this place? Why did we nearly get turned into sliced lunch meat by lasers. Actual lasers? In real life??
+ZORA
+Hmmm, you have a point. 
+JANE
+I loved it.
+OLLIE
+Same, same. 
+ROHAN
+Oh yeah, yes – I loved it too, Jane. Peril and danger and thrills, all of that. I just...
+ZORA
+You just...?
+ROHAN
+(serious for Rohan)
+I just wonder what Mr Boyd has got us into. I wonder who he is, like really?
+ZORA
+He’s our geography teacher, from Australia. 
+OLLIE
+He likes James Bond and so do we.
+JANE
+And that’s why we’re in Spy Club.
+ENTER ALICE sfx chiming in?
+ALICE Spy Club, you say?
+
+[[]]
+[[]]
+[[|10301]]
+
+
+:: 10301 {"position":"2025,150","size":"100,100"}
+SFX: The kids jump out of their skins, assorted gasps. 
+(threatening chime)
+What is Spy Club?
+ROHAN
+(shocked)
+Blimey! You scared us, appearing out of nowhere, floating around like that. Who are you?
+ZORA
+What are you?
+ALICE
+I’m ALICE – An Automated Lifelike Intelligent Covert Entity. 
+OLLIE
+(awed)
+Cool!
+ALICE
+(angry noise)
+I’m not Cool, stupid. I’m Alice, I just told you. What is your purpose at Lumera, Spy Club?
+JANE
+Lumera? What’s Lumera?
+ALICE
+You haven’t heard of Lumera? 
+JANE
+No.
+ALICE
+Good! You’re not supposed to. I ask again, state your purpose, Spy Club! 
+ZORA
+Our purpose...?
+ALICE
+Yes. What do you want? You passed the my laser test, with minimal faults, some crying. 
+ROHAN
+That wasn’t me.
+ALICE
+(to herself)
+Update notes for Laser Maze version 2.1.1. Increase speed 80%. Heat – 100%
+(to the group)
+So you clearly want something. What do you want?
+ZORA
+It’s not a what, it’s a who?
+OLLIE
+Our teacher, Mr Boyd. We think he’s here. 
+ALICE
+(playful, yet sinister)
+Mr...Boyd. I don’t recognise that entity. Therefore, logic tells me you are enemies of Lumera. 
+JANE
+We’re not!
+ZORA
+We don’t even know what Lumera is!
+ALICE
+Enemies of Lumera must be eliminated. Immediately. 
+SFX some kind of sinister powering up noise.
+ROHAN
+No, wait, wait! We’re too young to die! There must be a way we can prove we’re not your enemy.
+ZORA
+Right? A test or something?
+SFX ALICE bringing her sinister level down a notch.
+ALICE
+A test? Yes – diagnostics are fun.
+(thinking noise)
+I have just the thing.
+JANE
+Phew. Okay. Go on.
+ALICE
+(powering up light sound)
+ROHAN
+(wincing)
+Oh my gosh, that's so bright!
+ALICE
+Lumen level 90%
+ZORA
+What's your test, Alice?
+ALICE Look into my eye, Listen to me. Tell me the answer. If you are who you say you are, Spy Club, you should have everything you need.
+[[]]
+[[]]
+[[|10302]]
+
+
+:: 10302 {"position":"2025,275","size":"100,100"}
+JANE
+OK Spy Club, we can do this. We've got this far!
+ALICE
+(interupting)
+Falcon!
+(sfx random bird noise noise?)
+OLLIE
+Pfft, that's not a falcon. A falcon is more like –
+ALICE (interupting) Quiet, you!
+[[]]
+[[]]
+[[|10302a]]
+
+
+:: 10302a {"position":"2200,275","size":"100,100"}
+[[ZORA I think it's hawk!|10303]]
+[[ROHAN Raven, it's got to be Raven! |10304]]
+[[10302a]]
+
+
+:: 10302b {"position":"2200,100","size":"100,100"}
+ALICE: Rebooting Diagnostic Test... Commencing in 3-2-1
+
+[[]]
+[[]]
+[[|10302a]]
+
+
+:: 10303 {"position":"2025,400","size":"100,100"}
+ALICE (with real pizzazz) Star!
+[[]]
+[[]]
+[[|10303a]]
+
+
+:: 10303a {"position":"2200,400","size":"100,100"}
+[[OLLIE: Let's go with Orion|10305]]
+[[JANE: I'm getting Sirius|10306]]
+[[10303a]]
+
+
+:: 10304 {"position":"2350,275","size":"100,100"}
+Alice: (laughing to herself) WRONG!!! 
+Zora: Those symbols in Alice’s eye… I think I’ve seen them before! On the Trade Craft Page… 
+Jane: And the business card - look! It looks just like her eye as well… I think we need to use both parts somehow… 
+
+[[]]
+[[]]
+[[|10304a]]
+
+
+:: 10304a {"position":"2500,275","size":"100,100"}
+OLLIE
+Alice really doesn't like me.
+(sfx ALICE annoyed trill here?)
+
+[[]]
+[[]]
+[[|10302b]]
+
+
+:: 10305 {"position":"2350,400","size":"100,100"}
+ALICE. (fail buzzer sound, like on Family Fortunes) Not this time.
+Ollie: Let’s use that business card, and match them to the symbols on the Trade Craft page…I think that’s going to help us.
+
+[[]]
+[[]]
+[[|10305a]]
+
+
+:: 10305a {"position":"2500,400","size":"100,100"}
+ROHAN
+(laughing)
+Seriously Ollie, what did you do to ALICE? She looks like she’s going to laser your ear off…
+
+[[]]
+[[]]
+[[|10302b]]
+
+
+:: 10306 {"position":"2025,525","size":"100,100"}
+ALICE Echo (sfx echo treatment)
+[[]]
+[[]]
+[[|10306a]]
+
+
+:: 10306a {"position":"2200,525","size":"100,100"}
+[[ZORA (whispering) Whisper|10307]]
+[[JANE (shouting) Shout|10308]]
+[[10306a]]
+
+
+:: 10307 {"position":"2350,525","size":"100,100"}
+ALICE
+Boo! Wrong. You're wrong. 
+(threating)
+You are our enemies, aren't you? Especially you.
+(sfx flashing sound)
+OLLIE
+Me? What did I do?
+ALICE
+What didn't you do?
+ZORA No! Alice, wait, we're not your enemies. Just...hold on.
+JANE: OK team, I am pretty sure we need to keep using the business card to find the hidden password. What happens if we line up the symbol and look at the other words it reveals? 
+
+[[]]
+[[]]
+[[|10307a]]
+
+
+:: 10307a {"position":"2500,525","size":"100,100"}
+ZORA: I really hope we get it right this time… ALICE is losing patience…
+
+[[]]
+[[]]
+[[|10302b]]
+
+
+:: 10308 {"position":"2700,700","size":"100,100"}
+ALICE
+Diagnosic complete. Zero enemies detected. 
+JANE
+(exhaling)
+Phew! Good work, team!
+OLLIE
+We did it? We did it!
+ALICE
+You did. You are now free to explore Lumera.
+(sfx flashing)
+I will be keeping my eye and ears on you.
+(sfx flashing intensifies)
+Especially on you.
+OLLIE
+What? Why me?
+ALICE
+(lower voice)
+Hmmmm. 
+(brighter and corporate)
+SFX: Lights turning on.
+Good luck locating your...Mr Boyd, Spy Club. Lumera ops and labs await you.   
+(sfx ALICE exits)
+ROHAN: Ops and Labs?
+[[]]
+[[]]
+[[|10400]]
+
+
+:: 10309 {"position":"2200,1000","size":"100,100"}
+OLLIE
+Alice really doesn't like me.
+(sfx ALICE annoyed trill here?)
+ROHAN
+(laughing)
+Yeah, what did you do to her?
+ZORA
+(sigh)
+Never mind that – we're missing something here...
+OLLIE
+For sure, but what?
+ZORA
+Mr Boyd -
+ROHAN
+- or his kidnappers, don't forget them, I keep reminding you –
+ZORA
+Left us these things for us, for a reason. 
+JANE
+Right, but which one of the things will help?
+ZORA
+...Not one thing, I think it's two things. The business card – plus that page from the Trade Craft catalogue.
+OLLIE
+Okay, that makes sense. 
+ROHAN
+You just might be right. Those symbols Alice keeps blinding us with look very familiar.
+JANE
+It's like we need another eye to look at them...
+ALICE Are you ready to try again? Or do you want to waste more time?
+
+
+:: 10400 {"position":"2600,25","size":"100,100"}
+ZORA
+I'm guessing Ops is operations...
+OLLIE
+And labs is like...a lab! There – I want to go there!
+JANE
+Wait, wait.
+(sfx rummaging in bag or pocket)
+Mr Boyd left these –
+ROHAN
+Or his kidnappers left them – how many times...??
+ZORA
+They're keycards, for these doors, I'm guessing. 
+OLLIE
+The symbols on them match...
+ZORA
+So, what should we do? Should we all go to each place together?
+JANE
+No...we don't know much time we have, it's best to split up.
+ROHAN
+I'll go with you Jane!
+JANE
+No.
+ROHAN
+(dissapointed noise)
+JANE
+Ollie and I will take the labs –
+OLLIE
+Yessssss!
+JANE
+Zora – you and Rohan investigate Ops. We'll keep hold of the Trade Craft page – you take the business card.
+ZORA
+(terse)
+Fine. How do you know those are the right things to take?
+JANE
+I don't – but they might help, right?
+ZORA
+Sure. Okay. (deep breath). Let's keep in touch, okay? Wait...oh great, there's no phone signal.
+ROHAN
+(grumpy)
+Of course there's not.
+SFX Alice mischevious chime in the distance.
+JANE
+(takes a deep breath)
+We've got this, team. It's going to be dangerous, nerve-wracking and...well, weird. But we've come this far – so we know we can go the distance.
+ROHAN
+We can?
+JANE
+We can. Everything Mr Boyd has taught us? It's time to put it into action, and bring him home. Spy Club, strike?
+ROHAN, ZORA, OLLIE
+Spy Club, strike!
+ZORA
+Okay, Rohan. Let's go.
+
+
+:: StoryInit {"position":"0,0","size":"100,100"}
+(set: $defaultVoiceId to "cgSgspJ2msm6clMCkdW9")
+(set: $auto to true)

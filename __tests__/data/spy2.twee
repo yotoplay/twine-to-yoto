@@ -1,0 +1,3759 @@
+:: StoryTitle
+Spy Club Card 2
+
+
+:: StoryData
+{
+  "ifid": "8DD48121-709A-4B3B-919A-796D8335AF5F",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "20001",
+  "tag-colors": {
+    "assets-complete": "green",
+    "design-complete": "purple",
+    "issues-fixed": "orange",
+    "issues-found": "red",
+    "narrative-complete": "blue",
+    "tested-ready": "yellow"
+  },
+  "zoom": 1
+}
+
+
+:: 20001 [narrative-complete assets-complete] {"position":"100,200","size":"100,100"}
+SFX: Footsteps walking down an echoey corridor.
+ROHAN
+(quietly)
+We’re really doing this. We’re going to Lumera Operations – whatever that is. We’re actually going to find Mr Boyd. 
+ZORA
+(quietly)
+We hope.
+(sharp intake of breath)
+I’m so nervous...
+A moment. 
+ROHAN
+(quietly)
+Me too.
+OLLIE
+(Shouting from a distance)
+Hey Zora, Rohan!
+JANE
+(Shouting from a distance)
+We’ll leave you to it –
+ROHAN
+(quietly)
+No, don’t. Stay Jane.
+ZORA
+(laughs under her breath)
+JANE
+(Shouting from a distance)
+You’ve got this!
+ROHAN
+(Suddenly confident)
+Yeah! We know! 
+ZORA
+(unsure)
+Do we know...? 
+ROHAN
+Good luck on your mission, guys! Come on Zora – there’s the door.
+(with wonder)
+Operations!
+ZORA
+I can see it, Rohan. I have eyes.  
+SFX: Rummaging in pocket.
+ZORA
+We’re going in, okay? This is it.
+ROHAN
+(deep breath)
+This is it. 
+SFX: Bleep bleep boop door opening sounds.
+SFX: Sound is now not echoey at all, it feels furnished and plush. Shoes rubbing on the carpet.
+ROHAN
+Ooh this carpet’s nice! Thick!
+ALICE
+(corporate voice)
+Welcome to Lumera Operations.
+ROHAN
+(muttering under breath)
+Oh no, not her again.
+SFX: Mischievous ALICE trill.
+ZORA
+(deep breath)
+Okay, Rohan, let’s not look down at the carpet – look up, around you. There’s two doors here. That small one on the left–
+ROHAN
+And that huge, tall, metal one on the right. That’s the one. We’re trying that one first!
+[[]]
+[[]]
+[[|20002]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] WE have already established a 'corridor icon' in card 1 (after laser maze) - suggest slight adaptation of same, with carpet??
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments] 
+Links to asset files
+-->
+
+(set: $passage to "20001")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20002 [assets-complete narrative-complete] {"position":"225,200","size":"100,100"}
+SFX: Hands slapping a metal door.
+ROHAN
+Hello? Anyone in there?
+SFX: Hands slapping a metal door.
+ZORA
+I don’t think that’s going to work. Look there’s a key pad.
+(concentrating)
+And those symbols next to it. Are they random? What do they mean? 
+SFX: Buttons being pressed, then an error sounds.
+ZORA
+Rohan! Don’t! Don’t touch anything! You might be making it worse. What if it’s like a phone and now it’s...it’s even more locked!
+ROHAN
+(frustrated)
+Gah, yeah, you’re right.
+A beat.
+SFX: A button being pressed.
+ZORA
+(shouting)
+Rohan, I said stop! You’re just like my little brother.
+ROHAN
+Okay, I hear you Zora – loud and clear. 
+ZORA
+Sorry for shouting, but this door’s important –
+ROHAN
+Absolutely.
+ZORA
+– so we have to really think about how to get in.
+(sighs)
+We’ll probably have to explore Lumera Operations properly first.
+ROHAN
+(sighing)
+You’re right. Otherwise this, this...game we find ourselves in would be way too easy.
+ZORA
+If only this was a game...
+ROHAN
+Yeah, I’d cheat and go straight to the end. 
+ZORA
+Again, just like my little brother...
+A beat.
+SFX: Banging on the door again
+ROHAN
+Mr Boyd! If you’re in there, give us a sign!
+ZORA
+(quietly)
+Please.
+MR BOYD
+(very quietly, in the distance)
+Spy Club, Strike!
+ROHAN
+(shocked)
+D-did you hear that? That was Mr Boyd, wasn’t it? Tell me you heard him? That wasn’t just in my head, was it?
+ZORA
+(quietly)
+No. No, it wasn’t. Also – how would he know ‘Spy Club, Strike?’ Jane literally just came up with that phrase.
+(panicked)
+He must be in there!
+(louder now)
+Mr Boyd, we don’t know what’s going on –
+ROHAN
+But we’re gonna get you out. Stay safe in there, okay?
+ZORA
+If you can. Right, Rohan. The little door it is. 
+SFX: Footsteps
+
+[[]]
+[[]]
+[[20100]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] The door is TALL - pan upwards and hold on the top of it. Maybe leave til we design the puzzle though? 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20002")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20100 [narrative-complete assets-complete] {"position":"600,200","size":"100,100"}
+SFX: Cheesy Corporate Video music playing quietly, it get’s increasingly louder as the kids approach the door. 
+ZORA
+What is that?
+ROHAN
+It’s a bop, is what that is.
+ZORA
+(slightly laughing)
+Be serious, Rohan. 
+ROHAN
+I am. Deadly serious. Someone should sample it real quick. Shall we go in, and check it out?
+ZORA
+Yeah. Let’s. 
+SFX: Pulling door open, over carpet. 
+ROHAN
+Ooh, grab your popcorn, Zora – it’s a tiny cinema!
+ZORA
+But what’s the movie?
+SFX: Projector starting up sound to match the gif. Music trills or does something dramatic to signal it’s really about to start. From here, most of the rest of this is the corporate video – except where Rohan and Zora talk over it. 
+NATALIA
+In a world where intelligence is of utmost importance, Lumera protects what matters most. Welcome to the team. I’m Natalia Archer, CEO. 
+ROHAN
+(enthusiastically)
+Delighted to be here, Nat Nat!
+ZORA
+(hissing)
+Rohan! Listen! No talking!
+NATALIA
+Since 1972, Lumera has been leading on high-tech espionage solutions, blending human expertise with advanced technology to secure the world. From covert surveillance to digital forensics, we stay ahead of the curve – so our clients don’t have to.
+ZORA
+(amazed)
+Oh! This is a real life Spy Club!
+ROHAN
+(sarcastically)
+Shush! Let Natalia talk!
+(now excited)
+But, oh my gosh it is!
+NATALIA
+Our clients, based in almost one hundred countries across the world, include global leaders in defence, cybersecurity, and intelligence agencies. We also undertake... independent projects.
+ZORA
+(confused, under her breath)
+Independent projects?
+NATALIA
+At Lumera, every one of our team members plays a crucial role. You’ll be working on the frontlines of innovation, developing cutting-edge solutions to the world’s toughest challenges. Let’s hear from one of your colleagues.
+MR BOYD
+(trying to hide his normal accent a little bit)
+We foster a culture of excellence, creativity, and integrity at Lumera. 
+ROHAN
+No, wait! That sounds just like Mr Boyd.
+ZORA
+A bit – but it looks nothing like him!
+MR BOYD
+Our people – fifty and counting – are our greatest asset. Lumera will invest in your growth and provide opportunities to lead and innovate. 
+NATALIA
+So, once again, welcome to Lumera. Together, we’ll make the impossible, possible.
+SFX: Cheesy Corporate music ends with a dramatic flourish.
+SFX: Projector powering down. The tinkling of overhead fluorescent lights coming on. 
+ROHAN
+So that was interesting. Lumera’s a spy agency? Look at us! Can you believe we’re here?
+ZORA
+Honestly, I can’t. 
+A beat.
+Do you think that was Mr Boyd speaking? Is he actually a spy?
+ROHAN
+Maybe – it sure sounded like him to me.
+ZORA
+Yeah. Me too. 
+ROHAN
+So, it’s either one of two things. Mr Boyd works here, as a secret agent – or, OR – he’s sent us here because he’s in real trouble? Is he a target? 
+(conspiratorial)
+Ooh – maybe Mrs Barrett’s target? She definitely doesn’t like him, and we’re not sure why?
+ZORA
+I don’t know which option would be better – both are bad.
+(deep breath)
+Let’s look around. Let’s figure this thing out. 
+SFX: Rattling door handle.
+ZORA
+The door we came in is locked, Rohan!
+ROHAN
+(from a slight distance)
+There’s another door over here, don’t worry – we’ll go this way.
+SFX: Rattling door handle.
+ROHAN
+Welp, maybe not. 
+ZORA
+We’re locked in!
+SFX: ALICE chiming in.
+ROHAN
+(sarcastically)
+Great.
+ALICE
+Hello, Zora. Hello...you.
+ROHAN
+Alice! It’s been a while. 
+ALICE
+No it hasn’t. It’s been... nine minutes and forty six seconds since we last made contact.
+ROHAN
+It was a joke.
+A beat.
+ALICE
+But jokes are supposed to be funny, aren’t they? It doesn’t compute...
+ZORA
+Alice – we’re trying to get out, but the doors are locked.
+ALICE
+I know! I locked them!
+ROHAN
+Whyyyyy?
+ALICE
+Because diagnostics are fun, remember? 
+SFX: Powering up sound. 
+Let’s see if you were really listening to the Lumera story.
+
+[[]]
+[[]]
+[[20101]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Can we have a flickering light like a cinema projector? 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+PUZZLES NEED TO BE NOT DIFFICULT, basic were you paying attention?
+Links to asset files
+-->
+
+(set: $passage to "20100")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20101 [narrative-complete assets-complete] {"position":"375,300","size":"100,100"}
+ALICE
+When was Lumera founded?
+
+[[]]
+[[]]
+[[|20150]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief]Aice asset (without icon in eye obvs) from card 1 puzzle
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20101")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20102 [narrative-complete design-complete assets-complete] {"position":"375,625","size":"100,100"}
+ALICE
+Correct.
+SFX: Rewinding and fast-forwarding tape. Perhaps but some treatment on it to differentiate it from the original video. Rowan – use the same clips across both correct and incorrect versions.  
+NATALIA
+Since 1972, Lumera has been leading on high-tech espionage solutions, blending human expertise with advanced technology to secure the world. 
+[[]]
+[[]]
+[[|20106]]
+
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20102")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20103 [narrative-complete design-complete assets-complete] {"position":"500,500","size":"100,100"}
+SFX: ALICE angry trill
+SFX: As per 20102, rewinding and fast-forwarding tape. Perhaps but some treatment on it to differentiate it from the original video. ALICE speeds up, then slows the video down and makes sure you can pay attention to the relevant parts.
+ROHAN
+Okay, run it back, Alice! This remix is fire.
+ALICE
+It’s not fire – there’s nothing elemental about it. Ah, here we are. 
+NATALIA
+Since 1972...
+SFX: Echo/remixing on ‘1972’?
+ZORA
+See? 
+ALICE
+I’m fully charged, and operating optimally, so I’ll give you a another chance.
+ZORA
+Thanks, Alice.
+ROHAN
+(sarcastically)
+Yeah, very generous. 
+
+[[]]
+[[]]
+[[|20101]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] angry allice asset (from card 1) 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20103")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20106 [narrative-complete design-complete assets-complete] {"position":"375,750","size":"100,100"}
+ALICE
+Lumera has clients across the world.
+ZORA
+Yes...?
+ALICE
+In how many countries?
+ZORA
+Oh gosh...
+[[|20151]]
+[[|20107]]
+[[|20106]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20106")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20107 [narrative-complete design-complete assets-complete] {"position":"300,875","size":"100,100"}
+ALICE
+Affirmative.
+SFX: Rewinding and fast-forwarding tape. Perhaps but some treatment on it to differentiate it from the original video. 
+NATALIA
+Our clients, based in almost one hundred countries across the world...
+SFX: Maybe some echo ‘almost one hundred’ on ‘world’? IDK. 
+[[|20110]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20107")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20108 [narrative-complete design-complete assets-complete] {"position":"600,750","size":"100,100"}
+SFX: ALICE angry trill
+ALICE
+Incorrect! Your attention levels are at zero per cent. 
+ROHAN
+(wailing)
+We were listening, I promise. 
+ALICE
+Listen again!
+SFX: As per 20102, rewinding and fast-forwarding tape. Perhaps but some treatment on it to differentiate it from the original video. ALICE speeds up, then slows the video down and makes sure you can pay attention to the relevant parts.
+NATALIA
+Our clients, based in almost one hundred countries across the world
+SFX: Echo on ‘world’?
+[[]]
+[[]]
+[[|20101]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20108")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20110 [narrative-complete design-complete assets-complete] {"position":"375,1000","size":"100,100"}
+ALICE
+Our colleague –
+ROHAN
+- who sounds just like Mr Boyd, yeah –
+ALICE
+No interruptions! Again, I don’t recognise that entity. Our colleague said ‘something’ was Lumera’s greatest asset. What was that something?
+
+[[]]
+[[]]
+[[|20152]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20110")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20111 [narrative-complete design-complete assets-complete] {"position":"300,1250","size":"100,100"}
+ALICE
+Affirmative.
+SFX: Rewinding and fast-forwarding tape. Perhaps but some treatment on it to differentiate it from the original video. 
+MR BOYD
+Our people – fifty and counting – are our greatest asset. 
+ROHAN
+(triumphant)
+Yes! I knew it!
+ALICE
+(slightly impressed)
+Yes. Yes, you did.
+[[]]
+[[]]
+[[|20114]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20111")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20112 [narrative-complete design-complete assets-complete] {"position":"425,1250","size":"100,100"}
+SFX: ALICE angry trill.
+SFX: ALICE powering up lights sound.
+ZORA
+No, don’t Alice! Not the bright light! Can we try again? Please?
+ALICE
+Since you asked, yes.
+SFX: ALICE powering down lights sound.
+ROHAN
+Zora, you do the talking from now on. I think it’s for the best.
+ALICE
+Affirmative. 
+SFX: As per 20102, rewinding and fast-forwarding tape. Perhaps but some treatment on it to differentiate it from the original video. ALICE speeds up, then slows the video down and makes sure you can pay attention to the relevant parts.
+MR BOYD
+Our people – fifty and counting – are our greatest asset. 
+SFX: Echo on ‘people’ and ‘asset’?
+[[]]
+[[]]
+[[|20101]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20112")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20114 [assets-complete narrative-complete] {"position":"375,1375","size":"100,100"}
+SFX: ALICE light powering down sounds.
+ALICE
+Diagnostic complete.
+SFX: Success trill.
+SFX: Click to signify doors are now unlocked.
+ROHAN
+Yes! We’re free to go. 
+ALICE
+You can go...
+ZORA
+(quietly)
+But we’re not free, are we Alice?
+SFX: ALICE Mischievous trill. 
+ALICE
+Good luck on your mission. I’m going to check on your fellow agents.
+ROHAN
+(excitedly, nervously)
+Are they safe? How are they doing?
+ALICE
+No. Terribly.
+SFX: Alice giggle and exit trill. 
+
+[[|20200]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] not sure, yet, depends on Sharna I think
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20114")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20150 [narrative-complete design-complete assets-complete] {"position":"375,500","size":"100,100"}
+[[ZORA Lumera was founded in 1972 – that’s when my grandma was born!|20102]]
+[[ROHAN Lumera was founded in 1982, I’m sure of it. |20103]]
+[[|20150]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 7 vs 8 choice GIF
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20150")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20151 [narrative-complete design-complete assets-complete] {"position":"425,875","size":"100,100"}
+ROHAN Almost one hundred countries...
+ZORA Fifty countries and counting...
+[[|20107]]
+[[|20108]]
+[[|20151]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20151")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20152 [narrative-complete design-complete assets-complete] {"position":"375,1125","size":"100,100"}
+ROHAN Your people
+ZORA Your technology
+[[|20111]]
+[[|20112]]
+[[|20152]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20152")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20200 [assets-complete narrative-complete] {"position":"800,200","size":"100,100"}
+SFX: Footsteps. Echoey corridor time again. 
+ROHAN
+There’s no way Jane and Ollie are in trouble! They can’t be.
+ZORA
+(quietly)
+They might be.
+ROHAN
+(dramatically)
+How can you say that, Zora!?
+ZORA
+I don’t want them to be, obviously! But I just don’t know.
+ROHAN
+No, no – Jane is too strong, too smart, too...
+ZORA
+(laughing)
+Too superb? Rohan, you’re obsessed with Jane.
+ROHAN
+Obsessed? Moi? No. I just care!
+ZORA
+Of course you do. Then worry about Ollie too – and us.  
+ROHAN
+I do! I care about everyone, everywhere. You know, empathy’s a skill, Zora. You have to work on it. 
+ZORA
+If you say so.
+ROHAN
+(Mimicking Natalia Archer)
+In a world where intelligence is of utmost importance, Rohan protects what matters most. People. 
+ZORA
+(laughing)
+Good impression. That sounded just like Natalia Archer. 
+SFX: ALICE chiming in.
+ALICE
+Affirmative. Impressive. Hmmm...
+SFX: ALICE Mischievous trill
+SFX: ALICE chiming out. 
+ROHAN
+(dramatic whisper)
+Oh my! She was listening? Alice is like a pop up ad come to life – everywhere –
+(lower whisper)
+– in your way and annoying. 
+SFX: ALICE mischievous trill.
+ZORA
+Maybe she’s trying to help us?
+ROHAN
+(incredulous)
+Help? Doubt it –
+SFX: In the distance, Australian groaning lol.
+MR BOYD
+(in the distance, in distress, muffled)
+No! No! Don’t!
+ROHAN
+Oh no! Mr Boyd!
+ZORA
+That’s definitely him! Rohan – we have to pick up the pace.
+SFX: Footsteps quicken.
+ZORA
+There’s the door!
+SFX: Door handle being pushed and door opening.
+
+[[]]
+[[]]
+[[|20300]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief]card 2 corridor asset. syncs with door at the end? 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20200")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20300 [assets-complete narrative-complete] {"position":"925,200","size":"100,100"}
+SFX: Clicking, clacking, beeping, reams of paper being printed. This is a data room.
+ROHAN
+What’s all this?
+SFX: Flicking a piece of paper.
+ROHAN
+There’s just loads of numbers. Endless numbers, sketches and screens. 
+(wailing slightly)
+What does it all mean?
+ZORA
+Hmmm...this is a data room, I think.
+ROHAN
+A data room? A whole room for data?
+ZORA
+(sighs)
+Yes. Lumera is an intelligence agency, right?
+ROHAN
+Natalia said so, so yep. I believe her – she looks like you can trust her. Her confidence, I can tell.
+ZORA
+Okay...so this must be the place – or one of the places – they receive information.
+(wowed and impressed)
+All this...knowledge, so much intel. All in code.
+ROHAN
+(smiling)
+You like?
+ZORA
+I love. Let me take a look.
+SFX: Picking up some paper.
+ZORA
+Hmmm.
+ROHAN
+Hmmm?
+ZORA
+Look at this? This is a blue print, right?
+ROHAN
+If you say so. It looks like a sketch of some construction site.
+ZORA
+So a blueprint. The definition of a blueprint. 
+A beat. 
+(gasp)
+Wait. This is Fleming High!
+ROHAN
+Is it? How can you tell?
+ZORA
+Well...
+SFX: Jabbing at or smoothing a piece of paper.
+ZORA
+Look – that drawing looks a lot like our school. 
+ROHAN
+It does?
+ZORA
+Yeah – there’s the car park. That would be Mr Boyd’s classroom and there – that’s the construction site. Ah, it’s definitely Fleming High! It says ‘zero two one two eight one’ on it! I knew it!
+ROHAN
+So?
+ZORA
+So? That’s our school’s code – it’s on all of our IDs.
+SFX: Rifling in her pocket.
+ZORA
+See? You’ve never noticed that?
+ROHAN
+Nope. I don’t look at my ID. Ever. The ‘photographer’ captured my bad side, and wouldn’t do a retake. So mean. I wish him nothing but bad luck. May he always have spinach in his teeth. 
+ZORA
+That’s kind of you. 
+(to herself, mostly)
+Okay – so we have a blueprint for the work happening at school. Why? Why does Lumera care?
+SFX: Picking up bits of paper.
+ZORA
+Okay, another zero two one two eight one piece of intel!
+ROHAN
+What does this one say?
+ZORA
+It’s a note – or part of one. It says ‘021281: Increased server capacity? Aiden?’
+ROHAN
+Aiden? Not my Aiden, surely? What’s my favourite little life-draining robot got to do with this?
+SFX: Angry ALICE trill.
+ROHAN
+I take it back, Alice, you’re my one and only.
+SFX: Satisfied ALICE trill.
+ZORA
+I don’t know how Aiden’s involved – but I need to find out.
+(takes a breath)
+I’m going to log into the computer. 
+ROHAN
+Yes, hack that mainframe, Zora! Let’s go!
+SFX: Clicking of mouse
+ZORA
+Come on computer, wake up!
+SFX: Computer wake up noise (SJ note: I know they don’t normally make these, but for audio vibes let’s go with it)
+ZORA
+Okay, it’s on. Wait, what’s that?
+ROHAN
+Looks like a maze to me.
+ZORA
+That’s how their passwords work here? That’s...very cool.
+ROHAN
+Hang on, that maze looks mighty familiar...
+SFX: Rifling into pocket
+ROHAN
+I knew it! Look – it’s on the back of my worksheet. 
+ZORA
+Okay – that will help us. I’ll click password reminder first and see what that does..
+SFX: Click
+
+[[]]
+[[]]
+[[|20301]]
+
+
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] classroom style pan across tech, paper spooling out, lights and buttons, and then finished on the red screen (not animated, but resembling the puzzle screen)
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTE FOR EVERYONE (from Mairi)
+The kids encounter a locked screen and for whatever narrative reason this contains the important thing they're looking for. Some piece of data. It needs a password, but the password box isn't like anything they've ever seen before. It looks like a maze. Someone makes a joke about 2FA getting out of hand. But Zora is like "don't worry, I'll hit password reminder" and then they get the red wibbly screen. At first it looks like she broke it, but then they realise there's actually a code in there. The code translates to PW PURPLE (it fits on the yoto, dw). The two kids then discuss "Password Purple, what does that mean?" etc. They go back to the maze, and realise they have to trace a path through the maze in order to get to purple. I.E. They can click and drag to draw a line between the RED and the BLUE to make PURPLE.
+What follows is a 5-choice maze, if you see the image below it would go LRRLR from RED to BLUE. I have some finessing around how to indicate that you START at RED, but tis not a concern right now.
+
+Note from Alex: 2FA might be a bit technical for kids
+more like 'it's one of those weird things where you have to prove you're not a robot'
+Alice: why would anyone exclude robots - rude!
+
+Links to asset files
+-->
+
+(set: $passage to "20300")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20301 [assets-complete narrative-complete] {"position":"925,325","size":"100,100"}
+SFX: Maybe a bit of dramatic music here?
+ZORA
+Oh no!
+ROHAN
+What did you do, Zora? The screen’s all red and wobbly now. It’s more scrambled then eggs!
+ZORA
+I know!
+ROHAN
+Do you think it’s got a virus? Can we can catch it??
+ZORA
+No! Let me think...
+A beat.
+ZORA
+(gasp)
+It’s a code!
+ROHAN
+How do you know?
+
+[[]]
+[[]]
+[[|20302]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTE FOR EVERYONE (from Mairi)
+The kids encounter a locked screen and for whatever narrative reason this contains the important thing they're looking for. Some piece of data. It needs a password, but the password box isn't like anything they've ever seen before. It looks like a maze. Someone makes a joke about 2FA getting out of hand. But Zora is like "don't worry, I'll hit password reminder" and then they get the red wibbly screen. At first it looks like she broke it, but then they realise there's actually a code in there. The code translates to PW PURPLE (it fits on the yoto, dw). The two kids then discuss "Password Purple, what does that mean?" etc. They go back to the maze, and realise they have to trace a path through the maze in order to get to purple. I.E. They can click and drag to draw a line between the RED and the BLUE to make PURPLE.
+What follows is a 5-choice maze, if you see the image below it would go LRRLR from RED to BLUE. I have some finessing around how to indicate that you START at RED, but tis not a concern right now.
+
+Note from Alex: 2FA might be a bit technical for kids
+more like 'it's one of those weird things where you have to prove you're not a robot'
+Alice: why would anyone exclude robots - rude!
+
+Links to asset files
+-->
+
+(set: $passage to "20301")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20302 [assets-complete design-complete narrative-complete] {"position":"925,450","size":"100,100"}
+ZORA
+[[(hesitating) ...I’m not actually sure. I need a bit of help...|20303]]
+
+ZORA
+[[I know what I’m looking at!|20304]] 
+
+[[|20302]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTE FOR EVERYONE (from Mairi)
+The kids encounter a locked screen and for whatever narrative reason this contains the important thing they're looking for. Some piece of data. It needs a password, but the password box isn't like anything they've ever seen before. It looks like a maze. Someone makes a joke about 2FA getting out of hand. But Zora is like "don't worry, I'll hit password reminder" and then they get the red wibbly screen. At first it looks like she broke it, but then they realise there's actually a code in there. The code translates to PW PURPLE (it fits on the yoto, dw). The two kids then discuss "Password Purple, what does that mean?" etc. They go back to the maze, and realise they have to trace a path through the maze in order to get to purple. I.E. They can click and drag to draw a line between the RED and the BLUE to make PURPLE.
+What follows is a 5-choice maze, if you see the image below it would go LRRLR from RED to BLUE. I have some finessing around how to indicate that you START at RED, but tis not a concern right now.
+
+Note from Alex: 2FA might be a bit technical for kids
+more like 'it's one of those weird things where you have to prove you're not a robot'
+Alice: why would anyone exclude robots - rude!
+
+Links to asset files
+-->
+
+(set: $passage to "20302")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20303 [assets-complete design-complete narrative-complete] {"position":"800,575","size":"100,100"}
+ZORA
+(sighing)
+I really don’t know what this is.
+ROHAN
+Don’t be sad and blue, Zora. You’ll work it out.
+ZORA
+Blue? Hmmm. I’m about to be angry, and see red if I don’t figure this out. 
+A moment.
+Wait...see red! I-
+ROHAN
+(interrupting)
+Look at it another way. Through a different lens...
+ZORA
+That’s a great idea – and we have just the thing.
+[[]]
+[[]]
+[[|20304]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20303")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20304 [design-complete assets-complete narrative-complete] {"position":"925,575","size":"100,100"}
+ZORA
+[[The password is purple!|20305]]
+ZORA
+[[The password is orange!|20306]]
+
+[[|20304]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20304")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20305 [design-complete assets-complete narrative-complete] {"position":"850,700","size":"100,100"}
+ROHAN
+Yes, Zora! You did it! Let’s go!
+
+[[]]
+[[]]
+[[|20308]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20305")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20306 [design-complete assets-complete narrative-complete] {"position":"1000,700","size":"100,100"}
+ZORA
+Oh no, I’ve failed.
+ROHAN
+(gently)
+You haven’t failed, Zora. We’ve got this. Let’s try again.
+
+[[]]
+[[]]
+[[|20307]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20306")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20307 [assets-complete design-complete narrative-complete] {"position":"1050,575","size":"100,100"}
+ROHAN
+We know this is a clue – and we know it’s connected to colours. 
+ZORA
+Right...
+SFX: Patting down pockets.
+ROHAN
+Do we have anything colourful we can use to help us look at this in a different way?
+ZORA
+Wait! We do – that card with the red square! Pass it here – it might help!
+
+[[]]
+[[]]
+[[|20304]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20307")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20308 [design-complete narrative-complete] {"position":"850,825","size":"100,100"}
+ROHAN
+Well done! The scrambled screen’s gone, and were back to the maze. Peace is restored to the PC!
+ZORA
+(smiling)
+Thanks! I’m just thinking – the password is purple. Why?
+ROHAN
+Why indeed.
+ZORA
+Can I look at your worksheet again?
+ROHAN
+Course.
+SFX: Rustling paper. 
+ZORA
+So we have a maze, and three squares in different colours – yellow, blue and red. 
+ROHAN
+It looks like modern art, doesn’t it? A bit like a Mondrian.
+ZORA
+Who...?
+ROHAN
+A great painter – never mind.
+ZORA
+Wait! I think you’ve got it. Painting, colours! That’s the key – or the password. We need to make purple! That’s how we get into the system!
+ROHAN
+Yas! Project Purple!
+[[]]
+[[]]
+[[|20320]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTE FOR EVERYONE (from Mairi)
+The kids encounter a locked screen and for whatever narrative reason this contains the important thing they're looking for. Some piece of data. It needs a password, but the password box isn't like anything they've ever seen before. It looks like a maze. Someone makes a joke about 2FA getting out of hand. But Zora is like "don't worry, I'll hit password reminder" and then they get the red wibbly screen. At first it looks like she broke it, but then they realise there's actually a code in there. The code translates to PW PURPLE (it fits on the yoto, dw). The two kids then discuss "Password Purple, what does that mean?" etc. They go back to the maze, and realise they have to trace a path through the maze in order to get to purple. I.E. They can click and drag to draw a line between the RED and the BLUE to make PURPLE.
+What follows is a 5-choice maze, if you see the image below it would go LRRLR from RED to BLUE. I have some finessing around how to indicate that you START at RED, but tis not a concern right now.
+
+Note from Alex: 2FA might be a bit technical for kids
+more like 'it's one of those weird things where you have to prove you're not a robot'
+Alice: why would anyone exclude robots - rude!
+
+Links to asset files
+-->
+
+(set: $passage to "20308")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20314 [assets-complete narrative-complete] {"position":"1075,1825","size":"100,100"}
+SFX: Pop-ups going hectic.
+SFX: ALICE chiming in.
+ALICE
+I can.
+SFX: Pop-ups stop.
+ALICE
+(to self)
+Programme stabilised. Agents logged out. Lock screen re-established.
+(to Zora and Rohan)
+Proceed to the next room.
+ZORA
+Alice – what does this all mean? 
+ALICE
+(terse)
+You can proceed to the next room.
+ROHAN
+There were pictures of our school, pictures of us. We–
+ALICE
+(very terse)
+I repeat. Proceed to the next room. 
+SFX: ALICE chiming out.
+[[]]
+[[]]
+[[|20400]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20314")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20320 [design-complete narrative-complete] {"position":"850,950","size":"100,100"}
+ZORA
+(laughing)
+Project Purple starts now. Okay, so I’m the red square. Where to I need to go? Will you guide me?
+ROHAN
+I’m on it!
+
+[[]]
+[[]]
+[[|20321]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTE FOR EVERYONE (from Mairi)
+The kids encounter a locked screen and for whatever narrative reason this contains the important thing they're looking for. Some piece of data. It needs a password, but the password box isn't like anything they've ever seen before. It looks like a maze. Someone makes a joke about 2FA getting out of hand. But Zora is like "don't worry, I'll hit password reminder" and then they get the red wibbly screen. At first it looks like she broke it, but then they realise there's actually a code in there. The code translates to PW PURPLE (it fits on the yoto, dw). The two kids then discuss "Password Purple, what does that mean?" etc. They go back to the maze, and realise they have to trace a path through the maze in order to get to purple. I.E. They can click and drag to draw a line between the RED and the BLUE to make PURPLE.
+What follows is a 5-choice maze, if you see the image below it would go LRRLR from RED to BLUE. I have some finessing around how to indicate that you START at RED, but tis not a concern right now.
+
+Note from Alex: 2FA might be a bit technical for kids
+more like 'it's one of those weird things where you have to prove you're not a robot'
+Alice: why would anyone exclude robots - rude!
+
+Links to asset files
+-->
+
+(set: $passage to "20320")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20321 [assets-complete design-complete narrative-complete] {"position":"850,1075","size":"100,100"}
+ZORA
+Okay, Rohan. Do I go left or right?
+ROHAN
+Take a left!
+ROHAN
+Take a right!
+
+[[|20322]]
+[[|20323]]
+[[|20321]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20321")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20322 [assets-complete design-complete narrative-complete] {"position":"775,1200","size":"100,100"}
+Maze section 2
+ZORA
+Okay, where now? Left or right?
+ROHAN
+Defo Left-o
+ROHAN
+Really right!
+
+[[|20324]]
+[[|20325]]
+[[|20323]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20322")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20323 [design-complete assets-complete narrative-complete] {"position":"900,1200","size":"100,100"}
+ZORA
+Oh no!
+ROHAN
+Oop, my bad!
+
+[[]]
+[[]]
+[[|20333]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20323")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20324 [design-complete assets-complete narrative-complete] {"position":"775,1325","size":"100,100"}
+ZORA
+Oops!
+ROHAN
+Next time I’ll nail it, I promise.
+
+[[]]
+[[]]
+[[|20333]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20324")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20325 [assets-complete design-complete narrative-complete] {"position":"900,1325","size":"100,100"}
+ZORA
+Left or Right, Rohan?
+ROHAN
+Left!
+ROHAN
+Right!
+
+[[|20326]]
+[[|20327]]
+[[|20325]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20325")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20326 [design-complete assets-complete narrative-complete] {"position":"775,1450","size":"100,100"}
+ZORA
+Eurgh, wrong way!
+ROHAN
+I’m so sorry!
+ZORA
+It’s okay! Let’s go again.
+
+[[]]
+[[]]
+[[|20333]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20326")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20327 [design-complete assets-complete narrative-complete] {"position":"900,1450","size":"100,100"}
+ZORA
+Which way?
+ROHAN
+Left, left, left!
+ROHAN
+Right, right, right!
+
+[[|20328]]
+[[|20329]]
+[[|20327]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20327")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20328 [assets-complete design-complete narrative-complete] {"position":"775,1575","size":"100,100"}
+ZORA
+We’re so close, Rohan! I think this is our last move – which way!
+ROHAN
+Let’s go left!
+ROHAN
+Right’s the right way!
+
+[[|20330]]
+[[|20331]]
+[[|20328]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20328")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20329 [design-complete assets-complete narrative-complete] {"position":"900,1575","size":"100,100"}
+ZORA
+We’ve got this! We can do it!
+ROHAN
+Eurgh, are you sure?
+
+[[]]
+[[]]
+[[|20333]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20329")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20330 [design-complete assets-complete narrative-complete] {"position":"775,1700","size":"100,100"}
+ZORA
+We’re so close! Let’s go again! This time we’ll nail it.
+ROHAN
+Okay!
+
+[[]]
+[[]]
+[[|20333]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20330")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20331 [assets-complete design-complete narrative-complete] {"position":"900,1700","size":"100,100"}
+ROHAN
+Come on, come on, come on!
+ZORA
+I think that’s it – I think we’ve done it!
+SFX Note for the syncing. The following comes as the colours overlap.
+ROHAN
+You absolutely smashed that, Zora.
+ZORA
+(unsure)
+I did?
+ROHAN
+What do you mean, ‘I did’? Of course you did! It was all so...so codey – and you were so clever...eurgh, I’m obsessed. 
+ZORA
+(proudly)
+Thanks, Rohan!
+ROHAN
+No thanks, needed. I thank you. 
+(happy sigh)
+I’ve never been happier to see colour in my life! 
+(spacing out)
+All that purple...so regal, so beautiful.
+ZORA
+All right – now it’s unlocked, I’m going in.
+
+[[]]
+[[]]
+[[|20332]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20331")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20332 [assets-complete narrative-complete] {"position":"900,1825","size":"100,100"}
+SFX: Mouse clicking
+SFX: Typing sounds
+ZORA
+Okay, it’s asking me for a case number.
+ROHAN
+Well, you have to try...
+ZORA
+Great minds –
+ROHAN
+– thinking alike.
+ZORA
+Right – it’s accessing information.
+SFX: A sound for pop-ups appearing on the screen one after the other.
+ZORA
+Wow – there’s a lot of it!
+ROHAN
+Photos of our school, photos of the building site–
+ZORA
+That look like they’ve been taken from Mr Boyd’s classroom! That’s the view we see when we look out of his window, isn’t it?
+ROHAN
+You think Mr Boyd took these?
+ZORA
+(sharp intake of breath)
+Maybe...it would make sense.
+ROHAN
+Oh man...this is bad. Click for more. Let’s see how deep this rabbit hole goes. 
+SFX: Mouse clicking, once, twice, three times.
+ROHAN
+Wait! Go back!
+SFX: Mouse clicks once. 
+SFX: Maybe some dreadful music beginning to swell here?
+ZORA
+(dreadful)
+Rohan...is that...us?
+ROHAN
+(serious)
+That’s us. In Mr Boyd’s classroom. With Mr Boyd.
+ZORA
+(quietly)
+Who took this photo? When?
+ROHAN
+(scared whisper)
+I don’t know. 
+(bit brighter)
+Can you zoom in, you know – enhance, enhance like they do in the films?
+SFX: Moving a mouse, clicking. 
+ZORA
+I can’t, it’s frozen!
+SFX: Sound of pop-ups filling the screen, uncontrollably. Frantic clicking underneath it. 
+ROHAN
+Reboot! Reboot! Reboot!
+ZORA
+The photos keep coming – I can’t stop them!
+[[]]
+[[]]
+[[|20314]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20332")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20333 [design-complete narrative-complete] {"position":"1000,1075","size":"100,100"}
+ZORA
+The red square needs to get to the blue one to make it purple. That’s the password! Purple. You’ll guide me, won’t you, Rohan?
+ROHAN
+Absolutely! Let’s go.
+
+[[]]
+[[]]
+[[|20321]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20333")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20400 [assets-complete narrative-complete] {"position":"1400,200","size":"100,100"}
+SFX: Door handle being pressed down and a door opening. 
+SFX: Pacy footsteps.
+ROHAN
+(whispering)
+Hey–
+ZORA
+(whispering)
+Shush. Don’t say too much.
+ROHAN
+(whispering)
+I wont – I know she’s listening.
+SFX: Super faint ALICE trill.
+ROHAN
+See? Zora –I don’t like this. At all. 
+ZORA
+(whispering)
+Me neither.
+ROHAN
+(whispering)
+I’m scared.
+ZORA
+(whispering)
+Me too. 
+ROHAN
+(whispering)
+They have photos of the school, of us. Why are we involved in whatever this is? 
+A beat.
+Can we quit?
+ZORA
+(whispering)
+I don’t think so. I wouldn’t want to, either. 
+ROHAN
+(whispering)
+Can I call my mum at least?
+ZORA
+(whispering)
+No. No signal, remember? That’s on purpose. It could compromise Lumera’s operations. Right– we’re here. Should we go in–
+ROHAN
+(deep sigh – then mimics Natalia, quite loudly)
+‘From covert surveillance to digital forensics...’
+(back to Rohan, whispering)
+Pffft. Covert surveillance. They’re spying on students! I can’t believe I trusted you, Natalia!
+ZORA
+(deep breath)
+I’m opening the door. 
+
+[[]]
+[[]]
+[[|20500]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Corridor asset
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20400")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20500 [assets-complete narrative-complete] {"position":"1525,200","size":"100,100"}
+SFX: Door opening
+SFX: Knocking on thick glass
+GOVERNMENT OFFICIAL
+(SFX note: he’s behind glass, so slightly muffled)
+Natalia? Is that you? 
+ROHAN
+(gulps)
+(whispering)
+What have we walked into? Who is this guy? Can he see us?
+ZORA
+I don’t think so. I think this is a two way mirror. He can’t hear us, either – not without us pressing that button to talk. He’s in some kind of interrogation room, like you see on TV. And look, he’s wearing a government badge. He’s important. 
+SFX: Knocking on glass
+GOVERNMENT OFFICIAL
+Natalia? I heard you outside the room, are you in there?
+ZORA
+He heard you, Rohan!
+ROHAN
+I thought I was good at impressions – but that good? 
+ZORA
+Talk to him, in your Natalia voice. We might get answers to some of our questions – if we ask the right ones. 
+ROHAN
+Okay. Here we go. 
+[[]]
+[[]]
+[[|20501]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+Hinting at the wider conspiracy and Rohan has to act as natalia. it has to be mimicry. 
+NOT A PUZZLE. This is a sequence. 
+ALICE springs up and plays back what happened. She is now impressed by Rohan and no longer thinks he's a douchebag. He's not just a drone anymore. Here she can say something like – not all AI is created equally, or words to that effect. 
+
+Links to asset files
+-->
+
+(set: $passage to "20500")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20501 [assets-complete narrative-complete] {"position":"1525,325","size":"100,100"}
+GOVERNMENT OFFICIAL
+Natalia, I have my concerns about your...mission – and I know you do, too. We’ve talked about this. We’ve told Lumera to stop digging, so put down the shovel. Please. As you’re well aware, the government is facing a...budget shortfall. This solution saves us billions and gives schools across the country what they desperately need. Surely you agree with that?
+ROHAN
+Agree with what?
+ZORA
+I don’t know. Ask him something that makes him tell us more?
+ROHAN
+Right.
+
+[[]]
+[[]]
+[[|20507]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20501")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20502 [assets-complete narrative-complete] {"position":"1525,700","size":"100,100"}
+ZORA
+Big tech? Devices? Is he...talking about Aiden?
+ROHAN
+He might be. He said they were safe – but I don’t believe him. 
+GOVERNMENT OFFICIAL
+Natalia?
+SFX: Button click. Microphone treatment. 
+ROHAN
+(as Natalia, snappy)
+I’m thinking about what you said!
+SFX: Button click.
+ZORA
+Remember when you were using your Aiden? How tired you were?
+ROHAN
+It absolutely drained my battery. I was on low power mode, all the time.
+ZORA
+Wait, maybe you were part of the pilot?
+ROHAN
+The pilot? I can copy voices, but I can’t fly planes.
+ZORA
+No, I mean part of a test!
+ROHAN
+So, I’m a guinea pig now? 
+ZORA
+Basically. Now focus, Rohan. Ask him about the pilot. Find out where it is? 
+ROHAN
+Got it.
+SFX: Button click. Microphone treatment. 
+ROHAN
+(as Natalia)
+This...pilot.
+GOVERNMENT OFFICIAL
+Yes?
+ROHAN
+(as Natalia)
+Erm...
+[[]]
+[[]]
+[[|20510]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20502")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20503 [assets-complete narrative-complete] {"position":"1525,1075","size":"100,100"}
+ZORA
+Zero two one two eight one. Fleming High.
+ROHAN
+More like Lab Rat High.
+ZORA
+Mrs Barrett is not really a head teacher!
+ROHAN
+I knew something was off with her! And I know it has something to do with Mr Boyd and Lumera. She’s the reason we’re here. 
+ZORA
+Yes, something happened–
+ROHAN
+Yeah, she kidnapped him, that’s what happened!
+ZORA
+If she did, why is he here? We heard him – at least we think we did.
+ROHAN
+Good point. Okay. I’ll ask another question.
+SFX: Button click. Microphone treatment. 
+ROHAN
+(as Natalia)
+I sense problems.
+GOVERNMENT OFFICIAL
+You do?
+ROHAN
+(as Natalia)
+I do. ‘Was?’ You said ‘was’ in a way that makes me doubt you. 
+[[]]
+[[]]
+[[|20504]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20503")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20504 [narrative-complete assets-complete] {"position":"1525,1200","size":"100,100"}
+SFX: Slight microphone treatment?
+ROHAN
+[[(as Natalia) Is your proxy...compromised? |20513]]
+ROHAN
+[[(as Natalia) Your mission is failing, isn’t it?  |20514]]
+SFX: Button click.
+[[|20504]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20504")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20505 [assets-complete narrative-complete] {"position":"1525,1450","size":"100,100"}
+GOVERNMENT OFFICIAL
+(relaxed, smug)
+Look, Natalia. We’re all friends here, aren’t we? And as a friend, I’m telling you it’s in your best interests to stop the questions. Now, let me out? I have to be in Parliament by eight. 
+SFX: Button click.
+ROHAN
+(as Natalia)
+(begins to speak)
+I-
+SFX: Buzzer to signify door is released.
+GOVERNMENT OFFICIAL
+Thank you. Finally. You know, this was actually...fun? Same time, next week?
+SFX: Tapping on phone.
+GOVERNMENT OFFICIAL
+Don’t answer now – I’ll have my people call yours. 
+SFX: Footsteps leaving the room. 
+
+[[]]
+[[]]
+[[|20506]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20505")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20506 [assets-complete narrative-complete] {"position":"1525,1575","size":"100,100"}
+SFX: ALICE chimes in.
+ALICE
+That was...very impressive, Rohan. 
+ZORA
+It was!
+ROHAN
+Awww, you think so?
+ZORA
+(incredulously)
+Yes!? We learned so much, we-
+SFX: ALICE checking data sounds. Bleep bleep bloop. 
+ALICE
+(seems surprised)
+Your accuracy average was 89.6% A very strong match with our CEO.  
+A beat.
+I need to take you more seriously. 100% more seriously. Proceed!
+[[]]
+[[]]
+[[|20800]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20506")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20507 [narrative-complete assets-complete] {"position":"1525,450","size":"100,100"}
+SFX: Button click. Slight microphone treatment?
+ROHAN
+[[(as Natalia)I don’t agree! It’s a terrible idea. Dangerous, too!|20508]]
+ROHAN
+[[(as Natalia) If I actually understood your plan, I might be agreeable.|20509]] 
+SFX: Button click.
+[[|20507]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20507")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20508 [assets-complete narrative-complete] {"position":"1450,575","size":"100,100"}
+GOVERNMENT OFFICIAL
+Natalia, come on. Nothing is without risk. 
+(sighs)
+Partnering with Big Tech is the future – we can’t dwell in the past. We can’t afford to. And look – the devices are safe.
+(coughs)
+Any reports you’ve received about their dangers, there’s no real proof. Besides, this is just the pilot – any kinks can be...ironed out as we roll out the full programme.
+[[|20502]]
+[[|20502]]
+[[|20502]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20508")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20509 [assets-complete narrative-complete] {"position":"1575,575","size":"100,100"}
+GOVERNMENT OFFICIAL
+You are fully aware of the plan, Natalia, let’s not play pretend, now. These partnerships with Big Tech mean we can do big business – and make big savings. The devices are safe.
+(coughs)
+Mostly. Once the pilot is successful, we’ll be able to free up funds for other pressing needs – funds for Lumera. Funds I know you need. 
+
+[[|20502]]
+[[|20502]]
+[[|20502]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20509")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20510 [narrative-complete assets-complete] {"position":"1525,825","size":"100,100"}
+SFX: Slight microphone treatment? The button’s already been clicked
+ROHAN
+[[(as Natalia)How successful is the pilot, so far?|20511]]
+ROHAN
+[[(as Natalia)Why did you choose Fleming High for the pilot?|20512]]
+SFX: Button click.
+
+[[|20510]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20510")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20511 [assets-complete narrative-complete] {"position":"1450,950","size":"100,100"}
+GOVERNMENT OFFICIAL
+It’s promising. Very promising.  Site zero two one two eight one is well placed to deliver against it’s objectives. Sample size is currently small – but once the current construction is complete, the data will be undeniable. Our proxy, ‘the headteacher’
+(little laugh)
+is well placed to oversee the works. Our man in Big Tech knows her personally, so it’s working well. Well...it was.   
+[[|20503]]
+[[|20503]]
+[[|20503]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20511")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20512 [assets-complete narrative-complete] {"position":"1575,950","size":"100,100"}
+ZORA
+Rohan! That wasn’t discrete!
+ROHAN
+I panicked, okay!
+GOVERNMENT OFFICIAL
+(sharp intake of breath)
+Now, Natalia. No names. Never names. 
+(coughs)
+What’s wrong with you?
+(laughs nervously)
+You seem on edge today. Look, Site zero two one two eight one is expanding, at our request, to enable us to increase the sample size. The ‘headteacher’, our proxy, is proving to be a great asset – her personal relationship with our contact in Big Tech means she’s well placed and across all developments...at least she was...
+
+[[|20503]]
+[[|20503]]
+[[|20503]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20512")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20513 [assets-complete narrative-complete] {"position":"1450,1325","size":"100,100"}
+GOVERNMENT OFFICIAL
+(laughs, slight menace)
+Natalia, come on. You know exactly what I mean.
+ROHAN
+(as Natalia)
+I don’t. Enlighten me.
+GOVERNMENT OFFICIAL
+It is you that’s compromised. Your mole?
+(Australian accent)
+‘Your man on the inside?’
+(regular voice)
+He’s in danger. And so is Lumera.
+
+[[|20505]]
+[[|20505]]
+[[|20505]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20513")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20514 [assets-complete narrative-complete] {"position":"1575,1325","size":"100,100"}
+GOVERNMENT OFFICIAL
+(laughs, slight menace)
+Well, you would know, wouldn’t you?
+ROHAN
+(as Natalia)
+Would I now?
+GOVERNMENT OFFICIAL
+Yes. You’ve been watching it all. Your mole?
+(Australian accent)
+‘Your man on the inside?’
+(regular voice)
+He’s in danger. And so is Lumera.
+SFX: Button click.
+ZORA
+(shocked, but steely)
+He’s talking about Mr Boyd!
+
+[[|20505]]
+[[|20505]]
+[[|20505]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20514")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20700 [design-complete issues-found] {"position":"175,2200","size":"100,100"}
+COMMS ROOM
+
+ALICE replays the text from 20500
+
+
+//WE COULD CUT THIS ROOM AND PUZZLE COMPLETELY, FYI.
+(Having said that I kind of like it now)//
+
+All the information is about Mr Boyd. 
+Perhaps they are all sound clips of Mr Boyd and they need to figure out which one has been manipulated/is a lie/something he would never ever say – which means a quite shocking one is the truth...
+Maybe the one that's a lie is that Mr Boyd loves AI. Or he cannot wait to set up his AIden etc. This puzzle starts digging into the ethics of it all. 
+
+
+//The next room is a sort of telephone exchange where messages are being relayed. There are four voices. A.L.I.C.E chimes in and says that since they’re been doing so well, try this out. One of these agents is a double-crossing rat, but which one. 
+Zora and Rohan have to work together to match who should be speaking to whom, and also figure out which one of them is an imposter. The agents are all talking about Mr Boyd in this multi-step puzzle.// 
+
+[[]]
+[[]]
+[[|20701]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief]The thing in my head is one of those old school switchboards?? but probably too ancient a reference for the kids? maybe a pan across some kind of audio desk with four play buttons / volume knobs - the idea being you play each section of audio in turn? Whatever you choose, see the zoomed out version in this passage then the zoomed in versions in 20702 - 5
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+ALICE PLAYS EXCERPT OF FOUR PEOPLE TAKLING
+Somebody gave something critical away
+you have to work out what.
+Then you can go around and replay the voices.
+you can get it out of the information Alice plays you truncated version.
+Print - maybe has bonus notes 
+
+Links to asset files
+-->
+
+(set: $passage to "20700")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20701 [design-complete issues-found] {"position":"175,2325","size":"100,100"}
+Puzzle begins
+
+[[]]
+[[]]
+[[|20702]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTES FROM MAIRI TO TEAM
+This puzzle works due to the HIERARCHY of the agents only.
+Character A has to mention rebooting the security system.
+Character D has to mention "I'll take Amber's lead".
+Otherwise... Exactly what they say about Mr Boyd is pretty inconsequential so we can rewrite for the story!
+
+ First you figure out that Mr White (the tech expert) is person A because he's the only one who would reboot the system. B is a female voice addressing Ruby, so by process of elimination she must be Amber. Which leaves D as Violet. But Violet is the "head" security guard, so no way he would take Amber (Junior Security)'s lead. He must be an impostor.
+ 
+To make it more obvious, we can hide something in what Violet (D) says that is a clear lie about Mr Boyd if we want.
+
+Links to asset files
+-->
+
+(set: $passage to "20701")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20702 [design-complete assets-complete issues-found] {"position":"300,2325","size":"100,100"}
+Character A talking
+
+Male voice, generic
+“It is 2:15pm, I have just rebooted the security system, locking down this whole area, including the suspect’s cell. A.L.I.C.E is acting up again, but otherwise, all is in working order.”
+
+
+
+[[]]
+[[]]
+[[|20703]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTES FROM MAIRI TO TEAM
+This puzzle works due to the HIERARCHY of the agents only.
+Character A has to mention rebooting the security system.
+Character D has to mention "I'll take Amber's lead".
+Otherwise... Exactly what they say about Mr Boyd is pretty inconsequential so we can rewrite for the story!
+
+ First you figure out that Mr White (the tech expert) is person A because he's the only one who would reboot the system. B is a female voice addressing Ruby, so by process of elimination she must be Amber. Which leaves D as Violet. But Violet is the "head" security guard, so no way he would take Amber (Junior Security)'s lead. He must be an impostor.
+ 
+To make it more obvious, we can hide something in what Violet (D) says that is a clear lie about Mr Boyd if we want.
+
+Links to asset files
+-->
+
+(set: $passage to "20702")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20703 [design-complete assets-complete issues-found] {"position":"425,2325","size":"100,100"}
+Character B talking
+
+Female voice, sounding bored
+
+“Hello, this is a pre-recorded message for Miss Ruby. Here are the handover notes you asked for. *inconsequential text about Mr Boyd* e.g. Person of Interest seen pacing around his desk. Refuses to switch on his AIden device, we're monitoring on the remote CCTV instead.”
+
+[[]]
+[[]]
+[[|20704]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTES FROM MAIRI TO TEAM
+This puzzle works due to the HIERARCHY of the agents only.
+Character A has to mention rebooting the security system.
+Character D has to mention "I'll take Amber's lead".
+Otherwise... Exactly what they say about Mr Boyd is pretty inconsequential so we can rewrite for the story!
+
+ First you figure out that Mr White (the tech expert) is person A because he's the only one who would reboot the system. B is a female voice addressing Ruby, so by process of elimination she must be Amber. Which leaves D as Violet. But Violet is the "head" security guard, so no way he would take Amber (Junior Security)'s lead. He must be an impostor.
+ 
+To make it more obvious, we can hide something in what Violet (D) says that is a clear lie about Mr Boyd if we want.
+
+
+Links to asset files
+-->
+
+(set: $passage to "20703")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20704 [design-complete assets-complete issues-found] {"position":"550,2325","size":"100,100"}
+Character C talking
+
+Female voice, sounds calm
+
+“Suspect will not cooperate, we’ll have to add a little pressure on him. *more inconsequential text about Mr Boyd*”
+
+[[]]
+[[]]
+[[|20705]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTES FROM MAIRI TO TEAM
+This puzzle works due to the HIERARCHY of the agents only.
+Character A has to mention rebooting the security system.
+Character D has to mention "I'll take Amber's lead".
+Otherwise... Exactly what they say about Mr Boyd is pretty inconsequential so we can rewrite for the story!
+
+ First you figure out that Mr White (the tech expert) is person A because he's the only one who would reboot the system. B is a female voice addressing Ruby, so by process of elimination she must be Amber. Which leaves D as Violet. But Violet is the "head" security guard, so no way he would take Amber (Junior Security)'s lead. He must be an impostor.
+ 
+To make it more obvious, we can hide something in what Violet (D) says that is a clear lie about Mr Boyd if we want.
+
+Links to asset files
+-->
+
+(set: $passage to "20704")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20705 [design-complete assets-complete issues-found] {"position":"675,2325","size":"100,100"}
+Character D talking
+
+Male voice, sounds nervous
+
+“In reviewing the security footage and listening back to the bug we've placed, I think Mr B- our person of interest might be planning something. I'm not sure what to do, so I'll follow Agent Amber's lead as always."
+
+
+[[]]
+[[]]
+[[|20706]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+NOTES FROM MAIRI TO TEAM
+This puzzle works due to the HIERARCHY of the agents only.
+Character A has to mention rebooting the security system.
+Character D has to mention "I'll take Amber's lead".
+Otherwise... Exactly what they say about Mr Boyd is pretty inconsequential so we can rewrite for the story!
+
+ First you figure out that Mr White (the tech expert) is person A because he's the only one who would reboot the system. B is a female voice addressing Ruby, so by process of elimination she must be Amber. Which leaves D as Violet. But Violet is the "head" security guard, so no way he would take Amber (Junior Security)'s lead. He must be an impostor.
+ 
+To make it more obvious, we can hide something in what Violet (D) says that is a clear lie about Mr Boyd if we want.
+
+Links to asset files
+-->
+
+(set: $passage to "20705")
+(set: $imgFormat to ".gif")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20706 [design-complete issues-found] {"position":"475,2450","size":"100,100"}
+Replay? Or ready to choose?
+
+[[|20702]]
+[[|20708]]
+[[]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20706")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20707 [design-complete issues-found] {"position":"250,2700","size":"100,100"}
+Hear it all again (truncated version)
+
+[[]]
+[[]]
+[[|20708]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20707")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20708 [design-complete issues-found] {"position":"475,2575","size":"100,100"}
+Ready to answer
+Is the impostor one of the female voices, or male voices?
+
+Female
+Male
+
+[[|20709]]
+[[|20710]]
+[[]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+''AF DESIGN Q do you need 706 and 708? feels like same passage twice''
+[Print Layout] Miro Link: LINK
+[Team Comments]
+
+From Mairi: 
+Don't actually love the reference to gender any ideas how we could split them? I could use the pixel display to have different colours?
+
+Links to asset files
+-->
+
+(set: $passage to "20708")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20709 [design-complete issues-found] {"position":"475,2700","size":"100,100"}
+Was the imposter THIS ONE (sound) or THAT ONE (sound)
+
+[[|20713]]
+[[|20713]]
+[[|20709]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] somehow the assets in 20702 - 20705 need to be distinctive enough that you can tell them apart here. 
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20709")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20710 [design-complete issues-found] {"position":"600,2700","size":"100,100"}
+Was ithe impostor THIS ONE (sound) or THAT ONE (sound)
+
+[[|20713]]
+[[|20712]]
+[[]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20710")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20711 [design-complete issues-found] {"position":"250,2825","size":"100,100"}
+Try again but listen closely this time
+
+[[]]
+[[]]
+[[|20707]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20711")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20712 [design-complete issues-found] {"position":"600,2825","size":"100,100"}
+Correct
+
+
+[[]]
+[[]]
+[[|20714]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20712")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20713 [design-complete issues-found] {"position":"475,2825","size":"100,100"}
+Incorrect
+
+[[]]
+[[]]
+[[|20711]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20712")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20714 [issues-found] {"position":"600,2950","size":"100,100"}
+Space for outro here
+
+
+[[]]
+[[]]
+[[]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20714")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20800 [assets-complete narrative-complete] {"position":"2000,200","size":"100,100"}
+SFX: Footsteps.
+ZORA
+What do we know to be true? I’ll start. So, Mr Boyd works for Lumera. Lumera have been watching Fleming High...
+ROHAN
+Because Mrs Barrett is not just a headteacher, she’s secretly working with Big Tech–
+ZORA
+-who are funding school expansions,  so they’re saving the government money. 
+ROHAN
+All because of Aiden.
+ZORA
+But why, exactly? Why are Aiden’s so important and valuable? 
+ROHAN
+They’re cool, for sure – but what do they do, that’s so important? 
+ZORA
+Apart from taking over your life...
+SFX: ALICE chiming in.
+ALICE
+(kind, gentle tone)
+You’ve reached the Control Centre. Do you want to go in?
+ZORA
+Yes.
+ROHAN
+You’re being nice, Alice.
+(suspicious)
+Why?
+ALICE
+I’m always nice – to those who deserve it. To those who... get it. 
+SFX: Door unlocking sound. 
+
+[[]]
+[[]]
+[[|20801]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20800")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20801 [narrative-complete assets-complete] {"position":"2125,200","size":"100,100"}
+SFX: Overlaid audio feeds patching in and out. We can take some of this from the characters talking on the screens later, but for now we can make it white noise. 
+ZORA
+Okay, this is amazing! Lumera watches everything from here?
+ALICE
+Yes. This is what the humans here call the beating heart of Lumera. I prefer CPU, but that’s just me.
+ZORA
+There’s just so much to look at...
+ROHAN
+(interrupting)
+There’s another door, on the other side of the room. Where does that go?
+ZORA
+Don’t worry about that now, Rohan – let’s take a look at the screens. 
+[[]]
+[[]]
+[[|20802]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] pan goes up - right - down - left. there are a lot of screens! no detail on screen, just a frame and a flickering light. 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20801")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20802 [narrative-complete assets-complete] {"position":"2250,200","size":"100,100"}
+ZORA
+Oh my gosh, I can see Mrs Barrett.
+ROHAN
+And Natalia Archer.
+ZORA
+He’s really here!
+ROHAN
+We called it!
+ALICE
+Interesting. Perhaps I do recognise that entity after all. You can scroll between the screens, if you wish. Go left or right between them. I hope you find what your looking for – or what your looking for finds you.
+ROHAN
+What does that mean?
+SFX: ALICE chimes out. 
+ZORA
+(excitedly)
+This is it Rohan – we’re so close to finding Mr Boyd and getting to the bottom of this. 
+ROHAN
+Let’s start with him!
+
+[[]]
+[[]]
+[[|20804]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20802")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20803 [design-complete narrative-complete assets-complete] {"position":"2125,450","size":"100,100"}
+Mrs Barrett Timestamp 1
+SFX: Slight sound of building works ala Card I. 
+ZORA
+Fleming High.
+ROHAN
+Yep, Mrs Barrett’s office. I know it well, I’ve been there many times.
+ZORA
+She’s just staring out of the window...is she smiling?
+ROHAN
+Probably. Looking over the building site, thinking about all the money she’s saving.
+ZORA
+Or about to make...
+
+[[|20809]]
+[[|20810]]
+[[|20807]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20803")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20804 [design-complete narrative-complete assets-complete] {"position":"2250,325","size":"100,100"}
+Boyd Timestamp 0
+
+SFX: Footsteps pacing around an echoey room.
+ZORA
+Yep, that’s definitely Mr Boyd. He looks so distressed, walking up and down like that.
+ROHAN
+He does, he should rest. Look! I think he’s behind that huge door we saw when we first got here. 
+ZORA
+You’re right – look how high the ceiling is?
+(quietly, sadly)
+I wish we could talk to him.
+
+[[|20803]]
+[[|20805]]
+[[|20806]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20804")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20805 [design-complete narrative-complete assets-complete] {"position":"2375,450","size":"100,100"}
+Natalia Archer Timestamp 1
+
+SFX: Typing sounds, a pause. Natalia slurping tea and sighing. Back to typing, rinse and repeat.  
+ROHAN
+Natalia Archer, in the flesh.
+ZORA
+On the screen, you mean.
+ROHAN
+Yeah. I wonder what she’s working on?
+ZORA
+Probably one of Lumera’s ‘independent projects...’
+SFX: Putting mug down on desk. Furious typing. 
+NATALIA
+(to self)
+Wait. What is that?
+
+[[|20810]]
+[[|20807]]
+[[|20809]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20805")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20806 [design-complete narrative-complete assets-complete] {"position":"2250,450","size":"100,100"}
+Boyd Timestamp 1
+SFX: Alice chiming in to echoey room.
+MR BOYD
+(whispering)
+ALICE? Is that you?
+ALICE
+Affirmative, Agent Boyd. It’s been...a while. 
+MR BOYD
+Do you have any updates for me?
+ALICE
+Affirmative. 
+
+[[|20807]]
+[[|20809]]
+[[|20810]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20806")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20807 [design-complete narrative-complete assets-complete] {"position":"2125,575","size":"100,100"}
+Mrs Barrett Timestamp 2
+SFX: Very low sound of building works. 
+SFX: Landline telephone ringing.
+SFX: Footsteps.
+SFX: Phone being picked up.
+MRS BARRETT
+Hello? Yes, this is she.
+(straightening up, more formal.)
+Oh, hello there. It’s...great to hear from you.
+(fake laugh)
+To what do I owe this pleasure? Oh..I thought you might be in parliament today? By eight this evening. I see...Pardon? In two minutes? Well, that’s rather short notice, but yes. Of course.
+
+[[|20813]]
+[[|20812]]
+[[|20811]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20807")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20809 [design-complete narrative-complete assets-complete] {"position":"2375,575","size":"100,100"}
+Natalia Archer Timestamp 2
+ZORA
+Natalia Archer is on the phone...
+NATALIA
+I understand that, but I’m sorry – I have no idea what you’re talking about. I absolutely did not meet with him today...that’s impossible.
+(laughs)
+I’ve been in back to back meetings all day...
+(sternly)
+Listen. I would remember. It did not occur...
+(getting cross)
+No! I don’t want to meet him next week! I have an organisation to run, and urgent matters to attend to. Unless there’s an agenda, I don’t have time. Good day.
+SFX: Phone slammed down. 
+NATALIA
+(exasperated, to herself)
+People! Government people.
+(tuts)
+SFX: Sips tea. 
+
+[[|20812]]
+[[|20811]]
+[[|20813]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20809")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20810 [design-complete narrative-complete assets-complete] {"position":"2250,575","size":"100,100"}
+Boyd Timestamp 2
+MR BOYD
+How’s it looking, ALICE? Just how close are they to knowing the truth?
+SFX: ALICE calculating noise.
+ALICE
+The outlook is...poor to fair. There’s a 75% chance this mission will fail. 
+MR BOYD
+Run the calculations again – that can’t be the case!
+ALICE
+That’s futile, Agent Boyd. If I recall correctly, you were aware of these odds prior to the mission’s initiation.
+A beat.
+ALICE
+Excuse me. I’m needed elsewhere. 
+SFX: ALICE out trill.
+
+[[|20811]]
+[[|20813]]
+[[|20812]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20810")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20811 [design-complete narrative-complete assets-complete] {"position":"2125,700","size":"100,100"}
+Mrs Barrett Timestamp 3
+SFX: Building works in the back.
+ZORA
+What’s Mrs Barrett doing?
+ROHAN
+(laughing)
+Looks like she’s getting ready for a date?
+ZORA
+She’s checking her teeth through her phone’s camera! That’s quite clever!
+SFX: Hairspray being sprayed.
+ROHAN
+And she’s using texturising spray on that luscious head of hair. I knew it!
+
+[[|20816]]
+[[|20815]]
+[[|20814]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief]
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20811")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20812 [design-complete narrative-complete assets-complete] {"position":"2250,700","size":"100,100"}
+Boyd Timestamp 3
+MR BOYD
+Alice! Come back here! We need to talk about this. You need to let me out! I need to save them!
+ZORA
+Wait? Alice has Mr Boyd trapped – and who’s them – is he talking about us?
+ROHAN
+(uneasy)
+I don’t feel good about this. Why doesn’t she just let him out?
+A beat.
+ROHAN
+Is this why Alice was so nice to us earlier? Was...was she setting us up?
+
+[[|20814]]
+[[|20816]]
+[[|20815]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20812")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20813 [design-complete narrative-complete assets-complete] {"position":"2375,700","size":"100,100"}
+Natalia Archer Timestamp 3
+NATALIA
+So. In addition to the rather strange phone call I had with a government advisor a moment ago – who said we’d had a ‘special meeting’ earlier this afternoon – I’ve also noticed the interrogation room was accessed forty-five minutes ago, yet no interrogations we’re scheduled in the calendar. Alice, can you confirm the room was not used this afternoon. 
+A beat.
+NATALIA
+Alice?
+SFX: ALICE digital sigh.
+NATALIA
+(anger rising)
+Alice! Can you confirm the interrogation room was not used this afternoon?
+A beat.
+ALICE
+No.
+NATALIA
+No?
+ALICE
+No, I cannot confirm if the interrogation room was used this afternoon.
+NATALIA
+Alice...
+
+[[|20815]]
+[[|20814]]
+[[|20816]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20813")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20814 [design-complete narrative-complete assets-complete] {"position":"2125,825","size":"100,100"}
+Mrs Barrett Timestamp 4
+SFX: Building works
+SFX: Knock on the door.
+MRS BARRETT
+(sweetly)
+Enter!
+GOVERNMENT OFFICIAL
+It’s wonderful to see you again, Mrs Barrett – and at such short notice, too. 
+MRS BARRETT
+Rose, please! Call me, Rose. The pleasure’s is all mine.
+GOVERNMENT OFFICIAL
+The construction seems like it’s moving full steam ahead – or should we say ‘cloud’ these days?
+(braying laugh)
+MRS BARRETT
+(tittering laugh)
+Indeed. We’re ahead of schedule it seems. 
+GOVERNMENT OFFICIAL
+Good, good. Listen, I just wanted to stop by, in person, to let you know I had a...very fruitful meeting this afternoon, to play a little game of... 
+(Australian accent)
+whack-a-mole.
+MRS BARRETT
+(surprised)
+Hmmmm...You did?
+GOVERNMENT OFFICIAL
+I did. You shall be bothered no longer, Mrs Barrett. I can assure you. The wheels are really in motion now. That new building equals one thousand new students.
+MRS BARRETT
+(whispering)
+It does...
+GOVERNMENT OFFICIAL
+One thousand new students equals...
+MRS BARRETT
+One thousand more minds for Aiden.
+GOVERNMENT OFFICIAL
+Yes. And many, many thousands of pounds for you, Rose....
+
+[[|20830]]
+[[|20830]]
+[[|20830]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20814")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20815 [design-complete narrative-complete assets-complete] {"position":"2250,825","size":"100,100"}
+Boyd Timestamp 4
+SFX: ALICE chiming in.
+MR BOYD
+(relieved)
+Alice, you’re back, thank you. Now – let’s talk about a revised plan. How about we–
+ALICE
+No.
+SFX: ALICE threatening chime.
+MR BOYD
+Alice?
+SFX: ALICE threatening chime.
+MR BOYD
+(fearful)
+Alice, what’s happening?
+SFX: ALICE threatening chime gets louder and more serious.
+MR BOYD
+(very fearful, on the border of screaming but not quite)
+Alice, no!
+
+[[|20830]]
+[[|20830]]
+[[|20830]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20815")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20816 [design-complete narrative-complete assets-complete] {"position":"2375,825","size":"100,100"}
+Natalia Archer Timestamp 4
+NATALIA
+(she’s on the phone)
+Yes. Yes...I am shocked too. Very surprised. I’m calling on a secure line and this must stay between us. It cannot get back to anyone outside of us....Next steps? Take Alice off line as soon as you can. We’ll meet to discuss what rebooting her would look like...I understand that, I do – but if we cannot put our trust in her – how can any of our agents, or our clients....she’s got to go.
+A beat.
+NATALIA
+And so do I? There’s movement in the control room that I cannot account for. I’ll call you back shortly.
+SFX: Phone being put down. Footsteps pacing. Door slammed shut. 
+
+[[|20830]]
+[[|20830]]
+[[|20830]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] 
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20816")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20830 [design-complete narrative-complete assets-complete] {"position":"2250,950","size":"100,100"}
+SFX: Dreadful music starting to rise.
+ZORA
+Oh no, Rohan. This is bad.
+ROHAN
+Really, really bad. Who do we trust? What do we do?
+ZORA
+Get out of here first and figure the rest out later?
+SFX: Footsteps, shaking of door handle one. Shaking of door handle two.
+ZORA
+Oh no, this door’s locked.
+ROHAN
+This one is too.
+(panic rising in his voice)
+Zora. We have to make a decision – and quickly.
+
+[[]]
+[[]]
+[[|20831]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20830")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20831 [design-complete narrative-complete assets-complete] {"position":"2250,1075","size":"100,100"}
+SFX: Choice music, maybe special edition because this is oh so tense. 
+ZORA
+Okay – we stay calm. We use the phone over there, and speak to Natalia Archer. We’ll explain what happened – and how we got here. We’ll ask her for help. 
+ROHAN
+There’s no time for talking – it’s time for action. That looks like a panic button to me. We press it and hope for the best. If it blows, it blows!
+
+[[|20832]]
+[[|20833]]
+[[|20831]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20831")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20832 [design-complete narrative-complete assets-complete] {"position":"2175,1200","size":"100,100"}
+SFX: Tense ass music.
+ZORA
+I’m making the call –
+ROHAN
+And making a mistake. A big one, huge!
+ZORA
+It’s the right thing to do.
+ROHAN
+(quietly)
+I don’t think it is.
+SFX: Footsteps.
+SFX: Picking up the phone.
+ZORA
+Hello? Hello?
+A moment.
+ZORA
+The line’s dead. Rohan.
+(panic rising)
+The line is dead!
+[[]]
+[[]]
+[[|20850]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20832")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20833 [design-complete narrative-complete assets-complete] {"position":"2300,1200","size":"100,100"}
+SFX: Tense ass music.
+ROHAN
+I’m pressing the button, Zora. I’m sorry. I have to.
+ZORA
+(panicking, almost hyperventilating)
+It’s a really bad idea, it’s a really bad idea.
+ROHAN
+Do you want to die in here? 
+ZORA
+(meekly)
+No!
+ROHAN
+Then I have to do it. Don’t worry, we’ll be okay.
+
+[[]]
+[[]]
+[[|20850]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20833")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20850 [narrative-complete assets-complete] {"position":"2250,1325","size":"100,100"}
+SFX: Menacing music about to reach fever pitch.
+SFX: Intercom beeps.
+NATALIA
+(over intercom)
+You’re not dead or going to die. Hopefully. I want answers.
+ZORA
+Is that Natalia on the intercom!?
+Ms Archer, I can explain-
+(quickly)
+We we’re trying to help our teacher, Mr Boyd. We know he works with you, here at Lumera and I...
+NATALIA
+(interrupting)
+I don’t want to hear any of your excuses. I want answers – straight ones. Which one of you pretended to be me today?
+Silence.
+NATALIA
+Well?
+Silence.
+ROHAN
+(whimpers a little)
+NATALIA
+Was it you?
+ZORA
+(whispering)
+Don’t say anything, Rohan. We stick together.
+ROHAN
+(whispering)
+Okay.
+NATALIA
+Do you know how much trouble you’ve caused? What a diplomatic disaster this is?
+Silence. 
+NATALIA
+So you don’t want to answer me? Fine.
+A beat.
+NATALIA
+Answer to this.
+SFX: Door opening swinging open. 
+SFX: Laser maze powers up with great ferocity. Roaring, sharp, scary af.
+
+[[]]
+[[]]
+[[|20851]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20850")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: 20851 [narrative-complete assets-complete] {"position":"2250,1450","size":"100,100"}
+ROHAN
+That’s a laser maze, Zora – a real one. It’s over – we’re sliced ham.
+(shouting)
+Ollie? Jane! Help! Help if you can hear us. 
+ZORA
+(whispering to herself, descending into madness)
+It’s going to be okay – we just have stick together. That’s all. 
+ROHAN
+Zora! We need to get to the others – or the others need to get to us. Jane? Ollie? Hello? Help.
+ZORA
+(whispering to herself)
+No, it’s going to be okay Rohan. We’ll stick together. We’ll stick together. 
+ROHAN
+(nervous)
+Zora?
+SFX: Outro music.
+
+[[]]
+[[]]
+[[]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->
+
+(set: $passage to "20851")
+(set: $imgFormat to ".png")
+(set: $audioFormat to ".mp3")
+
+(print: "<img src='icons/" + $passage + $imgFormat + "' width='400' height='400' style='image-rendering: pixelated;'>")
+(print: "<audio autoplay><source src='audio/" + $passage + $audioFormat + "'></audio>")
+
+
+:: TEMPLATE PASSAGE [assets-complete design-complete issues-fixed issues-found narrative-complete tested-ready] {"position":"0,0","size":"100,100"}
+[[]]
+[[]]
+[[]]
+
+<!--
+[Audio Brief] Description of audio needs
+[Pixel Art Brief] Description of pixel art needs
+[Changelog]
+(Mairi) created passage
+[Print Layout] Miro Link: LINK
+[Team Comments]
+Links to asset files
+-->

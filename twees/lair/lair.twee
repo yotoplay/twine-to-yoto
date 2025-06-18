@@ -1,0 +1,140 @@
+:: StoryTitle
+Lair of the Medusa
+
+
+:: StoryData
+{
+  "ifid": "137f7874-fde1-4cad-b72f-26f6f8569407",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+:: StoryInit
+(set: $cover to "https://cdn.yoto.io/myo-cover/bee_green.gif")
+(set: $defaultVoiceId to "cgSgspJ2msm6clMCkdW9")
+(set: $auto to true)
+
+:: Start
+You stand at the entrance of a labyrinthine maze, carved from ancient stone. The air is thick with the scent of moss and mystery. Legends tell of a fearsome Medusa who dwells within, turning all who gaze upon her to stone. With a deep breath, you prepare yourself to navigate the maze and defeat the creature, relying on wit and courage.
+[[To Enter the maze|MazeEntrance]]
+[[To Leave the maze|CowardsReturn]]
+
+
+:: AlternateRoute {"position":"775,150","size":"100,100"}
+Deciding to find a different route, you turn back and discover another path leading deeper into the maze. The air feels heavier here, charged with an unseen energy.
+[[To Follow the new path|MedusaLair]]
+[[To Rest for a moment|ApproachingFootsteps]]
+
+
+:: ApproachingFootsteps {"position":"25,150","size":"100,100"}
+You decide to rest, leaning against the cool stone wall. As you catch your breath, you hear faint footsteps approaching from the path behind you, growing steadily louder.
+[[To Hide|SuccessfulHiding]]
+[[To Prepare to fight|FalseAlarm]]
+
+
+:: ArmedForBattle {"position":"400,150","size":"100,100"}
+You grasp the rusty sword, its weight a comforting reminder of past battles fought. You continue your journey, feeling slightly more prepared for the dangers ahead.
+[[To Continue through the maze|MedusaLair]]
+[[To Rest for a moment|ApproachingFootsteps]]
+
+
+:: CowardsReturn {"position":"275,25","size":"100,100"}
+The thought of facing such a perilous quest overwhelms you, and you decide to leave. Returning home, you are met with disappointment from the villagers, who had placed their hopes in you.
+[[To Return to the start|Start]]
+
+
+:: DarkCorridor {"position":"1025,25","size":"100,100"}
+Ignoring the chest, you press on until you reach a dark corridor. The air is colder here, and the shadows seem to move just at the edge of your vision, creating an unsettling atmosphere.
+[[To Enter the corridor|ShadowyFigures]]
+[[To Turn back|AlternateRoute]]
+
+
+:: DeepPit {"position":"400,25","size":"100,100"}
+Choosing the left path, you walk cautiously until you find a deep pit blocking your way. The pit appears ancient, its depths unknown, and the air around it feels eerily still.
+[[To Jump over the pit|SuccessfulJump]]
+[[To Find another way|HiddenPath]]
+
+
+:: FalseAlarm {"position":"25,275","size":"100,100"}
+You brace yourself for a fight, but as the footsteps draw near, you realize it's just a harmless animal. You laugh at your own paranoia and continue on your way.
+[[To Continue to the Medusa's lair|FinalBattle]]
+[[To Turn back|AlternateRoute]]
+
+
+:: FinalBattle {"position":"900,150","size":"100,100"}
+You face the Medusa, holding the polished shield before you. As she advances, her eyes meet the shield's reflective surface. With a scream, she turns to stone, defeated by her own deadly gaze. You have triumphed over the Medusa and completed your quest.
+[[To Return to the start|Start]]
+
+
+:: ForebodingPath {"position":"275,150","size":"100,100"}
+Leaving the shield behind, you press on, but a sense of foreboding lingers. You wonder if you made the right choice, but it's too late to turn back now.
+[[To Continue through the maze|MedusaLair]]
+[[To Turn back|AlternateRoute]]
+
+
+:: HiddenPath {"position":"775,25","size":"100,100"}
+Deciding not to risk the jump, you backtrack and discover a narrow, hidden path. Following it, you soon find yourself in a small chamber with a polished shield hanging on the wall, reflecting a glint of light.
+[[To Take the shield|PolishedShield]]
+[[To Leave the shield|ForebodingPath]]
+
+
+:: HiddenTrap {"position":"1025,150","size":"100,100"}
+You attempt to find another way, but your hesitation costs you dearly. A hidden trap springs, and you find yourself ensnared, unable to continue. Your journey ends here.
+[[To Return to the start|Start]]
+
+
+:: MazeEntrance {"position":"150,25","size":"100,100"}
+You step into the maze, the light dimming as the high walls surround you. After a few steps, you encounter your first decision: a fork in the path, each direction shrouded in uncertainty.
+[[To Go left|DeepPit]]
+[[To Go right|OldChest]]
+
+
+:: MedusaLair {"position":"1150,25","size":"100,100"}
+You forge ahead and soon find yourself standing before an intricately carved door. Pushing it open, you step into a large, dimly lit room. At its center, you see the Medusa, her snake-like hair writhing menacingly.
+[[To Face the Medusa|FinalBattle]]
+[[To Try to find another way|HiddenTrap]]
+
+
+:: OldChest {"position":"525,25","size":"100,100"}
+You turn right and after a few steps, discover an old chest half-buried in the dirt. Its wood is rotting, and vines have started to reclaim it, hinting at its age and the secrets it might hold.
+[[To Open the chest|RustySword]]
+[[To Ignore the chest and continue|DarkCorridor]]
+
+
+:: PolishedShield {"position":"150,150","size":"100,100"}
+You take the polished shield from the wall, feeling a surge of confidence. Its reflective surface might just be the key to defeating the Medusa. With renewed determination, you continue deeper into the maze.
+[[To Continue through the maze|MedusaLair]]
+[[To Rest for a moment|ApproachingFootsteps]]
+
+
+:: RustySword {"position":"900,25","size":"100,100"}
+You pry open the chest with some effort. Inside, you find a rusty sword, its blade dull but still sturdy. The weapon feels reassuring in your hand, despite its age.
+[[To Take the sword|ArmedForBattle]]
+[[To Leave the sword|UnarmedJourney]]
+
+
+:: ShadowyFigures {"position":"650,150","size":"100,100"}
+Stepping into the dark corridor, you feel the temperature drop. Shadows loom large, and you sense movement around you. It's as if the darkness itself is alive.
+[[To Fight the shadows|SuccessfulHiding]]
+[[To Run away|AlternateRoute]]
+
+
+
+:: SuccessfulHiding {"position":"1150,150","size":"100,100"}
+You quickly hide behind a protruding rock. The footsteps pass by, and you breathe a sigh of relief. Emerging from your hiding spot, you press on with caution.
+[[To Continue to the Medusa's lair|FinalBattle]]
+[[To Turn back|AlternateRoute]]
+
+
+:: SuccessfulJump {"position":"650,25","size":"100,100"}
+With a running start, you leap over the pit. Your heart pounds as you barely make it to the other side. You dust yourself off and continue on your path, feeling a mix of relief and determination.
+[[To Move forward|MedusaLair]]
+[[To Rest for a moment|ApproachingFootsteps]]
+
+
+:: UnarmedJourney {"position":"525,150","size":"100,100"}
+Leaving the sword, you continue walking, relying on your wits and courage alone. The path ahead is uncertain, but you move forward with resolve.
+[[To Move forward|MedusaLair]]
+[[To Rest for a moment|ApproachingFootsteps]]

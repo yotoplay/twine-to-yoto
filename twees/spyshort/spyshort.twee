@@ -1,0 +1,40 @@
+:: StoryTitle
+Spy Mission Shortened Version
+
+:: StoryData
+{
+    "startnode": "Start",
+    "creator": "Harlowe",
+    "creator-version": "2.3.13",
+    "ifid": "376BEBA8-2AA8-45D1-A88E-4F7F1FF26FC8",
+    "zoom": 1
+}
+
+:: StoryInit
+(set: $customProperty to "This is a custom value")
+(set: $cover to "https://cdn.yoto.io/myo-cover/cherries_yellow.gif")
+(set: $resumeTimeout to 1000)
+(set: $defaultVoiceId to "vR2kq8hD9KkCxSGI8D1v")
+(set: $auto to true)
+(set: $lhbTemplate to ", press the left button.");
+(set: $rhbTemplate to ", press the right button.");
+
+:: Start
+You are Agent Alex, a spy on a mission to find the hidden treasure before the villains do. Your adventure begins now. So get cracking!!!!
+[[To solve the riddle straight away|SolveRiddle]]
+[[To search elsewhere|SearchElsewhere]]
+
+:: SolveRiddle
+After solving the riddle, you find the hidden treasure buried under some rocks. You've completed your mission successfully, Agent Alex! 
+[[To return to the start to embark on a new adventure|Start]]
+[[To end the story|End]]
+
+:: SearchElsewhere
+You continue to explore the cave but can't find anything significant. You decide to return home and plan your next move.
+[[To return to the start to try again|Start]]
+[[|]]
+[[|End]]
+
+:: End
+This is the end, beautiful friend.
+[[To return to the start|Start]]

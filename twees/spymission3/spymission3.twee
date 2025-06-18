@@ -1,0 +1,100 @@
+:: StoryTitle
+YotoEspionage
+
+:: StoryData
+{
+    "startnode": "Start",
+    "creator": "Harlowe",
+    "creator-version": "2.3.13",
+    "ifid": "376BEBA8-2AA8-45D1-A88E-4F7F1FF26FC8",
+    "zoom": 1
+}
+
+:: StoryInit
+(set: $customProperty to "This is a custom value")
+(set: $cover to "https://cdn.yoto.io/myo-cover/star_yellow.gif")
+(set: $resumeTimeout to 1)
+(set: $defaultVoiceId to "cgSgspJ2msm6clMCkdW9")
+(set: $auto to true)
+
+:: Start
+You are Agent Sam, a top spy for the Yoto Intelligence Agency. Your mission: infiltrate Tonies Corp, an evil corporation suspected of developing mind-control technology. The future of free thought depends on your success.
+
+[[To Sneak into the headquarters through the front entrance in disguise|FrontEntrance]]
+[[To Hack into their security systems remotely before entering|HackSecurity]]
+
+:: FrontEntrance 
+You arrive at the front entrance, posing as a corporate employee. The security guard eyes you suspiciously.
+
+[[To Distract the guard by dropping your briefcase and slipping past|DistractGuard]]
+[[To Hand over forged ID documents and talk your way in|FakeID]]
+
+:: HackSecurity
+You attempt to hack into Tonies' security system from a safe distance. Your laptop hums as you breach their firewall. Suddenly, an alarm is triggered.
+
+[[To Shut down your system and flee before they trace your location|Flee]]
+[[To Attempt a rapid counter-hack to deactivate the alarm|CounterHack]]
+
+:: FakeID
+The security guard inspects your forged ID, frowning.
+He calls for backup, and you're apprehended before you can escape.
+
+[[To Return to the start to try again|Start]]
+
+:: DistractGuard
+You drop your briefcase, spilling papers everywhere. The guard bends down to help, giving you just enough time to slip past unnoticed.
+
+[[To Head towards the elevator leading to the research lab|Elevator]]
+[[To Investigate the CEOs office for key information|CEOsOffice]]
+
+:: CounterHack 
+Your fingers fly across the keyboard, scrambling to shut down their alarm system. Success! You’ve disabled their alert before they could trace you.
+
+[[To Proceed with accessing their secret research files remotely|AccessFiles]]
+[[To Enter the building now that the security system is down|FrontEntrance]]
+
+:: Flee 
+You shut your laptop and quickly leave your location. It’s too risky to try hacking again for now.
+
+Mission failed. The alarm was triggered, and Tonies Corp is now on high alert.
+
+[[To Return to the start to try again|Start]]
+
+:: Elevator
+You step into the elevator, heading to the restricted research lab. Just as the doors close, a Tonies executive steps in with you.
+
+[[To Pretend you’re lost and ask for directions|PretendLost]]
+[[To Remain silent and hope they don’t ask questions|StaySilent]]
+
+:: CEOsOffice
+You sneak into the CEO’s office and search through his desk. Among confidential documents, you find a keycard to the restricted lab and a secret memo about mind-control tests.
+
+[[To Take the keycard and memo to the lab|ResearchLab]]
+[[To Photograph the documents and leave the building unnoticed|PhotographDocuments]]
+
+:: AccessFiles
+You access Tonies Corps secret research files. They contain blueprints for the mind-control device.
+
+You send the blueprints to Yoto HQ. Mission accomplished!
+
+[[To Return to the start for another mission|Start]]
+
+:: ResearchLab
+Using the keycard, you enter the research lab. Inside, you see the mind-control device in development. Before you can act, you’re caught by security.
+
+Mission failed. You were captured before you could stop Tonies Corp.
+
+[[To Return to the start to try again|Start]]
+
+:: StaySilent
+You stay silent, hoping the executive doesn’t question you. He glances at you but says nothing. As soon as he exits, you head to the lab.
+
+[[To Enter the research lab to disable the mind-control device|ResearchLab]]
+[[To Investigate the upper floors for more clues|InvestigateFloors]]
+
+:: PretendLost
+You pretend to be lost and ask the executive for directions. He seems suspicious and tells you to follow him.
+
+He leads you straight to security. You're captured and your cover is blown.
+
+[[To Return to the start to try again|Start]]

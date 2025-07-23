@@ -1,13 +1,3 @@
-## [1.0.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.0.0...v1.0.1) (2025-07-23)
-
-
-### Bug Fixes
-
-* bump version to 1.8.1 after GitHub migration ([49e634f](https://github.com/yotoplay/twine-to-yoto/commit/49e634f0072e58125d922180cdea604fc74a2658))
-
-# 1.0.0 (2025-07-23)
-
-
 ### Features
 
 * migrate repository to GitHub and update semantic-release configuration ([022acf7](https://github.com/yotoplay/twine-to-yoto/commit/022acf7e5575e2bf30593a52bd380a44527aac9b))

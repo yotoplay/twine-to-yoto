@@ -1,0 +1,63 @@
+name: Update Homebrew Formula
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-formula:
+    name: Update Homebrew Formula
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout homebrew-tap
+        uses: actions/checkout@v4
+        with:
+          repository: yotoplay/homebrew-tap
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: homebrew-tap
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Download release asset
+        run: |
+          cd homebrew-tap
+          # Get the latest release info
+          RELEASE_TAG="${{ github.event.release.tag_name }}"
+          VERSION="${RELEASE_TAG#v}"
+          
+          # Download the zip file
+          curl -L -o "twine2yoto-macos-arm64.zip" \
+            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64.zip"
+          
+          # Calculate SHA256
+          SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
+          
+          echo "Version: $VERSION"
+          echo "SHA256: $SHA256"
+          
+          # Update the formula
+          sed -i.bak \
+            -e "s/version \"[^\"]*\"/version \"$VERSION\"/" \
+            -e "s|url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v[^\"]*|url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v$VERSION|g" \
+            -e "s/sha256 \"[^\"]*\"/sha256 \"$SHA256\"/" \
+            Formula/twine-to-yoto.rb
+          
+          # Remove backup file
+          rm Formula/twine-to-yoto.rb.bak
+
+      - name: Commit and push changes
+        run: |
+          cd homebrew-tap
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add Formula/twine-to-yoto.rb
+            git commit -m "feat: update twine-to-yoto to ${{ github.event.release.tag_name }}"
+            git push origin main
+          fi 

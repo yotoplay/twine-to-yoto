@@ -11,7 +11,7 @@
     ["@semantic-release/github", {
       "assets": [
         {
-          "path": "twine2yoto-macos-arm64-v*.zip",
+          "path": "artifacts/twine2yoto-mac-*.zip",
           "name": "twine2yoto-macos-arm64.zip",
           "label": "macOS ARM64 Binary"
         }

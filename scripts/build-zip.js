@@ -28,7 +28,7 @@ fs.mkdirSync(tempDir);
 
 try {
   // Copy only the files we want to include
-  const filesToInclude = [binaryName, "docs.md", "example.env"];
+  const filesToInclude = [binaryName, "DOCS.md", "example.env"];
   const dirsToInclude = ["sample_twees"];
 
   // Copy files

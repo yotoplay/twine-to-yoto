@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.9.0...v1.10.0) (2025-07-23)
+
+
+### Features
+
+* add GitHub releases with binary assets for Homebrew distribution ([13db442](https://github.com/yotoplay/twine-to-yoto/commit/13db442d96ee11a82bbc63f577d3adfc1cfffe39))
+* add Homebrew tap setup documentation and update script ([81e8a16](https://github.com/yotoplay/twine-to-yoto/commit/81e8a16e072d8a1b47c07546305fc2057ddcbaab))
+
 # [1.9.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.8.2...v1.9.0) (2025-07-23)
 
 

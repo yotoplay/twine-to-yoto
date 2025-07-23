@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.10.0...v1.10.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* revert README.md and create separate BREW.md for Homebrew instructions ([f8a6d4c](https://github.com/yotoplay/twine-to-yoto/commit/f8a6d4ccf0b23dc5d2254656d3632e62bd7ffc01))
+
 # [1.10.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.9.0...v1.10.0) (2025-07-23)
 
 

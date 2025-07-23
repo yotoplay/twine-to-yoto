@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.11.1...v1.12.0) (2025-07-23)
+
+
+### Features
+
+* add multi-architecture support for macOS ARM64 and x64 ([d11dd51](https://github.com/yotoplay/twine-to-yoto/commit/d11dd514aa4551403f74d5c60fdf7d7c6af35e8c))
+
 ## [1.11.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.11.0...v1.11.1) (2025-07-23)
 
 

@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.8.2...v1.9.0) (2025-07-23)
+
+
+### Features
+
+* complete GitHub migration by removing all Bitbucket references ([c17efec](https://github.com/yotoplay/twine-to-yoto/commit/c17efecdb515213c291172c63471a4ca8b1eace6))
+
 ### Features
 
 * migrate repository to GitHub and update semantic-release configuration ([022acf7](https://github.com/yotoplay/twine-to-yoto/commit/022acf7e5575e2bf30593a52bd380a44527aac9b))

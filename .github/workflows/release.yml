@@ -28,6 +28,12 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Build macOS binary
+        run: npm run build:mac
+
+      - name: Create release zip for macOS
+        run: npm run build:mac:zip
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

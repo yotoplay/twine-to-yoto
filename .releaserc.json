@@ -7,7 +7,16 @@
     ["@semantic-release/npm", {
       "npmPublish": false
     }],
-    "@semantic-release/git"
+    "@semantic-release/git",
+    ["@semantic-release/github", {
+      "assets": [
+        {
+          "path": "twine2yoto-macos-arm64-v*.zip",
+          "name": "twine2yoto-macos-arm64.zip",
+          "label": "macOS ARM64 Binary"
+        }
+      ]
+    }]
   ],
   "preset": "angular",
   "tagFormat": "v${version}",

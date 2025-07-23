@@ -3,6 +3,16 @@ name: Update Homebrew Formula
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Release tag to process (e.g., v1.10.1)'
+        required: true
+        default: 'v1.10.1'
+
+permissions:
+  contents: write
+  actions: read
 
 jobs:
   update-formula:
@@ -21,12 +31,26 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Debug release info
+        run: |
+          echo "Release tag: ${{ github.event.release.tag_name }}"
+          echo "Release name: ${{ github.event.release.name }}"
+          echo "Release draft: ${{ github.event.release.draft }}"
+          echo "Release prerelease: ${{ github.event.release.prerelease }}"
+
       - name: Download release asset
         run: |
           cd homebrew-tap
           # Get the latest release info
-          RELEASE_TAG="${{ github.event.release.tag_name }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            RELEASE_TAG="${{ github.event.inputs.release_tag }}"
+          else
+            RELEASE_TAG="${{ github.event.release.tag_name }}"
+          fi
           VERSION="${RELEASE_TAG#v}"
+          
+          echo "Processing release: $RELEASE_TAG"
+          echo "Version: $VERSION"
           
           # Download the zip file
           curl -L -o "twine2yoto-macos-arm64.zip" \
@@ -35,7 +59,6 @@ jobs:
           # Calculate SHA256
           SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
           
-          echo "Version: $VERSION"
           echo "SHA256: $SHA256"
           
           # Update the formula

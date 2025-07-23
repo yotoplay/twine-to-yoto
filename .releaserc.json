@@ -9,6 +9,7 @@
     }],
     "@semantic-release/git",
     ["@semantic-release/github", {
+      "draft": false,
       "assets": [
         {
           "path": "artifacts/twine2yoto-mac-*.zip",

@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.10.1...v1.11.0) (2025-07-23)
+
+
+### Features
+
+* add automated Homebrew formula updates on GitHub releases ([07f07c9](https://github.com/yotoplay/twine-to-yoto/commit/07f07c94d5661487ae1f5f23026e86ab4769676b))
+
 ## [1.10.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.10.0...v1.10.1) (2025-07-23)
 
 

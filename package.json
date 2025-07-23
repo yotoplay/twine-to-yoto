@@ -1,6 +1,6 @@
 {
   "name": "twine-to-yoto",
-  "version": "1.0.0",
+  "version": "1.8.1",
   "description": "",
   "main": "index.js",
   "type": "module",

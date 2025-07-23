@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.12.0...v1.13.0) (2025-07-23)
+
+
+### Features
+
+* add Windows build to release workflow ([c1d3b7a](https://github.com/yotoplay/twine-to-yoto/commit/c1d3b7a506a1798f2a9d5cd9b277336ef5646e82))
+
 # [1.12.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.11.1...v1.12.0) (2025-07-23)
 
 

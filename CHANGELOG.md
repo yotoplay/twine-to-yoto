@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.11.0...v1.11.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* ensure GitHub releases are published immediately and add workflow debugging ([2fdf289](https://github.com/yotoplay/twine-to-yoto/commit/2fdf28913f5e43e76e76da19124a15d7ed180041))
+
 # [1.11.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.10.1...v1.11.0) (2025-07-23)
 
 

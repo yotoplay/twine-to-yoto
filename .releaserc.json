@@ -10,5 +10,6 @@
     "@semantic-release/git"
   ],
   "preset": "angular",
-  "tagFormat": "v${version}"
+  "tagFormat": "v${version}",
+  "repositoryUrl": "https://github.com/yotoplay/twine-to-yoto.git"
 }

@@ -43,7 +43,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/) specific
 
 #### Automated Release
 
-Releases are automatically triggered when pushing to the `main` branch via Bitbucket Pipelines (or GitHub Actions when migrated). The process:
+Releases are automatically triggered when pushing to the `main` branch via GitHub Actions. The process:
 
 1. Analyzes commits since last release
 2. Determines next version based on commit types
@@ -51,17 +51,13 @@ Releases are automatically triggered when pushing to the `main` branch via Bitbu
 4. Creates git tag
 5. Publishes to npm (if configured)
 
-#### Bitbucket Setup
+#### GitHub Setup
 
-For Bitbucket Pipelines, ensure these repository variables are set:
+The GitHub Actions workflow will automatically handle releases. Ensure these repository secrets are set in GitHub:
 
-- `BITBUCKET_ACCESS_TOKEN` - Bitbucket access token with repo permissions (optional)
+- `NPM_TOKEN` - NPM access token (optional, for npm publishing)
 
 Note: NPM publishing is currently disabled. To enable it, add `@semantic-release/npm` to the plugins in `.releaserc.json`.
-
-#### GitHub Setup (Future Migration)
-
-When migrating to GitHub, the GitHub Actions workflow will automatically handle releases.
 
 #### Manual Release
 

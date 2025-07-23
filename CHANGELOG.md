@@ -2,19 +2,19 @@
 
 * migrate repository to GitHub and update semantic-release configuration ([022acf7](https://github.com/yotoplay/twine-to-yoto/commit/022acf7e5575e2bf30593a52bd380a44527aac9b))
 
-# [1.8.0](http://bitbucket.org/yotoplay/twine-to-yoto/compare/v1.7.4...v1.8.0) (2025-07-23)
+# [1.8.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.7.4...v1.8.0) (2025-07-23)
 
 
 ### Bug Fixes
 
-* remove npm publishing from semantic-release to prevent token errors ([7c974ff](http://bitbucket.org/yotoplay/twine-to-yoto/commits/7c974ff91a7510b9e705addac6a8630b219ec814))
-* update test mock to use simpleOpen instead of open module ([e6ad48b](http://bitbucket.org/yotoplay/twine-to-yoto/commits/e6ad48b32e76e1f69edad25ffdd8764d4f45f4a7))
+* remove npm publishing from semantic-release to prevent token errors ([7c974ff](https://github.com/yotoplay/twine-to-yoto/commit/7c974ff91a7510b9e705addac6a8630b219ec814))
+* update test mock to use simpleOpen instead of open module ([e6ad48b](https://github.com/yotoplay/twine-to-yoto/commit/e6ad48b32e76e1f69edad25ffdd8764d4f45f4a7))
 
 
 ### Features
 
-* add semantic-release with changelog generation ([ba65b36](http://bitbucket.org/yotoplay/twine-to-yoto/commits/ba65b36f693026ef63edccea4a97b13279498f2d))
-* configure semantic-release for Bitbucket Pipelines ([e628702](http://bitbucket.org/yotoplay/twine-to-yoto/commits/e628702171b77208f63a434999a689d66816fe49))
+* add semantic-release with changelog generation ([ba65b36](https://github.com/yotoplay/twine-to-yoto/commit/ba65b36f693026ef63edccea4a97b13279498f2d))
+* configure semantic-release for GitHub Actions ([e628702](https://github.com/yotoplay/twine-to-yoto/commit/e628702171b77208f63a434999a689d66816fe49))
 
 # Changelog
 

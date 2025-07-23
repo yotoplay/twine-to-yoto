@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: yotoplay/homebrew-tap
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
           path: homebrew-tap
 
       - name: Setup Node.js
@@ -38,7 +38,7 @@ jobs:
           echo "Release draft: ${{ github.event.release.draft }}"
           echo "Release prerelease: ${{ github.event.release.prerelease }}"
 
-      - name: Download release asset
+      - name: Download release assets
         run: |
           cd homebrew-tap
           # Get the latest release info
@@ -52,20 +52,26 @@ jobs:
           echo "Processing release: $RELEASE_TAG"
           echo "Version: $VERSION"
           
-          # Download the zip file
+          # Download both zip files
           curl -L -o "twine2yoto-macos-arm64.zip" \
             "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64.zip"
           
-          # Calculate SHA256
-          SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
+          curl -L -o "twine2yoto-macos-x64.zip" \
+            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-x64.zip"
           
-          echo "SHA256: $SHA256"
+          # Calculate SHA256 for both
+          ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
+          X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64.zip | cut -d' ' -f1)
           
-          # Update the formula
+          echo "ARM64 SHA256: $ARM64_SHA256"
+          echo "X64 SHA256: $X64_SHA256"
+          
+          # Update the formula with both SHA256 values
           sed -i.bak \
             -e "s/version \"[^\"]*\"/version \"$VERSION\"/" \
             -e "s|url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v[^\"]*|url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v$VERSION|g" \
-            -e "s/sha256 \"[^\"]*\"/sha256 \"$SHA256\"/" \
+            -e "/arm64/,/sha256/s/sha256 \"[^\"]*\"/sha256 \"$ARM64_SHA256\"/" \
+            -e "/x64/,/sha256/s/sha256 \"[^\"]*\"/sha256 \"$X64_SHA256\"/" \
             Formula/twine-to-yoto.rb
           
           # Remove backup file
@@ -82,5 +88,6 @@ jobs:
           else
             git add Formula/twine-to-yoto.rb
             git commit -m "feat: update twine-to-yoto to ${{ github.event.release.tag_name }}"
+            git remote set-url origin https://x-access-token:${{ secrets.HOMEBREW_TAP_TOKEN }}@github.com/yotoplay/homebrew-tap.git
             git push origin main
           fi 

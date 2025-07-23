@@ -29,7 +29,7 @@ function createZipForBinary(binaryName, zipName, tempDir) {
         fs.copyFileSync(binaryName, path.join(tempDir, "twine2yoto"));
 
         // Copy other files
-        const filesToInclude = ["DOCS.md", "example.env"];
+        const filesToInclude = ["docs.md", "example.env"];
         const dirsToInclude = ["sample_twees"];
 
         // Copy files

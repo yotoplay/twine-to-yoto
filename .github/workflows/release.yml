@@ -6,9 +6,9 @@ on:
       - main
 
 jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-latest
+  build-macos:
+    name: Build macOS
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,17 +28,90 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Build macOS binary
+      - name: Build macOS binaries
         run: npm run build:mac
 
-      - name: Build Windows binary
-        run: npm run build:win
+      - name: Code sign macOS binaries
+        run: |
+          codesign --sign - --force --deep twine2yoto-arm64
+          codesign --sign - --force --deep twine2yoto-x64
 
       - name: Create release zip for macOS
         run: npm run build:mac:zip
 
+      - name: Upload macOS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-binaries
+          path: |
+            twine2yoto-macos-arm64.zip
+            twine2yoto-macos-x64.zip
+
+  build-windows:
+    name: Build Windows
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build Windows binary
+        run: npm run build:win
+
       - name: Create release zip for Windows
         run: npm run build:win:zip
+
+      - name: Upload Windows artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-binaries
+          path: twine2yoto-windows-x64.zip
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: [build-macos, build-windows]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download macOS artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: macos-binaries
+          path: .
+
+      - name: Download Windows artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: windows-binaries
+          path: .
 
       - name: Release
         env:

@@ -17,16 +17,16 @@ VERSION="${RELEASE_TAG#v}"
 echo "Processing release: $RELEASE_TAG"
 echo "Version: $VERSION"
 
-# Download both zip files
-curl -L -o "twine2yoto-macos-arm64.zip" \
-  "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64.zip"
+          # Download both zip files
+          curl -L -o "twine2yoto-macos-arm64-${VERSION}.zip" \
+            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64-${VERSION}.zip"
+          
+          curl -L -o "twine2yoto-macos-x64-${VERSION}.zip" \
+            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-x64-${VERSION}.zip"
 
-curl -L -o "twine2yoto-macos-x64.zip" \
-  "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-x64.zip"
-
-# Calculate SHA256 for both
-ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
-X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64.zip | cut -d' ' -f1)
+          # Calculate SHA256 for both
+          ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64-${VERSION}.zip | cut -d' ' -f1)
+          X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64-${VERSION}.zip | cut -d' ' -f1)
 
 echo "ARM64 SHA256: $ARM64_SHA256"
 echo "X64 SHA256: $X64_SHA256"

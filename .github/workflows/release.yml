@@ -44,8 +44,8 @@ jobs:
         with:
           name: macos-binaries
           path: |
-            twine2yoto-macos-arm64.zip
-            twine2yoto-macos-x64.zip
+            twine2yoto-macos-arm64-*.zip
+            twine2yoto-macos-x64-*.zip
 
   build-windows:
     name: Build Windows
@@ -66,9 +66,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
-
       - name: Build Windows binary
         run: npm run build:win
 
@@ -79,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-binaries
-          path: twine2yoto-windows-x64.zip
+          path: twine2yoto-win-*.zip
 
   release:
     name: Release

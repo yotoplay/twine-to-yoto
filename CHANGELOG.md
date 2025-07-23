@@ -1,3 +1,12 @@
+## [1.13.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.13.0...v1.13.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* add macOS code signing to release workflow ([7d7e201](https://github.com/yotoplay/twine-to-yoto/commit/7d7e201acc2d635865786f2286615a20aea0e279))
+* correct zip file names with version numbers in workflows ([d5e8b24](https://github.com/yotoplay/twine-to-yoto/commit/d5e8b24a63b52840aaca06043fe6675f44f0bb81))
+* remove duplicate test step from Windows build job ([bbdbf80](https://github.com/yotoplay/twine-to-yoto/commit/bbdbf8085cec56ffdc500918789d86eaf713c1b3))
+
 # [1.13.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.12.0...v1.13.0) (2025-07-23)
 
 

@@ -1,3 +1,10 @@
+# 1.0.0 (2025-07-23)
+
+
+### Features
+
+* migrate repository to GitHub and update semantic-release configuration ([022acf7](https://github.com/yotoplay/twine-to-yoto/commit/022acf7e5575e2bf30593a52bd380a44527aac9b))
+
 # [1.8.0](http://bitbucket.org/yotoplay/twine-to-yoto/compare/v1.7.4...v1.8.0) (2025-07-23)
 
 

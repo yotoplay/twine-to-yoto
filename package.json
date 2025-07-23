@@ -1,0 +1,73 @@
+{
+  "name": "twine-to-yoto",
+  "version": "1.8.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc",
+    "format": "prettier --check --ignore-path .prettierignore .",
+    "format:fix": "prettier --write --ignore-path .prettierignore .",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "npm run typecheck && npm run lint && npm run format && npm test",
+    "v": "jq -r '.version' package.json",
+    "build:mac": "esbuild ./index.ts --bundle --platform=node --format=cjs --outfile=build/app.js; pkg build/app.js --output twine2yoto --targets node16-macos-arm64",
+    "build:win": "esbuild ./index.ts --bundle --platform=node --format=cjs --outfile=build/app.js; pkg build/app.js --output twine2yoto --targets node16-win-x64",
+    "build:mac:zip": "npm run build:mac; node scripts/build-zip.js mac `npm run v --silent`",
+    "build:win:zip": "npm run build:win; node scripts/build-zip.js win `npm run v --silent`",
+    "convert": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 node --loader ts-node/esm index.ts",
+    "convert:twee": "npm run convert -- --type=twee",
+    "convert:yoto": "npm run convert -- --type=yoto",
+    "release": "semantic-release"
+  },
+  "author": "Yoto",
+  "license": "ISC",
+  "dependencies": {
+    "@yotoplay/twee2json": "^1.0.1",
+    "@yotoplay/twee2yoto": "^1.0.1",
+    "archiver": "^7.0.1",
+    "axios": "^1.7.7",
+    "axios-retry": "^4.5.0",
+    "configstore": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "enquirer": "^2.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "open": "^9.1.0",
+    "qs": "^6.13.1",
+    "signale": "^1.4.0",
+    "twine-utils": "^3.1.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/archiver": "^6.0.3",
+    "@types/configstore": "^6.0.2",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/qs": "^6.9.17",
+    "@types/signale": "^1.4.7",
+    "@types/yargs": "^17.0.33",
+    "axios-mock-adapter": "^2.1.0",
+    "esbuild": "^0.25.5",
+    "eslint": "^9.15.0",
+    "pkg": "^5.8.1",
+    "prettier": "^3.3.3",
+    "semantic-release": "^24.2.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.3"
+  },
+  "pkg": {
+    "assets": [
+      "package.json"
+    ],
+    "scripts": [
+      "build/app.js"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+image: node:20
+
+definitions:
+  caches:
+    npm: $HOME/.npm
+
+  steps:
+    - step: &build
+        name: Build
+        caches:
+          - npm
+        script:
+          - npm ci --prefer-offline --no-audit
+          - npm run build
+    - step: &package
+        name: Package
+        caches:
+          - npm
+        script:
+          - apt-get update && apt-get install -y zip && apt-get install -y jq
+          - npm ci --prefer-offline --no-audit
+          - npm run build:mac:zip
+          - npm run build:win:zip
+        artifacts:
+          - "artifacts/*.zip"
+    - step: &release
+        name: Release
+        caches:
+          - npm
+        script:
+          - npm ci --prefer-offline --no-audit
+          - npm run test
+          - npm run release
+
+pipelines:
+  default:
+    - step: *build
+
+  branches:
+    main:
+      - step: *build
+      - step: *package
+      - step: *release
+
+  tags:
+    "**": # This pattern will match all tags
+      - step: *package

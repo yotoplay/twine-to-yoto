@@ -38,6 +38,12 @@ jobs:
           echo "Release draft: ${{ github.event.release.draft }}"
           echo "Release prerelease: ${{ github.event.release.prerelease }}"
 
+      - name: Checkout twine-to-yoto (for scripts)
+        uses: actions/checkout@v4
+        with:
+          repository: yotoplay/twine-to-yoto
+          path: twine-to-yoto
+
       - name: Download release assets
         run: |
           cd homebrew-tap
@@ -47,35 +53,9 @@ jobs:
           else
             RELEASE_TAG="${{ github.event.release.tag_name }}"
           fi
-          VERSION="${RELEASE_TAG#v}"
           
-          echo "Processing release: $RELEASE_TAG"
-          echo "Version: $VERSION"
-          
-          # Download both zip files
-          curl -L -o "twine2yoto-macos-arm64.zip" \
-            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64.zip"
-          
-          curl -L -o "twine2yoto-macos-x64.zip" \
-            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-x64.zip"
-          
-          # Calculate SHA256 for both
-          ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
-          X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64.zip | cut -d' ' -f1)
-          
-          echo "ARM64 SHA256: $ARM64_SHA256"
-          echo "X64 SHA256: $X64_SHA256"
-          
-          # Update the formula with both SHA256 values
-          sed -i.bak \
-            -e "s/version \"[^\"]*\"/version \"$VERSION\"/" \
-            -e "s|url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v[^\"]*|url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v$VERSION|g" \
-            -e "/arm64/,/sha256/s/sha256 \"[^\"]*\"/sha256 \"$ARM64_SHA256\"/" \
-            -e "/x64/,/sha256/s/sha256 \"[^\"]*\"/sha256 \"$X64_SHA256\"/" \
-            Formula/twine-to-yoto.rb
-          
-          # Remove backup file
-          rm Formula/twine-to-yoto.rb.bak
+          # Run the external script
+          ../twine-to-yoto/scripts/download-release-assets.sh "$RELEASE_TAG"
 
       - name: Commit and push changes
         run: |

@@ -20,6 +20,11 @@
           "path": "artifacts/twine2yoto-macos-x64-*.zip",
           "name": "twine2yoto-macos-x64.zip",
           "label": "macOS x64 Binary"
+        },
+        {
+          "path": "artifacts/twine2yoto-win-*.zip",
+          "name": "twine2yoto-win.zip",
+          "label": "Windows Binary"
         }
       ]
     }]

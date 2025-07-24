@@ -62,15 +62,13 @@ jobs:
 
           ../twine-to-yoto/scripts/generate-formula.sh
 
-          cat ../twine-to-yoto/twine-to-yoto.rb
-
           ls -al
           pwd
-          
+          cat Formula/twine-to-yoto.rb
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          cp ../twine-to-yoto/twine-to-yoto.rb Formula/twine-to-yoto.rb
           git diff
           git status
           git remote -v

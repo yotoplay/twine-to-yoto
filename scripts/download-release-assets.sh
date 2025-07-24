@@ -28,10 +28,6 @@ curl -L -o "twine2yoto-macos-x64.zip" "$X64_ZIP_URL"
 ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
 X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64.zip | cut -d' ' -f1)
 
-pwd
-ls -la
-git status
-
 echo "ARM64 SHA256: $ARM64_SHA256"
 echo "X64 SHA256: $X64_SHA256"
 
@@ -45,10 +41,6 @@ echo "$X64_SHA256" > ./Formula/x64_sha256.txt
 
 # Create version file in the homebrew-tap Formula directory
 echo "$VERSION" > ./Formula/version.txt
-
-ls -la
-git remote -v
-git status
 
 echo "Created URL and SHA256 files in homebrew-tap/Formula directory:"
 echo "  arm64_url.txt: $(cat ./Formula/arm64_url.txt)"

@@ -44,7 +44,7 @@ jobs:
           repository: yotoplay/twine-to-yoto
           path: twine-to-yoto
 
-      - name: Download release assets
+      - name: Download release assets and update homebrew formula
         run: |
           cd homebrew-tap
           # Get the latest release info
@@ -56,13 +56,12 @@ jobs:
           
           # Run the external script
           ../twine-to-yoto/scripts/download-release-assets.sh "$RELEASE_TAG"
-
-      - name: Commit and push changes
-        run: |
           cd homebrew-tap
+          ls -al
+          pwd
+          git status
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
           if git diff --quiet; then
             echo "No changes to commit"
           else

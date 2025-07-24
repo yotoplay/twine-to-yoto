@@ -1,3 +1,10 @@
+## [1.15.5](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.4...v1.15.5) (2025-07-24)
+
+
+### Bug Fixes
+
+* rever to using ,/Formula directory ([1ea74fe](https://github.com/yotoplay/twine-to-yoto/commit/1ea74fe4521917e9b01bd5c6afb9bd306741a4bd))
+
 ## [1.15.4](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.3...v1.15.4) (2025-07-24)
 
 

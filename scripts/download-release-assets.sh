@@ -46,6 +46,9 @@ echo "$X64_SHA256" > ./Formula/x64_sha256.txt
 # Create version file in the homebrew-tap Formula directory
 echo "$VERSION" > ./Formula/version.txt
 
+ls -la
+git status
+
 echo "Created URL and SHA256 files in homebrew-tap/Formula directory:"
 echo "  arm64_url.txt: $(cat ./Formula/arm64_url.txt)"
 echo "  x64_url.txt: $(cat ./Formula/x64_url.txt)"

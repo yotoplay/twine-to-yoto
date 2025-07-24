@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.3...v1.15.4) (2025-07-24)
+
+
+### Bug Fixes
+
+* remove NODE_AUTH_TOKEN from release workflow since npm publishing is disabled ([cea14ee](https://github.com/yotoplay/twine-to-yoto/commit/cea14ee8071cc6c8098e6af18139de6b846592be))
+
 ## [1.15.3](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.2...v1.15.3) (2025-07-24)
 
 

@@ -1,3 +1,15 @@
+# [1.15.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.14.0...v1.15.0) (2025-07-24)
+
+
+### Bug Fixes
+
+* update semantic-release permissions and repository URL ([057b01e](https://github.com/yotoplay/twine-to-yoto/commit/057b01e0c8aff20e656d5cf13db940ea59a66e52))
+
+
+### Features
+
+* add build:all script for semantic-release prepareCmd ([e97c889](https://github.com/yotoplay/twine-to-yoto/commit/e97c889b673f14442f539b1d70552787e37c96aa))
+
 # [1.14.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.13.1...v1.14.0) (2025-07-24)
 
 

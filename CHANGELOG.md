@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.13.1...v1.14.0) (2025-07-24)
+
+
+### Features
+
+* optimize release workflow with semantic-release asset upload ([aac742a](https://github.com/yotoplay/twine-to-yoto/commit/aac742a4247ae8a7d887a6ca8992f25d0145cf21))
+
 ## [1.13.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.13.0...v1.13.1) (2025-07-23)
 
 

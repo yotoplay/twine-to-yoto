@@ -17,6 +17,7 @@
     "build:win": "esbuild ./index.ts --bundle --platform=node --format=cjs --outfile=build/app.js; pkg build/app.js --output twine2yoto --targets node16-win-x64",
     "build:mac:zip": "npm run build:mac; node scripts/build-zip.js mac `npm run v --silent`",
     "build:win:zip": "npm run build:win; node scripts/build-zip.js win `npm run v --silent`",
+    "build:all": "npm run build:mac && codesign --sign - --force --deep twine2yoto-arm64 && codesign --sign - --force --deep twine2yoto-x64 && npm run build:win && npm run build:mac:zip && npm run build:win:zip",
     "convert": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 node --loader ts-node/esm index.ts",
     "convert:twee": "npm run convert -- --type=twee",
     "convert:yoto": "npm run convert -- --type=yoto",

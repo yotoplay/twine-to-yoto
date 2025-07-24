@@ -62,11 +62,10 @@ jobs:
           git remote -v
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet; then
-            echo "No changes to commit"
-          else
-            git add Formula/twine-to-yoto.rb
-            git commit -m "feat: update twine-to-yoto to ${{ github.event.release.tag_name }}"
-            git remote set-url origin https://x-access-token:${{ secrets.HOMEBREW_TAP_TOKEN }}@github.com/yotoplay/homebrew-tap.git
-            git push origin main
-          fi 
+          git diff
+          
+          git add Formula/**
+          git commit -m "feat: update twine-to-yoto to ${{ github.event.release.tag_name }}"
+          git remote set-url origin https://x-access-token:${{ secrets.HOMEBREW_TAP_TOKEN }}@github.com/yotoplay/homebrew-tap.git
+          git push origin main
+          

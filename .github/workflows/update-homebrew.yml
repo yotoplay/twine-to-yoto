@@ -60,7 +60,7 @@ jobs:
           ls -al
           pwd
 
-          node ../twine-to-yoto/scripts/generate-formula.js
+          ../twine-to-yoto/scripts/generate-formula.sh
 
           cat ../twine-to-yoto/twine-to-yoto.rb
 

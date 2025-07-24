@@ -17,46 +17,34 @@ VERSION="${RELEASE_TAG#v}"
 echo "Processing release: $RELEASE_TAG"
 echo "Version: $VERSION"
 
-          # Download both zip files
-          curl -L -o "twine2yoto-macos-arm64-${VERSION}.zip" \
-            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64-${VERSION}.zip"
-          
-          curl -L -o "twine2yoto-macos-x64-${VERSION}.zip" \
-            "https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-x64-${VERSION}.zip"
+ARM64_ZIP_URL="https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-arm64.zip"
+X64_ZIP_URL="https://github.com/yotoplay/twine-to-yoto/releases/download/${RELEASE_TAG}/twine2yoto-macos-x64.zip"
 
-          # Calculate SHA256 for both
-          ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64-${VERSION}.zip | cut -d' ' -f1)
-          X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64-${VERSION}.zip | cut -d' ' -f1)
+# Download both zip files
+curl -L -o "twine2yoto-macos-arm64.zip" "$ARM64_ZIP_URL"
+curl -L -o "twine2yoto-macos-x64.zip" "$X64_ZIP_URL"
+
+# Calculate SHA256 for both
+ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
+X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64.zip | cut -d' ' -f1)
 
 echo "ARM64 SHA256: $ARM64_SHA256"
 echo "X64 SHA256: $X64_SHA256"
 
-# Update the formula using awk for more precise control
-awk -v version="$VERSION" -v arm64_sha="$ARM64_SHA256" -v x64_sha="$X64_SHA256" '
-{
-  # Update version
-  gsub(/version "[^"]*"/, "version \"" version "\"")
-  
-  # Update URLs
-  gsub(/url "https:\/\/github\.com\/yotoplay\/twine-to-yoto\/releases\/download\/v[^"]*/, "url \"https://github.com/yotoplay/twine-to-yoto/releases/download/v" version)
-  
-  # Update SHA256 values - track which one we are updating
-  if ($0 ~ /arm64/) {
-    in_arm64 = 1
-  }
-  if ($0 ~ /x64/) {
-    in_arm64 = 0
-  }
-  if ($0 ~ /sha256 "PLACEHOLDER_SHA256"/) {
-    if (in_arm64) {
-      gsub(/sha256 "PLACEHOLDER_SHA256"/, "sha256 \"" arm64_sha "\"")
-    } else {
-      gsub(/sha256 "PLACEHOLDER_SHA256"/, "sha256 \"" x64_sha "\"")
-    }
-  }
-  print
-}' Formula/twine-to-yoto.rb > Formula/twine-to-yoto.rb.tmp && mv Formula/twine-to-yoto.rb.tmp Formula/twine-to-yoto.rb
+# Create URL files
+echo "$ARM64_ZIP_URL" > Formula/arm64_url.txt
+echo "$X64_ZIP_URL" > Formula/x64_url.txt
 
-# Show the updated formula for debugging
-echo "Updated formula:"
-cat Formula/twine-to-yoto.rb 
+# Create SHA256 files
+echo "$ARM64_SHA256" > Formula/arm64_sha256.txt
+echo "$X64_SHA256" > Formula/x64_sha256.txt
+
+# Create version file
+echo "$VERSION" > Formula/version.txt
+
+echo "Created URL and SHA256 files in Formula directory:"
+echo "  arm64_url.txt: $(cat Formula/arm64_url.txt)"
+echo "  x64_url.txt: $(cat Formula/x64_url.txt)"
+echo "  arm64_sha256.txt: $(cat Formula/arm64_sha256.txt)"
+echo "  x64_sha256.txt: $(cat Formula/x64_sha256.txt)"
+echo "  version.txt: $(cat Formula/version.txt)" 

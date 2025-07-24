@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.2...v1.15.3) (2025-07-24)
+
+
+### Bug Fixes
+
+* update script to work with separate homebrew-tap repository in GitHub Actions ([787fb7a](https://github.com/yotoplay/twine-to-yoto/commit/787fb7a9f9fefb2b17541c24cd1296b8e8652446))
+
 ## [1.15.2](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.1...v1.15.2) (2025-07-24)
 
 

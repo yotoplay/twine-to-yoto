@@ -31,6 +31,5 @@
   ],
   "preset": "angular",
   "tagFormat": "v${version}",
-  "repositoryUrl": "https://github.com/yotoplay/twine-to-yoto.git",
-  "prepareCmd": "npm run build:all"
+  "repositoryUrl": "https://github.com/yotoplay/twine-to-yoto.git"
 }

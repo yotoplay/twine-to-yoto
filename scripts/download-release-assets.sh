@@ -28,6 +28,9 @@ curl -L -o "twine2yoto-macos-x64.zip" "$X64_ZIP_URL"
 ARM64_SHA256=$(shasum -a 256 twine2yoto-macos-arm64.zip | cut -d' ' -f1)
 X64_SHA256=$(shasum -a 256 twine2yoto-macos-x64.zip | cut -d' ' -f1)
 
+pwd
+ls -la
+
 echo "ARM64 SHA256: $ARM64_SHA256"
 echo "X64 SHA256: $X64_SHA256"
 

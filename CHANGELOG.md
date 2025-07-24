@@ -1,3 +1,10 @@
+## [1.15.6](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.5...v1.15.6) (2025-07-24)
+
+
+### Bug Fixes
+
+* update generate-formula.js to use ES modules and correct file paths ([4ec5537](https://github.com/yotoplay/twine-to-yoto/commit/4ec55371a6d40cef4c1718e0628b3383ef504fc6))
+
 ## [1.15.5](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.4...v1.15.5) (2025-07-24)
 
 

@@ -47,6 +47,7 @@ echo "$X64_SHA256" > ./Formula/x64_sha256.txt
 echo "$VERSION" > ./Formula/version.txt
 
 ls -la
+git remote -v
 git status
 
 echo "Created URL and SHA256 files in homebrew-tap/Formula directory:"

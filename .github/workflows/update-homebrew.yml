@@ -57,22 +57,19 @@ jobs:
           # Run the external script
           ../twine-to-yoto/scripts/download-release-assets.sh "$RELEASE_TAG"
 
-          ls -al
-          pwd
 
           ../twine-to-yoto/scripts/generate-formula.sh
 
-          ls -al
-          pwd
+       
           cat Formula/twine-to-yoto.rb
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          git diff
-          git status
-          git remote -v
           git add Formula/twine-to-yoto.rb
+
+          git status
+
           git commit -m "feat: update twine-to-yoto to ${{ github.event.release.tag_name }}"
           git remote set-url origin https://x-access-token:${{ secrets.HOMEBREW_TAP_TOKEN }}@github.com/yotoplay/homebrew-tap.git
           git push origin main

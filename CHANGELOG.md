@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.1...v1.15.2) (2025-07-24)
+
+
+### Bug Fixes
+
+* use file-based variables for Homebrew formula instead of awk string replacement ([688024f](https://github.com/yotoplay/twine-to-yoto/commit/688024f41611d22d00c7322b136468e6cef34f15))
+
 ## [1.15.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.0...v1.15.1) (2025-07-24)
 
 

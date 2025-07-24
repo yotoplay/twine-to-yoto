@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const formulaDir = path.join(__dirname, "../homebrew-tap/Formula");
+const formulaDir = path.join(__dirname, "./Formula");
 const version = fs.readFileSync(path.join(formulaDir, "version.txt"), "utf-8").trim();
 const arm64Url = fs.readFileSync(path.join(formulaDir, "arm64_url.txt"), "utf-8").trim();
 const arm64Sha = fs.readFileSync(path.join(formulaDir, "arm64_sha256.txt"), "utf-8").trim();

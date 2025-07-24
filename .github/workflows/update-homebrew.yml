@@ -56,10 +56,10 @@ jobs:
           
           # Run the external script
           ../twine-to-yoto/scripts/download-release-assets.sh "$RELEASE_TAG"
-          cd homebrew-tap
           ls -al
           pwd
           git status
+          git remote -v
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if git diff --quiet; then

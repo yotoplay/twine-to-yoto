@@ -32,19 +32,19 @@ echo "ARM64 SHA256: $ARM64_SHA256"
 echo "X64 SHA256: $X64_SHA256"
 
 # Create URL files in the homebrew-tap Formula directory
-echo "$ARM64_ZIP_URL" > homebrew-tap/Formula/arm64_url.txt
-echo "$X64_ZIP_URL" > homebrew-tap/Formula/x64_url.txt
+echo "$ARM64_ZIP_URL" > ./Formula/arm64_url.txt
+echo "$X64_ZIP_URL" > ./Formula/x64_url.txt
 
 # Create SHA256 files in the homebrew-tap Formula directory
-echo "$ARM64_SHA256" > homebrew-tap/Formula/arm64_sha256.txt
-echo "$X64_SHA256" > homebrew-tap/Formula/x64_sha256.txt
+echo "$ARM64_SHA256" > ./Formula/arm64_sha256.txt
+echo "$X64_SHA256" > ./Formula/x64_sha256.txt
 
 # Create version file in the homebrew-tap Formula directory
-echo "$VERSION" > homebrew-tap/Formula/version.txt
+echo "$VERSION" > ./Formula/version.txt
 
 echo "Created URL and SHA256 files in homebrew-tap/Formula directory:"
-echo "  arm64_url.txt: $(cat homebrew-tap/Formula/arm64_url.txt)"
-echo "  x64_url.txt: $(cat homebrew-tap/Formula/x64_url.txt)"
-echo "  arm64_sha256.txt: $(cat homebrew-tap/Formula/arm64_sha256.txt)"
-echo "  x64_sha256.txt: $(cat homebrew-tap/Formula/x64_sha256.txt)"
-echo "  version.txt: $(cat homebrew-tap/Formula/version.txt)" 
+echo "  arm64_url.txt: $(cat ./Formula/arm64_url.txt)"
+echo "  x64_url.txt: $(cat ./Formula/x64_url.txt)"
+echo "  arm64_sha256.txt: $(cat ./Formula/arm64_sha256.txt)"
+echo "  x64_sha256.txt: $(cat ./Formula/x64_sha256.txt)"
+echo "  version.txt: $(cat ./Formula/version.txt)" 

@@ -7,6 +7,9 @@ on:
 
 permissions:
   contents: write
+  issues: write
+  pull-requests: write
+  actions: read
 
 jobs:
   release:
@@ -30,23 +33,6 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-      - name: Build macOS binary
-        run: npm run build:mac
-
-      - name: Code sign macOS binaries
-        run: |
-          codesign --sign - --force --deep twine2yoto-arm64
-          codesign --sign - --force --deep twine2yoto-x64
-
-      - name: Build Windows binary
-        run: npm run build:win
-
-      - name: Create release zip for macOS
-        run: npm run build:mac:zip
-
-      - name: Create release zip for Windows
-        run: npm run build:win:zip
 
       - name: Release
         env:

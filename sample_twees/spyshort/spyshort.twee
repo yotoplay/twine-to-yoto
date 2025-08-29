@@ -14,7 +14,7 @@ Spy Mission Shortened Version
 (set: $customProperty to "This is a custom value")
 (set: $cover to "https://cdn.yoto.io/myo-cover/cherries_yellow.gif")
 (set: $resumeTimeout to 1000)
-(set: $defaultVoiceId to "vR2kq8hD9KkCxSGI8D1v")
+(set: $defaultVoiceId to "JBFqnCBsd6RMkjVDRZzb")
 (set: $auto to true)
 (set: $lhbTemplate to ", press the left button.");
 (set: $rhbTemplate to ", press the right button.");

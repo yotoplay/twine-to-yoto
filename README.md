@@ -1,6 +1,6 @@
 # twine-to-yoto
 
-A command line to to help you convert twine -> twee documents to TweeJSON and to YotoJSON
+A command line to to help you convert [Twine/twee](https://twinery.org/) documents to YotoJSON format for interactive audio content.
 
 ## How To
 
@@ -26,7 +26,9 @@ npm run test
 
 ### run it
 
-See docs.md for usage instructions
+See [docs.md](docs.md) for usage instructions
+
+## Notes for maintainers/contributors
 
 ### release it
 

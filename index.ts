@@ -23,11 +23,14 @@ import {
 
 import { ensureAuth } from "./lib/auth/ensureAuth.js";
 import { logger } from "./lib/utils/logger.js";
-import { clearAuthConfig } from "./lib/auth/tokens.js";
+import { TokenManager } from "@yotoplay/oauth-device-code-flow";
+import os from "os";
 
 (async () => {
   if (argv.clearAuth) {
-    clearAuthConfig();
+    const tokenPath = path.join(os.homedir(), '.twine2yoto', 'tokens.json');
+    const tokenManager = new TokenManager(tokenPath);
+    await tokenManager.clearTokens();
     logger.success("Authentication configuration cleared");
     return;
   }

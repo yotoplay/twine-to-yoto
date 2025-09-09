@@ -1,170 +1,174 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { DeviceCodeResponse } from "../types/auth.js";
 
-vi.mock("./tokens");
-vi.mock("../apis/api.yoto");
+// Mock the oauth-device-code-flow library
+const mockTokenManager = {
+  loadTokens: vi.fn(),
+  saveTokens: vi.fn(),
+  areTokensValid: vi.fn(),
+  clearTokens: vi.fn(),
+};
+
+const mockDeviceCodeAuth = {
+  initiate: vi.fn(),
+  pollForToken: vi.fn(),
+  refreshToken: vi.fn(),
+};
+
+vi.mock("@yotoplay/oauth-device-code-flow", () => ({
+  DeviceCodeAuth: vi.fn(() => mockDeviceCodeAuth),
+  TokenManager: vi.fn(() => mockTokenManager),
+}));
+
 vi.mock("../utils/simpleOpen", () => ({
   simpleOpen: vi.fn(),
+}));
+
+vi.mock("path", () => ({
+  default: {
+    join: vi.fn((...args) => args.join("/")),
+  },
+  join: vi.fn((...args) => args.join("/")),
+}));
+
+vi.mock("os", () => ({
+  default: {
+    homedir: vi.fn(() => "/home/user"),
+  },
+  homedir: vi.fn(() => "/home/user"),
 }));
 
 describe("ensureAuth", () => {
   const mockAccessToken = "test-access-token";
   const mockRefreshToken = "test-refresh-token";
-  const deviceCodeResponse: DeviceCodeResponse = {
-    device_code: "test-device-code",
-    user_code: "TEST-CODE",
-    verification_uri: "https://verify.test",
-    verification_uri_complete: "https://verify.test?user_code=TEST-CODE",
-    expires_in: 300,
+  
+  const mockStoredTokens = {
+    accessToken: mockAccessToken,
+    refreshToken: mockRefreshToken,
+    expiresAt: Date.now() + 3600000, // 1 hour from now
+    tokenType: "Bearer",
+  };
+
+  const mockDeviceCodeResult = {
+    success: true,
+    deviceCode: "test-device-code",
+    userCode: "TEST-CODE",
+    verificationUri: "https://verify.test",
+    verificationUriComplete: "https://verify.test?user_code=TEST-CODE",
+    expiresIn: 300,
     interval: 5,
+  };
+
+  const mockPollingResult = {
+    success: true,
+    tokens: {
+      accessToken: "new-access-token",
+      refreshToken: "new-refresh-token",
+      expiresAt: Date.now() + 3600000,
+      tokenType: "Bearer",
+    },
   };
 
   beforeEach(() => {
     vi.clearAllMocks();
+    // Set up environment variables
+    process.env.YOTO_CLIENT_ID = "test-client-id";
+    process.env.YOTO_AUTH_DOMAIN = "auth.yoto.com";
+    process.env.YOTO_API_URL = "https://api.yoto.com";
   });
 
   it("should use stored access token if valid", async () => {
-    const { getAccessToken, isTokenExpired } = await import("./tokens");
+    mockTokenManager.loadTokens.mockResolvedValue(mockStoredTokens);
+    mockTokenManager.areTokensValid.mockReturnValue(true);
+
     const { ensureAuth } = await import("./ensureAuth.js");
-
-    vi.mocked(getAccessToken).mockReturnValue(mockAccessToken);
-    vi.mocked(isTokenExpired).mockReturnValue(false);
-
     const result = await ensureAuth();
+
     expect(result).toBe(mockAccessToken);
+    expect(mockTokenManager.loadTokens).toHaveBeenCalled();
+    expect(mockTokenManager.areTokensValid).toHaveBeenCalledWith(mockStoredTokens);
   });
 
   it("should use refresh token if access token is invalid", async () => {
-    const { getAccessToken, getRefreshToken, saveTokens, isTokenExpired } =
-      await import("./tokens");
-    const { refresh } = await import("../apis/api.yoto");
+    mockTokenManager.loadTokens.mockResolvedValue(mockStoredTokens);
+    mockTokenManager.areTokensValid.mockReturnValue(false);
+    mockDeviceCodeAuth.refreshToken.mockResolvedValue({
+      success: true,
+      tokens: {
+        accessToken: "new-access-token",
+        refreshToken: "new-refresh-token",
+        expiresAt: Date.now() + 3600000,
+        tokenType: "Bearer",
+      },
+    });
+
     const { ensureAuth } = await import("./ensureAuth.js");
-
-    const mockAccessToken = "expired-access-token";
-    const mockRefreshToken = "valid-refresh-token";
-    const newAccessToken = "new-access-token";
-    const newRefreshToken = "new-refresh-token";
-
-    vi.mocked(getAccessToken).mockReturnValue(mockAccessToken);
-    vi.mocked(isTokenExpired).mockReturnValue(true);
-    vi.mocked(getRefreshToken).mockReturnValue(mockRefreshToken);
-    vi.mocked(refresh).mockResolvedValue({
-      access_token: newAccessToken,
-      refresh_token: newRefreshToken,
-      expires_in: 3600,
-    });
-
     const result = await ensureAuth();
-    expect(result).toBe(newAccessToken);
-    expect(refresh).toHaveBeenCalledWith({
-      client_id: "test-client-id",
-      refresh_token: mockRefreshToken,
-    });
-    expect(saveTokens).toHaveBeenCalledWith(newAccessToken, newRefreshToken);
+
+    expect(result).toBe("new-access-token");
+    expect(mockDeviceCodeAuth.refreshToken).toHaveBeenCalledWith(mockRefreshToken);
+    expect(mockTokenManager.saveTokens).toHaveBeenCalled();
   });
 
   it("should start device code flow if refresh token fails", async () => {
-    const { getAccessToken, getRefreshToken, isTokenExpired } = await import(
-      "./tokens"
-    );
-    const { startDeviceCodeFlow, pollDeviceCode, refresh } = await import(
-      "../apis/api.yoto"
-    );
+    mockTokenManager.loadTokens.mockResolvedValue(mockStoredTokens);
+    mockTokenManager.areTokensValid.mockReturnValue(false);
+    mockDeviceCodeAuth.refreshToken.mockRejectedValue(new Error("Refresh failed"));
+    mockDeviceCodeAuth.initiate.mockResolvedValue(mockDeviceCodeResult);
+    mockDeviceCodeAuth.pollForToken.mockResolvedValue(mockPollingResult);
+
     const { ensureAuth } = await import("./ensureAuth.js");
-
-    vi.mocked(getAccessToken).mockReturnValue(mockAccessToken);
-    vi.mocked(isTokenExpired).mockReturnValue(true);
-    vi.mocked(getRefreshToken).mockReturnValue(mockRefreshToken);
-    vi.mocked(refresh).mockRejectedValue(new Error("Refresh failed"));
-    vi.mocked(startDeviceCodeFlow).mockResolvedValue(deviceCodeResponse);
-    vi.mocked(pollDeviceCode).mockResolvedValue({
-      access_token: "new-access-token",
-      refresh_token: "new-refresh-token",
-    });
-
     const result = await ensureAuth();
+
     expect(result).toBe("new-access-token");
-    expect(startDeviceCodeFlow).toHaveBeenCalled();
-    expect(pollDeviceCode).toHaveBeenCalledWith(
-      deviceCodeResponse.device_code,
-      expect.any(String),
-    );
+    expect(mockDeviceCodeAuth.initiate).toHaveBeenCalled();
+    expect(mockDeviceCodeAuth.pollForToken).toHaveBeenCalled();
+    expect(mockTokenManager.saveTokens).toHaveBeenCalled();
   });
 
   it("should start device code flow if no valid tokens", async () => {
-    const { getAccessToken, getRefreshToken } = await import("./tokens");
-    const { startDeviceCodeFlow, pollDeviceCode } = await import(
-      "../apis/api.yoto"
-    );
+    mockTokenManager.loadTokens.mockResolvedValue(null);
+    mockDeviceCodeAuth.initiate.mockResolvedValue(mockDeviceCodeResult);
+    mockDeviceCodeAuth.pollForToken.mockResolvedValue(mockPollingResult);
+
     const { ensureAuth } = await import("./ensureAuth.js");
-
-    vi.mocked(getAccessToken).mockReturnValue(undefined);
-    vi.mocked(getRefreshToken).mockReturnValue(undefined);
-    vi.mocked(startDeviceCodeFlow).mockResolvedValue(deviceCodeResponse);
-    vi.mocked(pollDeviceCode).mockResolvedValue({
-      access_token: "new-access-token",
-      refresh_token: "new-refresh-token",
-    });
-
     const result = await ensureAuth();
+
     expect(result).toBe("new-access-token");
-    expect(startDeviceCodeFlow).toHaveBeenCalled();
-    expect(pollDeviceCode).toHaveBeenCalledWith(
-      deviceCodeResponse.device_code,
-      expect.any(String),
-    );
+    expect(mockDeviceCodeAuth.initiate).toHaveBeenCalled();
+    expect(mockDeviceCodeAuth.pollForToken).toHaveBeenCalled();
+    expect(mockTokenManager.saveTokens).toHaveBeenCalled();
   });
 
-  it("should handle network errors during device code flow", async () => {
-    const { getAccessToken, getRefreshToken } = await import("./tokens");
-    const { startDeviceCodeFlow, pollDeviceCode } = await import(
-      "../apis/api.yoto"
-    );
-    const { ensureAuth } = await import("./ensureAuth.js");
-
-    vi.mocked(getAccessToken).mockReturnValue(undefined);
-    vi.mocked(getRefreshToken).mockReturnValue(undefined);
-    vi.mocked(startDeviceCodeFlow).mockResolvedValue(deviceCodeResponse);
-    vi.mocked(pollDeviceCode).mockRejectedValue(new Error("Network error"));
-
-    await expect(ensureAuth()).rejects.toThrow("Network error");
-  });
-
-  it("should save tokens after successful device code flow", async () => {
-    const { getAccessToken, getRefreshToken, saveTokens } = await import(
-      "./tokens"
-    );
-    const { startDeviceCodeFlow, pollDeviceCode } = await import(
-      "../apis/api.yoto"
-    );
-    const { ensureAuth } = await import("./ensureAuth.js");
-
-    vi.mocked(getAccessToken).mockReturnValue(undefined);
-    vi.mocked(getRefreshToken).mockReturnValue(undefined);
-    vi.mocked(startDeviceCodeFlow).mockResolvedValue(deviceCodeResponse);
-    vi.mocked(pollDeviceCode).mockResolvedValue({
-      access_token: "new-access-token",
-      refresh_token: "new-refresh-token",
+  it("should handle device code flow initiation failure", async () => {
+    mockTokenManager.loadTokens.mockResolvedValue(null);
+    mockDeviceCodeAuth.initiate.mockResolvedValue({
+      success: false,
+      error: "Failed to initiate device code flow",
     });
 
-    await ensureAuth();
-    expect(saveTokens).toHaveBeenCalledWith(
-      "new-access-token",
-      "new-refresh-token",
-    );
+    const { ensureAuth } = await import("./ensureAuth.js");
+    
+    await expect(ensureAuth()).rejects.toThrow("Failed to initiate device code flow");
   });
 
-  it("should handle network errors during device code flow start", async () => {
-    const { getAccessToken, getRefreshToken } = await import("./tokens");
-    const { startDeviceCodeFlow } = await import("../apis/api.yoto");
+  it("should handle polling failure", async () => {
+    mockTokenManager.loadTokens.mockResolvedValue(null);
+    mockDeviceCodeAuth.initiate.mockResolvedValue(mockDeviceCodeResult);
+    mockDeviceCodeAuth.pollForToken.mockResolvedValue({
+      success: false,
+      error: "Device code flow failed",
+    });
+
     const { ensureAuth } = await import("./ensureAuth.js");
+    
+    await expect(ensureAuth()).rejects.toThrow("Device code flow failed");
+  });
 
-    vi.mocked(getAccessToken).mockReturnValue(undefined);
-    vi.mocked(getRefreshToken).mockReturnValue(undefined);
-    vi.mocked(startDeviceCodeFlow).mockRejectedValue(
-      new Error("Network error"),
-    );
-
-    await expect(ensureAuth()).rejects.toThrow("Network error");
+  it("should throw error if YOTO_CLIENT_ID is not set", async () => {
+    delete process.env.YOTO_CLIENT_ID;
+    
+    const { ensureAuth } = await import("./ensureAuth.js");
+    
+    await expect(ensureAuth()).rejects.toThrow("YOTO_CLIENT_ID is not set");
   });
 });

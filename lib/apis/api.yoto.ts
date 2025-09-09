@@ -1,10 +1,8 @@
 import axios from "axios";
 import axiosRetry from "axios-retry";
-import qs from "qs";
 import { YotoJSON } from "@yotoplay/twee2yoto";
 import { jwtDecode as decode } from "jwt-decode";
 import axiosDebug from "./axiosDebug.js";
-import { logger } from "../utils/logger";
 
 const YOTO_API_URL = "https://api.yotoplay.com";
 export const client = axios.create();

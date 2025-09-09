@@ -70,10 +70,6 @@ describe("ensureAuth", () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    // Set up environment variables
-    process.env.YOTO_CLIENT_ID = "test-client-id";
-    process.env.YOTO_AUTH_DOMAIN = "auth.yoto.com";
-    process.env.YOTO_API_URL = "https://api.yoto.com";
   });
 
   it("should use stored access token if valid", async () => {
@@ -164,11 +160,4 @@ describe("ensureAuth", () => {
     await expect(ensureAuth()).rejects.toThrow("Device code flow failed");
   });
 
-  it("should throw error if YOTO_CLIENT_ID is not set", async () => {
-    delete process.env.YOTO_CLIENT_ID;
-    
-    const { ensureAuth } = await import("./ensureAuth.js");
-    
-    await expect(ensureAuth()).rejects.toThrow("YOTO_CLIENT_ID is not set");
-  });
 });

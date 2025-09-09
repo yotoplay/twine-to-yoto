@@ -9,18 +9,14 @@ const tokenPath = path.join(os.homedir(), '.twine2yoto', 'tokens.json');
 const tokenManager = new TokenManager(tokenPath);
 
 const authConfig = {
-  domain: process.env.YOTO_AUTH_DOMAIN || 'auth.yoto.com',
-  clientId: process.env.YOTO_CLIENT_ID!,
-  audience: process.env.YOTO_API_URL || 'https://api.yoto.com'
+  domain: 'auth.yoto.com',
+  clientId: 'twine2yoto-cli',
+  audience: 'https://api.yoto.com'
 };
 
 const deviceCodeAuth = new DeviceCodeAuth(authConfig);
 
 async function deviceCodeFlow(): Promise<string> {
-  if (!process.env.YOTO_CLIENT_ID) {
-    throw new Error("YOTO_CLIENT_ID is not set");
-  }
-
   logger.info("Starting device code flow");
   
   const scope = "openid profile email offline_access content:write media:write";
@@ -72,10 +68,6 @@ async function refreshTokenFlow(refreshToken: string): Promise<string> {
 }
 
 export async function ensureAuth(): Promise<string> {
-  if (!process.env.YOTO_CLIENT_ID) {
-    throw new Error("YOTO_CLIENT_ID is not set");
-  }
-
   // Try stored access token first
   const storedTokens = await tokenManager.loadTokens();
   if (storedTokens && tokenManager.areTokensValid(storedTokens)) {

@@ -5,7 +5,6 @@ import {
 } from "./api.yoto.js";
 
 const YOTO_API_URL = "https://api.yotoplay.com";
-const YOTO_AUTH_URL = "https://login.yotoplay.com";
 
 // Use the custom axios client instance for all tests
 const mock = new MockAdapter(client);

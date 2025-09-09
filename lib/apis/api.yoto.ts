@@ -3,12 +3,10 @@ import axiosRetry from "axios-retry";
 import qs from "qs";
 import { YotoJSON } from "@yotoplay/twee2yoto";
 import { jwtDecode as decode } from "jwt-decode";
-import { AuthCredentials } from "../types/auth";
 import axiosDebug from "./axiosDebug.js";
 import { logger } from "../utils/logger";
 
 const YOTO_API_URL = "https://api.yotoplay.com";
-const YOTO_AUTH_URL = "https://login.yotoplay.com";
 export const client = axios.create();
 axiosDebug(client);
 axiosRetry(client, { retries: 5, retryDelay: axiosRetry.exponentialDelay });

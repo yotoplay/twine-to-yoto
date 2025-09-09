@@ -1,3 +1,10 @@
+## [1.15.7](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.6...v1.15.7) (2025-09-09)
+
+
+### Bug Fixes
+
+* restore YOTO_CLIENT_ID environment variable for tests ([8c49c1e](https://github.com/yotoplay/twine-to-yoto/commit/8c49c1edaa0cfde667729da9dcf3d92736ca4205))
+
 ## [1.15.6](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.5...v1.15.6) (2025-07-24)
 
 

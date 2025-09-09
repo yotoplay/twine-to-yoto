@@ -10,7 +10,6 @@ axiosDebug(client);
 axiosRetry(client, { retries: 5, retryDelay: axiosRetry.exponentialDelay });
 client.defaults.headers.common["User-Agent"] = `twine2yoto`;
 
-
 export function getProfile(id_token: string) {
   try {
     return decode(id_token);

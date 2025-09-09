@@ -40,7 +40,7 @@ vi.mock("os", () => ({
 describe("ensureAuth", () => {
   const mockAccessToken = "test-access-token";
   const mockRefreshToken = "test-refresh-token";
-  
+
   const mockStoredTokens = {
     accessToken: mockAccessToken,
     refreshToken: mockRefreshToken,
@@ -70,6 +70,8 @@ describe("ensureAuth", () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    // Set up environment variables
+    process.env.YOTO_CLIENT_ID = "test-client-id";
   });
 
   it("should use stored access token if valid", async () => {
@@ -81,7 +83,9 @@ describe("ensureAuth", () => {
 
     expect(result).toBe(mockAccessToken);
     expect(mockTokenManager.loadTokens).toHaveBeenCalled();
-    expect(mockTokenManager.areTokensValid).toHaveBeenCalledWith(mockStoredTokens);
+    expect(mockTokenManager.areTokensValid).toHaveBeenCalledWith(
+      mockStoredTokens,
+    );
   });
 
   it("should use refresh token if access token is invalid", async () => {
@@ -101,14 +105,18 @@ describe("ensureAuth", () => {
     const result = await ensureAuth();
 
     expect(result).toBe("new-access-token");
-    expect(mockDeviceCodeAuth.refreshToken).toHaveBeenCalledWith(mockRefreshToken);
+    expect(mockDeviceCodeAuth.refreshToken).toHaveBeenCalledWith(
+      mockRefreshToken,
+    );
     expect(mockTokenManager.saveTokens).toHaveBeenCalled();
   });
 
   it("should start device code flow if refresh token fails", async () => {
     mockTokenManager.loadTokens.mockResolvedValue(mockStoredTokens);
     mockTokenManager.areTokensValid.mockReturnValue(false);
-    mockDeviceCodeAuth.refreshToken.mockRejectedValue(new Error("Refresh failed"));
+    mockDeviceCodeAuth.refreshToken.mockRejectedValue(
+      new Error("Refresh failed"),
+    );
     mockDeviceCodeAuth.initiate.mockResolvedValue(mockDeviceCodeResult);
     mockDeviceCodeAuth.pollForToken.mockResolvedValue(mockPollingResult);
 
@@ -143,8 +151,10 @@ describe("ensureAuth", () => {
     });
 
     const { ensureAuth } = await import("./ensureAuth.js");
-    
-    await expect(ensureAuth()).rejects.toThrow("Failed to initiate device code flow");
+
+    await expect(ensureAuth()).rejects.toThrow(
+      "Failed to initiate device code flow",
+    );
   });
 
   it("should handle polling failure", async () => {
@@ -156,8 +166,7 @@ describe("ensureAuth", () => {
     });
 
     const { ensureAuth } = await import("./ensureAuth.js");
-    
+
     await expect(ensureAuth()).rejects.toThrow("Device code flow failed");
   });
-
 });

@@ -28,7 +28,7 @@ import os from "os";
 
 (async () => {
   if (argv.clearAuth) {
-    const tokenPath = path.join(os.homedir(), '.twine2yoto', 'tokens.json');
+    const tokenPath = path.join(os.homedir(), ".twine2yoto", "tokens.json");
     const tokenManager = new TokenManager(tokenPath);
     await tokenManager.clearTokens();
     logger.success("Authentication configuration cleared");

@@ -1,14 +1,10 @@
 import MockAdapter from "axios-mock-adapter";
-import {
-  client,
-  uploadIcon,
-} from "./api.yoto.js";
+import { client, uploadIcon } from "./api.yoto.js";
 
 const YOTO_API_URL = "https://api.yotoplay.com";
 
 // Use the custom axios client instance for all tests
 const mock = new MockAdapter(client);
-
 
 describe("uploadIcon", () => {
   // Remove the duplicate mock declaration and reuse the one above

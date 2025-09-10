@@ -120,4 +120,29 @@ describe("elevenLabsAuth", () => {
     expect(result).toBe(trimmedKey);
     expect(mockSetElevenLabsApiKey).toHaveBeenCalledWith(trimmedKey);
   });
+
+  it("should cache API key requests to prevent multiple prompts", async () => {
+    const userApiKey = "user-entered-key";
+    mockGetElevenLabsApiKey.mockResolvedValue(undefined);
+
+    // Mock the question callback
+    mockRl.question.mockImplementation(
+      (question: string, callback: (answer: string) => void) => {
+        callback(userApiKey);
+      },
+    );
+
+    // First call should prompt for API key
+    const result1 = await ensureElevenLabsApiKey();
+    expect(result1).toBe(userApiKey);
+    expect(mockRl.question).toHaveBeenCalledTimes(1);
+    expect(mockSetElevenLabsApiKey).toHaveBeenCalledTimes(1);
+
+    // Second call should use stored API key (mocked to return the key)
+    mockGetElevenLabsApiKey.mockResolvedValue(userApiKey);
+    const result2 = await ensureElevenLabsApiKey();
+    expect(result2).toBe(userApiKey);
+    // Should not prompt again
+    expect(mockRl.question).toHaveBeenCalledTimes(1);
+  });
 });

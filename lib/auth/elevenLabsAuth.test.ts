@@ -1,6 +1,6 @@
 import { vi, describe, it, expect, beforeEach, afterEach } from "vitest";
 import readline from "readline";
-import { ensureElevenLabsApiKey } from "./elevenLabsAuth.js";
+import { setupElevenLabsApiKey, getElevenLabsApiKeyIfAvailable } from "./elevenLabsAuth.js";
 
 // Mock readline
 vi.mock("readline");
@@ -48,101 +48,94 @@ describe("elevenLabsAuth", () => {
     vi.clearAllMocks();
   });
 
-  it("should return stored API key if available", async () => {
-    const storedApiKey = "stored-api-key";
-    mockGetElevenLabsApiKey.mockResolvedValue(storedApiKey);
+  describe("setupElevenLabsApiKey", () => {
+    it("should not prompt if API key is already stored", async () => {
+      const storedApiKey = "stored-api-key";
+      mockGetElevenLabsApiKey.mockResolvedValue(storedApiKey);
 
-    const result = await ensureElevenLabsApiKey();
+      await setupElevenLabsApiKey();
 
-    expect(result).toBe(storedApiKey);
-    expect(mockGetElevenLabsApiKey).toHaveBeenCalled();
-    expect(mockCreateInterface).not.toHaveBeenCalled();
-  });
-
-  it("should prompt user for API key when not stored", async () => {
-    const userApiKey = "user-entered-key";
-    mockGetElevenLabsApiKey.mockResolvedValue(undefined);
-
-    // Mock the question callback
-    mockRl.question.mockImplementation(
-      (question: string, callback: (answer: string) => void) => {
-        callback(userApiKey);
-      },
-    );
-
-    const result = await ensureElevenLabsApiKey();
-
-    expect(result).toBe(userApiKey);
-    expect(mockGetElevenLabsApiKey).toHaveBeenCalled();
-    expect(mockCreateInterface).toHaveBeenCalledWith({
-      input: process.stdin,
-      output: process.stdout,
+      expect(mockGetElevenLabsApiKey).toHaveBeenCalled();
+      expect(mockCreateInterface).not.toHaveBeenCalled();
     });
-    expect(mockRl.question).toHaveBeenCalledWith(
-      "Please enter your ElevenLabs API key: ",
-      expect.any(Function),
-    );
-    expect(mockSetElevenLabsApiKey).toHaveBeenCalledWith(userApiKey);
-    expect(mockRl.close).toHaveBeenCalled();
+
+    it("should prompt user for API key when not stored", async () => {
+      const userApiKey = "user-entered-key";
+      mockGetElevenLabsApiKey.mockResolvedValue(undefined);
+
+      // Mock the question callback
+      mockRl.question.mockImplementation(
+        (question: string, callback: (answer: string) => void) => {
+          callback(userApiKey);
+        },
+      );
+
+      await setupElevenLabsApiKey();
+
+      expect(mockGetElevenLabsApiKey).toHaveBeenCalled();
+      expect(mockCreateInterface).toHaveBeenCalledWith({
+        input: process.stdin,
+        output: process.stdout,
+      });
+      expect(mockRl.question).toHaveBeenCalledWith(
+        "Please enter your ElevenLabs API key (or press Enter to skip): ",
+        expect.any(Function),
+      );
+      expect(mockSetElevenLabsApiKey).toHaveBeenCalledWith(userApiKey);
+      expect(mockRl.close).toHaveBeenCalled();
+    });
+
+    it("should handle empty API key gracefully", async () => {
+      mockGetElevenLabsApiKey.mockResolvedValue(undefined);
+
+      // Mock the question callback with empty string
+      mockRl.question.mockImplementation(
+        (question: string, callback: (answer: string) => void) => {
+          callback("");
+        },
+      );
+
+      await setupElevenLabsApiKey();
+
+      expect(mockSetElevenLabsApiKey).not.toHaveBeenCalled();
+    });
+
+    it("should trim whitespace from user input", async () => {
+      const userApiKey = "  user-entered-key  ";
+      const trimmedKey = "user-entered-key";
+      mockGetElevenLabsApiKey.mockResolvedValue(undefined);
+
+      // Mock the question callback
+      mockRl.question.mockImplementation(
+        (question: string, callback: (answer: string) => void) => {
+          callback(userApiKey);
+        },
+      );
+
+      await setupElevenLabsApiKey();
+
+      expect(mockSetElevenLabsApiKey).toHaveBeenCalledWith(trimmedKey);
+    });
   });
 
-  it("should throw error when user enters empty API key", async () => {
-    mockGetElevenLabsApiKey.mockResolvedValue(undefined);
+  describe("getElevenLabsApiKeyIfAvailable", () => {
+    it("should return stored API key if available", async () => {
+      const storedApiKey = "stored-api-key";
+      mockGetElevenLabsApiKey.mockResolvedValue(storedApiKey);
 
-    // Mock the question callback with empty string
-    mockRl.question.mockImplementation(
-      (question: string, callback: (answer: string) => void) => {
-        callback("");
-      },
-    );
+      const result = await getElevenLabsApiKeyIfAvailable();
 
-    await expect(ensureElevenLabsApiKey()).rejects.toThrow(
-      "ElevenLabs API key is required for audio generation",
-    );
+      expect(result).toBe(storedApiKey);
+      expect(mockGetElevenLabsApiKey).toHaveBeenCalled();
+    });
 
-    expect(mockSetElevenLabsApiKey).not.toHaveBeenCalled();
-  });
+    it("should return null if no API key is stored", async () => {
+      mockGetElevenLabsApiKey.mockResolvedValue(null);
 
-  it("should trim whitespace from user input", async () => {
-    const userApiKey = "  user-entered-key  ";
-    const trimmedKey = "user-entered-key";
-    mockGetElevenLabsApiKey.mockResolvedValue(undefined);
+      const result = await getElevenLabsApiKeyIfAvailable();
 
-    // Mock the question callback
-    mockRl.question.mockImplementation(
-      (question: string, callback: (answer: string) => void) => {
-        callback(userApiKey);
-      },
-    );
-
-    const result = await ensureElevenLabsApiKey();
-
-    expect(result).toBe(trimmedKey);
-    expect(mockSetElevenLabsApiKey).toHaveBeenCalledWith(trimmedKey);
-  });
-
-  it("should cache API key requests to prevent multiple prompts", async () => {
-    const userApiKey = "user-entered-key";
-    mockGetElevenLabsApiKey.mockResolvedValue(undefined);
-
-    // Mock the question callback
-    mockRl.question.mockImplementation(
-      (question: string, callback: (answer: string) => void) => {
-        callback(userApiKey);
-      },
-    );
-
-    // First call should prompt for API key
-    const result1 = await ensureElevenLabsApiKey();
-    expect(result1).toBe(userApiKey);
-    expect(mockRl.question).toHaveBeenCalledTimes(1);
-    expect(mockSetElevenLabsApiKey).toHaveBeenCalledTimes(1);
-
-    // Second call should use stored API key (mocked to return the key)
-    mockGetElevenLabsApiKey.mockResolvedValue(userApiKey);
-    const result2 = await ensureElevenLabsApiKey();
-    expect(result2).toBe(userApiKey);
-    // Should not prompt again
-    expect(mockRl.question).toHaveBeenCalledTimes(1);
+      expect(result).toBeNull();
+      expect(mockGetElevenLabsApiKey).toHaveBeenCalled();
+    });
   });
 });

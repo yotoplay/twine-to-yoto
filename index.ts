@@ -22,6 +22,7 @@ import {
 } from "./lib/audio/audioFileHandler.js";
 
 import { ensureAuth } from "./lib/auth/ensureAuth.js";
+import { setupElevenLabsApiKey } from "./lib/auth/elevenLabsAuth.js";
 import { logger } from "./lib/utils/logger.js";
 import { TokenManager } from "@yotoplay/oauth-device-code-flow";
 import os from "os";
@@ -36,6 +37,10 @@ import os from "os";
   }
 
   logger.time("Execution time");
+  
+  // Setup ElevenLabs API key (optional)
+  await setupElevenLabsApiKey();
+  
   const inputDirectory = argv.input;
   const tweeFiles = readFilesFromDirectory(inputDirectory, ".twee");
 

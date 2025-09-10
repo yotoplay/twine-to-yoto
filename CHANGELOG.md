@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/yotoplay/twine-to-yoto/compare/v1.16.1...v1.16.2) (2025-09-10)
+
+
+### Bug Fixes
+
+* prevent multiple simultaneous ElevenLabs API key prompts ([6b714d8](https://github.com/yotoplay/twine-to-yoto/commit/6b714d845a7ee0dab70f56c8ee9d7e980851dc38))
+
 ## [1.16.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.16.0...v1.16.1) (2025-09-10)
 
 

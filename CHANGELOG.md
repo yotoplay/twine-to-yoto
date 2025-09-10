@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.7...v1.16.0) (2025-09-10)
+
+
+### Features
+
+* replace .env file with interactive API key prompt for Homebrew distribution ([5644828](https://github.com/yotoplay/twine-to-yoto/commit/5644828f91ab23941b3c1bc75712d5711a8a6a2e))
+
 ## [1.15.7](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.6...v1.15.7) (2025-09-09)
 
 

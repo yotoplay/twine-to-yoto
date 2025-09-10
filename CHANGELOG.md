@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.16.0...v1.16.1) (2025-09-10)
+
+
+### Bug Fixes
+
+* replace placeholder client ID with actual Yoto client ID ([53a441d](https://github.com/yotoplay/twine-to-yoto/commit/53a441d0c37da2e6d74d17280045f960124cbb21))
+
 # [1.16.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.15.7...v1.16.0) (2025-09-10)
 
 

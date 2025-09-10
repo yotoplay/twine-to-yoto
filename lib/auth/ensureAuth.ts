@@ -9,7 +9,7 @@ const tokenPath = path.join(os.homedir(), ".twine2yoto", "tokens.json");
 const tokenManager = new TokenManager(tokenPath);
 
 // Hardcoded client ID for twine-to-yoto tool
-const YOTO_CLIENT_ID = "YOUR_YOTO_CLIENT_ID_HERE";
+const YOTO_CLIENT_ID = "8cFQjtbWIUaqSRXLdsDiQ7cuP5EGFKub";
 
 const authConfig = {
   domain: "login.yotoplay.com",

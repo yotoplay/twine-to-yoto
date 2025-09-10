@@ -27,7 +27,7 @@ export async function saveConfig(config: StoredConfig): Promise<void> {
     if (!fs.existsSync(configDir)) {
       fs.mkdirSync(configDir, { recursive: true });
     }
-    
+
     fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
   } catch (error) {
     throw new Error(`Failed to save configuration: ${error}`);

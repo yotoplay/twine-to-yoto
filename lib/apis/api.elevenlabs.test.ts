@@ -15,7 +15,9 @@ describe("textToSpeech", () => {
 
   beforeEach(async () => {
     mock = new MockAdapter(client);
-    const { ensureElevenLabsApiKey } = await import("../auth/elevenLabsAuth.js");
+    const { ensureElevenLabsApiKey } = await import(
+      "../auth/elevenLabsAuth.js"
+    );
     mockEnsureElevenLabsApiKey = ensureElevenLabsApiKey;
   });
 
@@ -40,8 +42,10 @@ describe("textToSpeech", () => {
   });
 
   it("throws an error if the API key cannot be obtained", async () => {
-    mockEnsureElevenLabsApiKey.mockRejectedValue(new Error("API key not available"));
-    
+    mockEnsureElevenLabsApiKey.mockRejectedValue(
+      new Error("API key not available"),
+    );
+
     await expect(
       textToSpeech("Hello, world!", "mock-voice-id"),
     ).rejects.toThrow("API key not available");

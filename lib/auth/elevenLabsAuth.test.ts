@@ -27,8 +27,10 @@ describe("elevenLabsAuth", () => {
 
   beforeEach(async () => {
     vi.clearAllMocks();
-    
-    const { getElevenLabsApiKey, setElevenLabsApiKey } = await import("./simpleStorage.js");
+
+    const { getElevenLabsApiKey, setElevenLabsApiKey } = await import(
+      "./simpleStorage.js"
+    );
     mockGetElevenLabsApiKey = getElevenLabsApiKey;
     mockSetElevenLabsApiKey = setElevenLabsApiKey;
 
@@ -37,7 +39,7 @@ describe("elevenLabsAuth", () => {
       question: vi.fn(),
       close: vi.fn(),
     };
-    
+
     mockCreateInterface = vi.mocked(readline.createInterface);
     mockCreateInterface.mockReturnValue(mockRl);
   });
@@ -60,11 +62,13 @@ describe("elevenLabsAuth", () => {
   it("should prompt user for API key when not stored", async () => {
     const userApiKey = "user-entered-key";
     mockGetElevenLabsApiKey.mockResolvedValue(undefined);
-    
+
     // Mock the question callback
-    mockRl.question.mockImplementation((question: string, callback: (answer: string) => void) => {
-      callback(userApiKey);
-    });
+    mockRl.question.mockImplementation(
+      (question: string, callback: (answer: string) => void) => {
+        callback(userApiKey);
+      },
+    );
 
     const result = await ensureElevenLabsApiKey();
 
@@ -76,7 +80,7 @@ describe("elevenLabsAuth", () => {
     });
     expect(mockRl.question).toHaveBeenCalledWith(
       "Please enter your ElevenLabs API key: ",
-      expect.any(Function)
+      expect.any(Function),
     );
     expect(mockSetElevenLabsApiKey).toHaveBeenCalledWith(userApiKey);
     expect(mockRl.close).toHaveBeenCalled();
@@ -84,14 +88,18 @@ describe("elevenLabsAuth", () => {
 
   it("should throw error when user enters empty API key", async () => {
     mockGetElevenLabsApiKey.mockResolvedValue(undefined);
-    
-    // Mock the question callback with empty string
-    mockRl.question.mockImplementation((question: string, callback: (answer: string) => void) => {
-      callback("");
-    });
 
-    await expect(ensureElevenLabsApiKey()).rejects.toThrow("ElevenLabs API key is required for audio generation");
-    
+    // Mock the question callback with empty string
+    mockRl.question.mockImplementation(
+      (question: string, callback: (answer: string) => void) => {
+        callback("");
+      },
+    );
+
+    await expect(ensureElevenLabsApiKey()).rejects.toThrow(
+      "ElevenLabs API key is required for audio generation",
+    );
+
     expect(mockSetElevenLabsApiKey).not.toHaveBeenCalled();
   });
 
@@ -99,11 +107,13 @@ describe("elevenLabsAuth", () => {
     const userApiKey = "  user-entered-key  ";
     const trimmedKey = "user-entered-key";
     mockGetElevenLabsApiKey.mockResolvedValue(undefined);
-    
+
     // Mock the question callback
-    mockRl.question.mockImplementation((question: string, callback: (answer: string) => void) => {
-      callback(userApiKey);
-    });
+    mockRl.question.mockImplementation(
+      (question: string, callback: (answer: string) => void) => {
+        callback(userApiKey);
+      },
+    );
 
     const result = await ensureElevenLabsApiKey();
 

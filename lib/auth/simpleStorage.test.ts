@@ -42,7 +42,9 @@ describe("simpleStorage", () => {
       const result = await loadConfig();
 
       expect(result).toEqual({});
-      expect(mockFs.existsSync).toHaveBeenCalledWith(expect.stringContaining(".twine2yoto/config.json"));
+      expect(mockFs.existsSync).toHaveBeenCalledWith(
+        expect.stringContaining(".twine2yoto/config.json"),
+      );
     });
 
     it("should return parsed config when file exists", async () => {
@@ -53,7 +55,10 @@ describe("simpleStorage", () => {
       const result = await loadConfig();
 
       expect(result).toEqual(mockConfig);
-      expect(mockFs.readFileSync).toHaveBeenCalledWith(expect.stringContaining(".twine2yoto/config.json"), "utf8");
+      expect(mockFs.readFileSync).toHaveBeenCalledWith(
+        expect.stringContaining(".twine2yoto/config.json"),
+        "utf8",
+      );
     });
 
     it("should return empty config when file is corrupted", async () => {
@@ -73,10 +78,13 @@ describe("simpleStorage", () => {
 
       await saveConfig(mockConfig);
 
-      expect(mockFs.mkdirSync).toHaveBeenCalledWith(expect.stringContaining(".twine2yoto"), { recursive: true });
+      expect(mockFs.mkdirSync).toHaveBeenCalledWith(
+        expect.stringContaining(".twine2yoto"),
+        { recursive: true },
+      );
       expect(mockFs.writeFileSync).toHaveBeenCalledWith(
         expect.stringContaining(".twine2yoto/config.json"),
-        JSON.stringify(mockConfig, null, 2)
+        JSON.stringify(mockConfig, null, 2),
       );
     });
 
@@ -89,7 +97,7 @@ describe("simpleStorage", () => {
       expect(mockFs.mkdirSync).not.toHaveBeenCalled();
       expect(mockFs.writeFileSync).toHaveBeenCalledWith(
         expect.stringContaining(".twine2yoto/config.json"),
-        JSON.stringify(mockConfig, null, 2)
+        JSON.stringify(mockConfig, null, 2),
       );
     });
 
@@ -100,7 +108,9 @@ describe("simpleStorage", () => {
         throw new Error("Write failed");
       });
 
-      await expect(saveConfig(mockConfig)).rejects.toThrow("Failed to save configuration: Error: Write failed");
+      await expect(saveConfig(mockConfig)).rejects.toThrow(
+        "Failed to save configuration: Error: Write failed",
+      );
     });
   });
 
@@ -134,7 +144,7 @@ describe("simpleStorage", () => {
 
       expect(mockFs.writeFileSync).toHaveBeenCalledWith(
         expect.stringContaining(".twine2yoto/config.json"),
-        JSON.stringify({ elevenLabsApiKey: apiKey }, null, 2)
+        JSON.stringify({ elevenLabsApiKey: apiKey }, null, 2),
       );
     });
 
@@ -149,7 +159,11 @@ describe("simpleStorage", () => {
 
       expect(mockFs.writeFileSync).toHaveBeenCalledWith(
         expect.stringContaining(".twine2yoto/config.json"),
-        JSON.stringify({ ...existingConfig, elevenLabsApiKey: apiKey }, null, 2)
+        JSON.stringify(
+          { ...existingConfig, elevenLabsApiKey: apiKey },
+          null,
+          2,
+        ),
       );
     });
   });
@@ -160,7 +174,9 @@ describe("simpleStorage", () => {
 
       await clearConfig();
 
-      expect(mockFs.unlinkSync).toHaveBeenCalledWith(expect.stringContaining(".twine2yoto/config.json"));
+      expect(mockFs.unlinkSync).toHaveBeenCalledWith(
+        expect.stringContaining(".twine2yoto/config.json"),
+      );
     });
 
     it("should not throw error when file does not exist", async () => {

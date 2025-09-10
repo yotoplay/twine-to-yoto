@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.16.2...v1.17.0) (2025-09-10)
+
+
+### Features
+
+* make ElevenLabs API key optional and prompt at startup ([1d05ae9](https://github.com/yotoplay/twine-to-yoto/commit/1d05ae9d073b5d55df62db2a650a2a5fe220fda0))
+
 ## [1.16.2](https://github.com/yotoplay/twine-to-yoto/compare/v1.16.1...v1.16.2) (2025-09-10)
 
 

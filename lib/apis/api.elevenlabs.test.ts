@@ -1,19 +1,31 @@
 import MockAdapter from "axios-mock-adapter";
+import { vi } from "vitest";
 import { client, textToSpeech } from "./api.elevenlabs.js";
+
 const ELEVENLABS_API_URL = "https://api.elevenlabs.io/v1";
+
+// Mock the elevenLabsAuth module
+vi.mock("../auth/elevenLabsAuth.js", () => ({
+  ensureElevenLabsApiKey: vi.fn(),
+}));
+
 describe("textToSpeech", () => {
   let mock: any;
+  let mockEnsureElevenLabsApiKey: any;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     mock = new MockAdapter(client);
+    const { ensureElevenLabsApiKey } = await import("../auth/elevenLabsAuth.js");
+    mockEnsureElevenLabsApiKey = ensureElevenLabsApiKey;
   });
 
   afterEach(() => {
     mock.reset();
+    vi.clearAllMocks();
   });
 
-  it("allows the voiceId to be specified amd returns the text-to-speech data", async () => {
-    process.env.ELEVENLABS_API_KEY = "mocked-api-key";
+  it("allows the voiceId to be specified and returns the text-to-speech data", async () => {
+    mockEnsureElevenLabsApiKey.mockResolvedValue("mocked-api-key");
     const voiceId = "mock-voice-id";
 
     mock
@@ -24,12 +36,14 @@ describe("textToSpeech", () => {
 
     const result = await textToSpeech("Hello, world!", voiceId);
     expect(result).toEqual({ data: Buffer.from("mock-audio-data") });
+    expect(mockEnsureElevenLabsApiKey).toHaveBeenCalled();
   });
 
-  it("throws an error if the ELEVENLABS_API_KEY is missing", async () => {
-    delete process.env.ELEVENLABS_API_KEY;
+  it("throws an error if the API key cannot be obtained", async () => {
+    mockEnsureElevenLabsApiKey.mockRejectedValue(new Error("API key not available"));
+    
     await expect(
       textToSpeech("Hello, world!", "mock-voice-id"),
-    ).rejects.toThrow("ELEVENLABS_API_KEY is not set");
+    ).rejects.toThrow("API key not available");
   });
 });

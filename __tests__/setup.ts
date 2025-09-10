@@ -1,2 +1,2 @@
 // This file is used for global setup
-process.env.YOTO_CLIENT_ID = "test-client-id";
+// No environment variables needed anymore

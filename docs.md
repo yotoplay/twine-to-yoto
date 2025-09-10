@@ -4,12 +4,7 @@ A command line to to help you convert twine -> twee documents to TweeJSON and to
 
 #### requirements
 
-a single .env file at the root containing the following - see .example.env:
-
-```
-ELEVENLABS_API_KEY=xxxx   # Your Elevenlabs API Key for generating audio tracks, contact Yoto if you need help with this
-YOTO_CLIENT_ID=xxxx       # Your Yoto Api Key for uploading to Yoto Cloud
-```
+No configuration files needed! The tool will prompt you for your ElevenLabs API key when first needed for audio generation.
 
 You will be prompted for a Yoto Account via browser based authentication if you have not logged in already.
 

@@ -70,8 +70,6 @@ describe("ensureAuth", () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    // Set up environment variables
-    process.env.YOTO_CLIENT_ID = "test-client-id";
   });
 
   it("should use stored access token if valid", async () => {

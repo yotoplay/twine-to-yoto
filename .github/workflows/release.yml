@@ -28,16 +28,21 @@ jobs:
           node-version: "20"
           cache: "npm"
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
       - name: Install dependencies
-        run: npm ci
+        run: bun install
 
       - name: Run tests
-        run: npm test
+        run: bun test
 
       - name: Build binaries and zip files
-        run: npm run build:all
+        run: bun run build:all
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release
+        run: bun run release

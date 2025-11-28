@@ -6,7 +6,7 @@ import fs from "fs";
 import { argv } from "./lib/args.js";
 import { setupOutput, setupInput } from "./lib/utils/consoleHelper.js";
 import "dotenv/config";
-import { getProfile, updateCard } from "./lib/apis/api.yoto.js";
+import { getProfile, updateCard, uploadCoverImage } from "./lib/apis/api.yoto.js";
 import {
   readFilesFromDirectory,
   readFileContent,
@@ -119,6 +119,22 @@ import os from "os";
   if (argv.upload) {
     try {
       const access_token = await ensureAuth();
+
+      // vvvv COVER IMAGE UPLOAD vvvv
+      const coverImagePath = path.join(inputDirectory, "image.png");
+      if (fs.existsSync(coverImagePath)) {
+        logger.info("Found cover art: image.png");
+        logger.pending("Uploading cover image...");
+        const coverImageFile = fs.readFileSync(coverImagePath);
+        const coverImageResponse = await uploadCoverImage(access_token, coverImageFile);
+        if (coverImageResponse?.coverImage?.mediaUrl) {
+          yotoJson.metadata.cover.imageL = coverImageResponse.coverImage.mediaUrl;
+          logger.complete("Cover image uploaded successfully");
+        } else {
+          logger.warn("Cover image uploaded but response format unexpected");
+        }
+      }
+      // ^^^^ COVER IMAGE UPLOAD ^^^^
 
       // vvvv ICON UPLOAD vvvv
       if (fs.existsSync(input.iconDir)) {

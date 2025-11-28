@@ -81,3 +81,18 @@ export async function uploadIcon(
 
   return response.data;
 }
+
+export async function uploadCoverImage(
+  access_token: string,
+  coverImageFile: Buffer,
+) {
+  const url = `${YOTO_API_URL}/media/coverImage/user/me/upload?coverType=default`;
+
+  const response = await client.post(url, coverImageFile, {
+    headers: {
+      "Content-Type": "image/png",
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+  return response.data;
+}

@@ -8,11 +8,12 @@ import {
 import fs from "fs";
 import path from "path";
 import { logger } from "../utils/logger.js";
+import { YotoJSON } from "@yotoplay/twee2yoto";
 
 export async function uploadIconsToYotoCloud(
   accessToken: string,
   iconDir: string,
-  yotoJson: any,
+  yotoJson: YotoJSON,
 ) {
   const allowedExtensions = [".png", ".gif"];
   const iconFiles = fs.readdirSync(iconDir).filter((file) => {
@@ -50,7 +51,7 @@ export async function uploadIconsToYotoCloud(
 export async function uploadAudioToYotoCloud(
   accessToken: string,
   audioDir: string,
-  yotoJson: any,
+  yotoJson: YotoJSON,
 ) {
   const audioFiles = fs.readdirSync(audioDir);
   const uploadPromises = audioFiles.map(async (file) => {

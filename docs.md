@@ -61,3 +61,7 @@ Here are some example voice IDs:
 - Charlotte `XB0fDUnXU5powFXDhCwa` British Female
 - George `JBFqnCBsd6RMkjVDRZzb` British Male
 
+### Cover Image
+
+Place an `image.png` file in the same directory as your `.twee` file. When using `--upload`, the tool will automatically detect and upload it as the default cover art for your card.
+

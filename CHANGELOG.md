@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.17.0...v1.17.1) (2025-11-28)
+
+
+### Bug Fixes
+
+* ensures StoryInit and errors if it's not correctly specified ([3e1c256](https://github.com/yotoplay/twine-to-yoto/commit/3e1c25689a98276cec880b56f5f60613dd03bb56))
+
 # [1.17.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.16.2...v1.17.0) (2025-09-10)
 
 

@@ -26,9 +26,9 @@
   "author": "Yoto",
   "license": "ISC",
   "dependencies": {
-    "@yotoplay/oauth-device-code-flow": "^1.0.1",
-    "@yotoplay/twee2json": "^1.0.1",
-    "@yotoplay/twee2yoto": "^1.0.1",
+    "@yotoplay/oauth-device-code-flow": "^1.2.1",
+    "@yotoplay/twee2json": "^1.1.0",
+    "@yotoplay/twee2yoto": "^1.2.0",
     "archiver": "^7.0.1",
     "axios": "^1.7.7",
     "axios-retry": "^4.5.0",

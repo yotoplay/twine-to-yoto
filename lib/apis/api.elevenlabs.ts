@@ -20,6 +20,7 @@ export async function textToSpeech(text: string, voiceId: string) {
     `${ELEVENLABS_API_URL}/text-to-speech/${voiceId}?output_format=mp3_44100_64&enable_logging=true`,
     {
       text,
+      model_id: "eleven_v3",
     },
     {
       headers: {

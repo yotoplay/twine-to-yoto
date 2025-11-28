@@ -37,7 +37,7 @@ jobs:
         run: bun install
 
       - name: Run tests
-        run: bun test
+        run: bun run test
 
       - name: Build binaries and zip files
         run: bun run build:all

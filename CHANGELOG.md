@@ -1,3 +1,12 @@
+# [1.18.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.17.1...v1.18.0) (2025-11-28)
+
+
+### Features
+
+* adds covert art support (image.png) ([f05adc3](https://github.com/yotoplay/twine-to-yoto/commit/f05adc31ce3bc5ce5ef9fe5c0af870a2c7083f58))
+* adds the ability to save a custom Cover Art image.png in the root of the twee folder ([201def9](https://github.com/yotoplay/twine-to-yoto/commit/201def9271561065bed478d8c0f2df0aaff79a75))
+* now uses elevenlabs_v3 model by default ([ee75672](https://github.com/yotoplay/twine-to-yoto/commit/ee75672a8336e1fdd3ce88d14f95d28e34561d95))
+
 ## [1.17.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.17.0...v1.17.1) (2025-11-28)
 
 

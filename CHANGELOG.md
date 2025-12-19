@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.18.0...v1.18.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* remove skipMediaFileCheck - this is a necesary step ([ec41b58](https://github.com/yotoplay/twine-to-yoto/commit/ec41b581657c6b3110a31712a4a97ac035cbde86))
+
 # [1.18.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.17.1...v1.18.0) (2025-11-28)
 
 

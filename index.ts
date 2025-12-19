@@ -6,7 +6,11 @@ import fs from "fs";
 import { argv } from "./lib/args.js";
 import { setupOutput, setupInput } from "./lib/utils/consoleHelper.js";
 import "dotenv/config";
-import { getProfile, updateCard, uploadCoverImage } from "./lib/apis/api.yoto.js";
+import {
+  getProfile,
+  updateCard,
+  uploadCoverImage,
+} from "./lib/apis/api.yoto.js";
 import {
   readFilesFromDirectory,
   readFileContent,
@@ -37,10 +41,10 @@ import os from "os";
   }
 
   logger.time("Execution time");
-  
+
   // Setup ElevenLabs API key (optional)
   await setupElevenLabsApiKey();
-  
+
   const inputDirectory = argv.input;
   const tweeFiles = readFilesFromDirectory(inputDirectory, ".twee");
 
@@ -49,20 +53,24 @@ import os from "os";
   logger.info(`Reading Twee file from ${tweePath}`);
 
   const tweeData = readFileContent(tweePath);
-  
+
   // Validate StoryInit header format
   const lines = tweeData.split("\n");
-  const hasMalformedStoryInit = lines.some((line) => line.trim() === "::StoryInit");
-  const hasValidStoryInit = lines.some((line) => line.trim() === ":: StoryInit");
-  
+  const hasMalformedStoryInit = lines.some(
+    (line) => line.trim() === "::StoryInit",
+  );
+  const hasValidStoryInit = lines.some(
+    (line) => line.trim() === ":: StoryInit",
+  );
+
   if (hasMalformedStoryInit && !hasValidStoryInit) {
     throw new Error(
       "Invalid StoryInit header format found. " +
-      "The StoryInit section must have a space after '::'. " +
-      "Please change '::StoryInit' to ':: StoryInit' in your .twee file."
+        "The StoryInit section must have a space after '::'. " +
+        "Please change '::StoryInit' to ':: StoryInit' in your .twee file.",
     );
   }
-  
+
   const tweeJson = convertTweeToJson(tweeData);
   if (argv.type === "twee") {
     process.stdout.write(JSON.stringify(tweeJson, null, 2));
@@ -95,8 +103,8 @@ import os from "os";
     if (!tweeJson.variables.defaultVoiceId) {
       throw new Error(
         "Audio generation is enabled ($auto is true) but $defaultVoiceId is missing. " +
-        "Please ensure your :: StoryInit section is properly formatted with a space after '::'. " +
-        "Example: :: StoryInit (not ::StoryInit)"
+          "Please ensure your :: StoryInit section is properly formatted with a space after '::'. " +
+          "Example: :: StoryInit (not ::StoryInit)",
       );
     }
     logger.pending("Using 11labs to generate audio tracks...");
@@ -126,9 +134,13 @@ import os from "os";
         logger.info("Found cover art: image.png");
         logger.pending("Uploading cover image...");
         const coverImageFile = fs.readFileSync(coverImagePath);
-        const coverImageResponse = await uploadCoverImage(access_token, coverImageFile);
+        const coverImageResponse = await uploadCoverImage(
+          access_token,
+          coverImageFile,
+        );
         if (coverImageResponse?.coverImage?.mediaUrl) {
-          yotoJson.metadata.cover.imageL = coverImageResponse.coverImage.mediaUrl;
+          yotoJson.metadata.cover.imageL =
+            coverImageResponse.coverImage.mediaUrl;
           logger.complete("Cover image uploaded successfully");
         } else {
           logger.warn("Cover image uploaded but response format unexpected");

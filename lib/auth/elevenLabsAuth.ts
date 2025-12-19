@@ -9,16 +9,21 @@ function promptForApiKey(): Promise<string | null> {
       output: process.stdout,
     });
 
-    logger.info("ElevenLabs API key is optional but enables automatic audio generation.");
+    logger.info(
+      "ElevenLabs API key is optional but enables automatic audio generation.",
+    );
     logger.info(
       "You can get your API key from: https://elevenlabs.io/app/settings/api-keys",
     );
 
-    rl.question("Please enter your ElevenLabs API key (or press Enter to skip): ", (apiKey) => {
-      rl.close();
-      const trimmedKey = apiKey.trim();
-      resolve(trimmedKey || null);
-    });
+    rl.question(
+      "Please enter your ElevenLabs API key (or press Enter to skip): ",
+      (apiKey) => {
+        rl.close();
+        const trimmedKey = apiKey.trim();
+        resolve(trimmedKey || null);
+      },
+    );
   });
 }
 
@@ -38,7 +43,9 @@ export async function setupElevenLabsApiKey(): Promise<void> {
     await setElevenLabsApiKey(apiKey);
     logger.success("ElevenLabs API key saved - audio generation enabled");
   } else {
-    logger.info("No ElevenLabs API key provided - audio generation will be skipped");
+    logger.info(
+      "No ElevenLabs API key provided - audio generation will be skipped",
+    );
   }
 }
 

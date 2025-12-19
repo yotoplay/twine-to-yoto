@@ -11,11 +11,13 @@ const ELEVENLABS_API_URL = "https://api.elevenlabs.io/v1";
 
 export async function textToSpeech(text: string, voiceId: string) {
   const apiKey = await getElevenLabsApiKeyIfAvailable();
-  
+
   if (!apiKey) {
-    throw new Error("ElevenLabs API key not available - audio generation is disabled");
+    throw new Error(
+      "ElevenLabs API key not available - audio generation is disabled",
+    );
   }
-  
+
   const response = await client.post(
     `${ELEVENLABS_API_URL}/text-to-speech/${voiceId}?output_format=mp3_44100_64&enable_logging=true`,
     {

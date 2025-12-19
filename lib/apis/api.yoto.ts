@@ -43,7 +43,7 @@ export async function uploadFile(url: string, fileContent: Buffer) {
 }
 
 export async function updateCard(access_token: string, card: YotoJSON) {
-  const url = `${YOTO_API_URL}/content?skipMediaFileCheck=true`;
+  const url = `${YOTO_API_URL}/content`;
 
   const response = await client.post(url, card, {
     headers: { Authorization: `Bearer ${access_token}` },

@@ -1,6 +1,9 @@
 import { vi, describe, it, expect, beforeEach, afterEach } from "vitest";
 import readline from "readline";
-import { setupElevenLabsApiKey, getElevenLabsApiKeyIfAvailable } from "./elevenLabsAuth.js";
+import {
+  setupElevenLabsApiKey,
+  getElevenLabsApiKeyIfAvailable,
+} from "./elevenLabsAuth.js";
 
 // Mock readline
 vi.mock("readline");

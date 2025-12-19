@@ -46,6 +46,8 @@ describe("textToSpeech", () => {
 
     await expect(
       textToSpeech("Hello, world!", "mock-voice-id"),
-    ).rejects.toThrow("ElevenLabs API key not available - audio generation is disabled");
+    ).rejects.toThrow(
+      "ElevenLabs API key not available - audio generation is disabled",
+    );
   });
 });

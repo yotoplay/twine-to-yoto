@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/yotoplay/twine-to-yoto/compare/v1.18.1...v1.18.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* adds user:content:manage scope claim ([41533cf](https://github.com/yotoplay/twine-to-yoto/commit/41533cf5fc66992674b08c88c4f78dc1633eab6b))
+
 ## [1.18.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.18.0...v1.18.1) (2025-12-19)
 
 

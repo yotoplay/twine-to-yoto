@@ -22,7 +22,7 @@ const deviceCodeAuth = new DeviceCodeAuth(authConfig);
 async function deviceCodeFlow(): Promise<string> {
   logger.info("Starting device code flow");
 
-  const scope = "openid profile email offline_access user:content:manage";
+  const scope = "openid offline_access user:content:manage";
   const deviceCodeResult = await deviceCodeAuth.initiate(scope);
 
   if (!deviceCodeResult.success || !deviceCodeResult.deviceCode) {

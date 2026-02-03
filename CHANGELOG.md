@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.18.2...v1.19.0) (2026-02-03)
+
+
+### Features
+
+* switch on autoConvert for all icons including animated gifs, now these can be autoconverted ([3e0c8e3](https://github.com/yotoplay/twine-to-yoto/commit/3e0c8e3d120ecd62f14648c2ebdf7c18760b87a1))
+
 ## [1.18.2](https://github.com/yotoplay/twine-to-yoto/compare/v1.18.1...v1.18.2) (2026-01-20)
 
 

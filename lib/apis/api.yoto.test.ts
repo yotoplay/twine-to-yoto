@@ -49,7 +49,7 @@ describe("uploadIcon", () => {
 
     mock
       .onPost(
-        `${YOTO_API_URL}/media/displayIcons/user/me/upload?autoConvert=false`,
+        `${YOTO_API_URL}/media/displayIcons/user/me/upload?autoConvert=true`,
       )
       .reply(200, responseData);
 
@@ -59,7 +59,7 @@ describe("uploadIcon", () => {
     const postHistory = mock.history.post[0];
     expect(postHistory).toBeDefined();
     expect(postHistory.url).toBe(
-      "https://api.yotoplay.com/media/displayIcons/user/me/upload?autoConvert=false",
+      "https://api.yotoplay.com/media/displayIcons/user/me/upload?autoConvert=true",
     );
     const headers = postHistory.headers as Record<string, string>;
     expect(headers.Authorization).toBe(`Bearer ${access_token}`);

@@ -69,8 +69,7 @@ export async function uploadIcon(
   iconFile: Buffer,
   mimetype: string,
 ) {
-  const autoConvert = mimetype === "image/png";
-  const url = `${YOTO_API_URL}/media/displayIcons/user/me/upload?autoConvert=${autoConvert}`;
+  const url = `${YOTO_API_URL}/media/displayIcons/user/me/upload?autoConvert=true`;
 
   const response = await client.post(url, iconFile, {
     headers: {

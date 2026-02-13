@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.19.0...v1.20.0) (2026-02-13)
+
+
+### Features
+
+* add transcode preset CLI option and set track format from API response ([16b60ee](https://github.com/yotoplay/twine-to-yoto/commit/16b60ee900b361121ec49bf9fbf3abbc0c676056))
+
 # [1.19.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.18.2...v1.19.0) (2026-02-03)
 
 

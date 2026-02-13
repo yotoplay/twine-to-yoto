@@ -3,6 +3,7 @@ import axiosRetry from "axios-retry";
 import { YotoJSON } from "@yotoplay/twee2yoto";
 import { jwtDecode as decode } from "jwt-decode";
 import axiosDebug from "./axiosDebug.js";
+import { TranscodePreset, TranscodeResponse } from "../types/transcode.js";
 
 const YOTO_API_URL = "https://api.yotoplay.com";
 export const client = axios.create();
@@ -52,11 +53,26 @@ export async function updateCard(access_token: string, card: YotoJSON) {
   return response.data.card;
 }
 
+export interface GetTranscodedUploadOptions {
+  preset?: TranscodePreset;
+  loudnorm?: string;
+}
+
 export async function getTranscodedUpload(
   access_token: string,
   uploadId: string,
-) {
-  const url = `${YOTO_API_URL}/media/upload/${uploadId}/transcoded?loudnorm=false`;
+  options?: GetTranscodedUploadOptions,
+): Promise<TranscodeResponse> {
+  const params = new URLSearchParams();
+  if (options?.loudnorm !== undefined) {
+    params.set("loudnorm", options.loudnorm);
+  } else {
+    params.set("loudnorm", "false");
+  }
+  if (options?.preset) {
+    params.set("preset", options.preset);
+  }
+  const url = `${YOTO_API_URL}/media/upload/${uploadId}/transcoded?${params.toString()}`;
   const response = await client.get(url, {
     headers: { Authorization: `Bearer ${access_token}` },
   });

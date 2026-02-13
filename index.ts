@@ -169,6 +169,7 @@ import os from "os";
         access_token,
         output.audioDir,
         yotoJson,
+        { preset: argv.preset },
       );
       logger.complete(`Uploaded ${audioUploaded.length} audio files`);
       // ^^^^ AUDIO UPLOAD ^^^^

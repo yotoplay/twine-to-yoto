@@ -9,6 +9,7 @@ import fs from "fs";
 import path from "path";
 import { logger } from "../utils/logger.js";
 import { YotoJSON } from "@yotoplay/twee2yoto";
+import { TranscodePreset } from "../types/transcode.js";
 
 export async function uploadIconsToYotoCloud(
   accessToken: string,
@@ -48,10 +49,16 @@ export async function uploadIconsToYotoCloud(
   return Promise.all(uploadPromises);
 }
 
+export interface UploadAudioOptions {
+  preset?: TranscodePreset;
+  loudnorm?: string;
+}
+
 export async function uploadAudioToYotoCloud(
   accessToken: string,
   audioDir: string,
   yotoJson: YotoJSON,
+  options?: UploadAudioOptions,
 ) {
   const audioFiles = fs.readdirSync(audioDir);
   const uploadPromises = audioFiles.map(async (file) => {
@@ -64,12 +71,16 @@ export async function uploadAudioToYotoCloud(
     if (uploadUrl) {
       await uploadFile(uploadUrl, fileContent);
     }
-    let transcodedSha256 = null;
+    let transcode = null;
     let counter = 0;
-    while (!transcodedSha256) {
-      const transcode = await getTranscodedUpload(accessToken, uploadId);
-      if (transcode?.transcodedSha256) {
-        transcodedSha256 = transcode.transcodedSha256;
+    while (!transcode?.transcodedSha256) {
+      const response = await getTranscodedUpload(accessToken, uploadId, {
+        preset: options?.preset,
+        loudnorm: options?.loudnorm,
+      });
+      if (response?.transcodedSha256) {
+        transcode = response;
+        logger.info("Transcode complete", transcode.transcodedSha256, transcode.transcodedInfo?.format);
       } else {
         if (counter > 10) {
           throw new Error(`Transcoding failed for ${file}`);
@@ -79,10 +90,17 @@ export async function uploadAudioToYotoCloud(
         await new Promise((resolve) => setTimeout(resolve, 5000));
       }
     }
+    const transcodedSha256 = transcode.transcodedSha256;
+    const trackFormat = transcode.transcodedInfo?.format;
+    if (!trackFormat) {
+      throw new Error(`Transcoded format not found for ${file}; transcoded info: ${JSON.stringify(transcode.transcodedInfo)}`);
+    }
     yotoJson.content.chapters.forEach((chapter: { tracks: any[] }) => {
       chapter.tracks.forEach((track) => {
-        if (track.trackUrl === `yoto:#${file}`)
+        if (track.trackUrl === `yoto:#${file}`) {
           track.trackUrl = `yoto:#${transcodedSha256}`;
+          track.format = trackFormat;
+        }
       });
     });
     return `yoto:#${transcodedSha256}`;

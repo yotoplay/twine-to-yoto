@@ -1,6 +1,7 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { Argv } from "./types/argv";
+import { TRANSCODE_PRESETS } from "./types/transcode.js";
 
 export const argv = yargs(hideBin(process.argv))
   .option("input", {
@@ -48,6 +49,13 @@ export const argv = yargs(hideBin(process.argv))
     type: "boolean",
     description: "Clear stored authentication configuration",
     default: false,
+  })
+  .option("preset", {
+    alias: "p",
+    type: "string",
+    choices: [...TRANSCODE_PRESETS],
+    description:
+      "Transcode preset (e.g. music for AAC, auto for auto-detect)",
   })
   .help()
   .alias("help", "h").argv as Argv;

@@ -1,3 +1,5 @@
+import { TranscodePreset } from "./transcode.js";
+
 export interface Argv {
   input: string;
   output?: string;
@@ -7,4 +9,5 @@ export interface Argv {
   cardid?: string;
   useTags: boolean;
   clearAuth: boolean;
+  preset?: TranscodePreset;
 }

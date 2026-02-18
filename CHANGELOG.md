@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.20.1...v1.21.0) (2026-02-18)
+
+
+### Features
+
+* add --auto CLI flag and placeholder chapters for passages without audio ([6b9ac84](https://github.com/yotoplay/twine-to-yoto/commit/6b9ac84deea2b5090dabee1f2a44cf3eb939530e))
+
 ## [1.20.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.20.0...v1.20.1) (2026-02-18)
 
 

@@ -17,16 +17,14 @@ if (!fs.existsSync("artifacts")) {
 }
 
 // Helper function to create zip for a specific binary
-function createZipForBinary(binaryName, zipName, tempDir) {
-  // Create temp directory
+function createZipForBinary(binaryName, zipName, tempDir, outputName) {
   if (fs.existsSync(tempDir)) {
     fs.rmSync(tempDir, { recursive: true });
   }
   fs.mkdirSync(tempDir);
 
   try {
-    // Copy the binary and rename it
-    fs.copyFileSync(binaryName, path.join(tempDir, "twine2yoto"));
+    fs.copyFileSync(binaryName, path.join(tempDir, outputName));
 
     // Copy other files
     const filesToInclude = ["docs.md", "example.env"];
@@ -79,6 +77,7 @@ try {
         arm64Binary,
         `twine2yoto-macos-arm64-${version}.zip`,
         "artifacts/temp-arm64",
+        "twine2yoto",
       );
     }
 
@@ -87,6 +86,7 @@ try {
         x64Binary,
         `twine2yoto-macos-x64-${version}.zip`,
         "artifacts/temp-x64",
+        "twine2yoto",
       );
     }
 
@@ -101,6 +101,7 @@ try {
         binaryName,
         `twine2yoto-${platform}-${version}.zip`,
         "artifacts/temp-win",
+        "twine2yoto.exe",
       );
     } else {
       console.warn(`Warning: ${binaryName} not found, skipping...`);

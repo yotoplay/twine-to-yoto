@@ -45,6 +45,13 @@ export const argv = yargs(hideBin(process.argv))
     description: "Append twee passage tags to chapter keys",
     default: true,
   })
+  .option("auto", {
+    alias: "a",
+    type: "boolean",
+    description:
+      "Enable automatic audio generation via ElevenLabs for passages without provided audio",
+    default: false,
+  })
   .option("clearAuth", {
     type: "boolean",
     description: "Clear stored authentication configuration",

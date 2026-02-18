@@ -1,5 +1,8 @@
-import { convertTweeToYoto } from "@yotoplay/twee2yoto";
-import { updateTrackUrls } from "./audioFileHandler.js";
+import { convertTweeToYoto, YotoJSON } from "@yotoplay/twee2yoto";
+import {
+  updateTrackUrls,
+  clearPlaceholderTracks,
+} from "./audioFileHandler.js";
 
 describe("Given a YotoJSON I can update trackUrls", () => {
   const mockTweeJson = {
@@ -57,5 +60,161 @@ describe("Given a YotoJSON I can update trackUrls", () => {
     expect(yotoJSON.content.chapters[0].tracks[0].trackUrl).toEqual(
       "yoto:#passagetrack",
     );
+  });
+});
+
+describe("clearPlaceholderTracks", () => {
+  function makeYotoJson(chapters: YotoJSON["content"]["chapters"]): YotoJSON {
+    return {
+      slug: "test",
+      sortkey: "test",
+      metadata: {
+        author: "",
+        category: "",
+        cover: { imageL: "" },
+        description: "",
+      },
+      updatedAt: "",
+      content: {
+        cover: { imageL: "" },
+        editSettings: {},
+        config: {},
+        chapters,
+        playbackType: "interactive",
+      },
+    };
+  }
+
+  it("clears tracks to empty array for chapters where all tracks are placeholders", () => {
+    const yotoJson = makeYotoJson([
+      {
+        title: "Start",
+        key: "Start",
+        display: { icon16x16: "" },
+        tracks: [
+          {
+            key: "Start",
+            title: "Start",
+            type: "audio",
+            format: "",
+            trackUrl: "[placeholder]",
+            events: {},
+          },
+        ],
+      },
+    ]);
+
+    clearPlaceholderTracks(yotoJson);
+
+    expect(yotoJson.content.chapters[0].tracks).toEqual([]);
+  });
+
+  it("preserves tracks that have resolved trackUrls", () => {
+    const yotoJson = makeYotoJson([
+      {
+        title: "Start",
+        key: "Start",
+        display: { icon16x16: "" },
+        tracks: [
+          {
+            key: "Start",
+            title: "Start",
+            type: "audio",
+            format: "",
+            trackUrl: "yoto:#abc123",
+            events: {},
+          },
+        ],
+      },
+    ]);
+
+    clearPlaceholderTracks(yotoJson);
+
+    expect(yotoJson.content.chapters[0].tracks).toHaveLength(1);
+    expect(yotoJson.content.chapters[0].tracks[0].trackUrl).toEqual(
+      "yoto:#abc123",
+    );
+  });
+
+  it("handles a mix of resolved and placeholder chapters", () => {
+    const yotoJson = makeYotoJson([
+      {
+        title: "Start",
+        key: "Start",
+        display: { icon16x16: "" },
+        tracks: [
+          {
+            key: "Start",
+            title: "Start",
+            type: "audio",
+            format: "",
+            trackUrl: "yoto:#abc123",
+            events: {},
+          },
+        ],
+      },
+      {
+        title: "Middle",
+        key: "Middle",
+        display: { icon16x16: "" },
+        tracks: [
+          {
+            key: "Middle",
+            title: "Middle",
+            type: "audio",
+            format: "",
+            trackUrl: "[placeholder]",
+            events: {},
+          },
+        ],
+      },
+      {
+        title: "End",
+        key: "End",
+        display: { icon16x16: "" },
+        tracks: [
+          {
+            key: "End",
+            title: "End",
+            type: "audio",
+            format: "",
+            trackUrl: "[placeholder]",
+            events: {},
+          },
+        ],
+      },
+    ]);
+
+    clearPlaceholderTracks(yotoJson);
+
+    expect(yotoJson.content.chapters[0].tracks).toHaveLength(1);
+    expect(yotoJson.content.chapters[1].tracks).toEqual([]);
+    expect(yotoJson.content.chapters[2].tracks).toEqual([]);
+  });
+
+  it("keeps the chapter structure intact even when tracks are cleared", () => {
+    const yotoJson = makeYotoJson([
+      {
+        title: "NoAudio",
+        key: "NoAudio",
+        display: { icon16x16: "" },
+        tracks: [
+          {
+            key: "NoAudio",
+            title: "NoAudio",
+            type: "audio",
+            format: "",
+            trackUrl: "[placeholder]",
+            events: {},
+          },
+        ],
+      },
+    ]);
+
+    clearPlaceholderTracks(yotoJson);
+
+    expect(yotoJson.content.chapters[0].title).toEqual("NoAudio");
+    expect(yotoJson.content.chapters[0].key).toEqual("NoAudio");
+    expect(yotoJson.content.chapters[0].tracks).toEqual([]);
   });
 });

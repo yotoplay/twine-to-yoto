@@ -8,6 +8,7 @@ export interface Argv {
   upload: boolean;
   cardid?: string;
   useTags: boolean;
+  auto: boolean;
   clearAuth: boolean;
   preset?: TranscodePreset;
 }

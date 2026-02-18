@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.20.0...v1.20.1) (2026-02-18)
+
+
+### Bug Fixes
+
+* preserve .exe extension in Windows build zip ([50478a1](https://github.com/yotoplay/twine-to-yoto/commit/50478a119083b3f5f8096be4a4ec9694751ba6c1))
+
 # [1.20.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.19.0...v1.20.0) (2026-02-13)
 
 

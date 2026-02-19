@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.21.1...v1.22.0) (2026-02-19)
+
+
+### Features
+
+* add login subcommand for standalone Yoto authentication ([b0397aa](https://github.com/yotoplay/twine-to-yoto/commit/b0397aa1b9f6314400a424fd899a50d26ce6c6f1))
+
 ## [1.21.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.21.0...v1.21.1) (2026-02-19)
 
 

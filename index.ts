@@ -30,9 +30,15 @@ import { ensureAuth } from "./lib/auth/ensureAuth.js";
 import { setupElevenLabsApiKey } from "./lib/auth/elevenLabsAuth.js";
 import { logger } from "./lib/utils/logger.js";
 import { TokenManager } from "@yotoplay/oauth-device-code-flow";
+import { handleLogin } from "./lib/commands/login.js";
 import os from "os";
 
 (async () => {
+  if (argv._[0] === "login") {
+    await handleLogin();
+    return;
+  }
+
   if (argv.clearAuth) {
     const tokenPath = path.join(os.homedir(), ".twine2yoto", "tokens.json");
     const tokenManager = new TokenManager(tokenPath);

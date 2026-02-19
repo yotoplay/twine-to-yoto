@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/yotoplay/twine-to-yoto/compare/v1.21.0...v1.21.1) (2026-02-19)
+
+
+### Bug Fixes
+
+* pass empty title to Windows start command so URL opens in browser ([b4bd5b4](https://github.com/yotoplay/twine-to-yoto/commit/b4bd5b4dd48cd8e773a25275008a731435a40f8f))
+
 # [1.21.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.20.1...v1.21.0) (2026-02-18)
 
 

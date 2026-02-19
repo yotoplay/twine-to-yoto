@@ -12,7 +12,7 @@ export async function simpleOpen(url: string): Promise<void> {
       await execAsync(`open "${url}"`);
     } else if (platform === "win32") {
       // Windows
-      await execAsync(`start "${url}"`);
+      await execAsync(`start "" "${url}"`);
     } else {
       // Linux and other Unix-like systems
       await execAsync(`xdg-open "${url}"`);

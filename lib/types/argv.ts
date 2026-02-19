@@ -1,6 +1,7 @@
 import { TranscodePreset } from "./transcode.js";
 
 export interface Argv {
+  _: (string | number)[];
   input: string;
   output?: string;
   type: string;

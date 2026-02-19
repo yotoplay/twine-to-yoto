@@ -4,26 +4,48 @@ A command line to to help you convert twine -> twee documents to TweeJSON and to
 
 #### requirements
 
-No configuration files needed! The tool will prompt you for your ElevenLabs API key when first needed for audio generation.
+No configuration files needed! The tool will prompt you for your ElevenLabs API key when first needed for audio generation (requires `--auto` flag).
 
-You will be prompted for a Yoto Account via browser based authentication if you have not logged in already.
+#### authentication
+
+You can authenticate with Yoto ahead of time using the `login` command:
+
+```bash
+./twine2yoto-macos login
+```
+
+This opens a browser for device code authentication and stores your tokens locally. Subsequent commands that need auth (e.g. `--upload`) will use the stored tokens automatically.
+
+To clear stored credentials:
+
+```bash
+./twine2yoto-macos --clearAuth
+```
 
 ### run it
 
 ```
 ./twine2yoto-macos --help
 
+Commands:
+  twine2yoto login          Authenticate with Yoto
+
 Options:
-      --version  Show version number                                   [boolean]
-  -i, --input    Input file path                                        [string]
-  -t, --type     Output type (twee or yoto)           [string] [default: "yoto"]
-  -o, --output   Output directory                                       [string]
-  -z, --zip      zip the output                                        [boolean]
-  -u, --upload   uploads the content to Yoto Cloud; requires a token parameter
-                                                                [default: false]
-  -c, --cardid   a card id that the content will be uploaded to, if not supplied
-                  a new card will be generated
-  -h, --help     Show help                                             [boolean]
+      --version    Show version number                                 [boolean]
+  -i, --input      Input directory path - must contain at least a *.twee file
+                                                                        [string]
+  -t, --type       Output type (twee or yoto)         [string] [default: "yoto"]
+  -o, --output     Output directory                                     [string]
+  -f, --force      force empty the output directory   [boolean] [default: false]
+  -u, --upload     uploads the content to YotoCloud   [boolean] [default: false]
+  -c, --cardid     a card id that the content will be uploaded to       [string]
+  -a, --auto       Enable automatic audio generation via ElevenLabs
+                                                      [boolean] [default: false]
+      --clearAuth  Clear stored authentication configuration
+                                                      [boolean] [default: false]
+  -p, --preset     Transcode preset (e.g. music for AAC, auto for auto-detect)
+                                                                        [string]
+  -h, --help       Show help                                           [boolean]
 
 ```
 
@@ -34,11 +56,14 @@ Options:
 # just the YotoJSON format
 ./twine2yoto-macos --type yoto --i ./twees/spyshort
 
-# with auto generated files and upload to Yoto Cloud
-./twine2yoto-macos --type yoto --i ./twees/spyshort --output ./.out --upload=true
+# with output directory (passages without audio will have empty tracks)
+./twine2yoto-macos --type yoto --i ./twees/spyshort --output ./.out
 
-# with auto generated files and upload to Yoto Cloud to an existing Yoto cardid
-./twine2yoto-macos --type yoto --i ./twees/spyshort --output ./.out --upload=true --cardid=xxxxx
+# with auto generated audio via ElevenLabs and upload to Yoto Cloud
+./twine2yoto-macos --type yoto --i ./twees/spyshort --output ./.out --auto --upload
+
+# upload to an existing Yoto card
+./twine2yoto-macos --type yoto --i ./twees/spyshort --output ./.out --upload --cardid=xxxxx
 ```
 
 #### tweeJSON

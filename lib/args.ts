@@ -4,6 +4,7 @@ import { Argv } from "./types/argv";
 import { TRANSCODE_PRESETS } from "./types/transcode.js";
 
 export const argv = yargs(hideBin(process.argv))
+  .command("login", "Authenticate with Yoto")
   .option("input", {
     alias: "i",
     type: "string",

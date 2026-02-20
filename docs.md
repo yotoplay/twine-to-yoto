@@ -11,6 +11,8 @@ brew tap yotoplay/tap
 brew install twine-to-yoto
 ```
 
+To upgrade to the latest release: `brew upgrade twine-to-yoto`
+
 **Windows (Scoop)**
 
 ```powershell
@@ -18,9 +20,13 @@ scoop bucket add yotoplay https://github.com/yotoplay/scoop-bucket
 scoop install twine2yoto
 ```
 
+To upgrade to the latest release: `scoop update twine2yoto`
+
 **Manual download**
 
 Grab the latest zip from the [releases page](https://github.com/yotoplay/twine-to-yoto/releases).
+
+More detailed usage and setup is in the [wiki](https://github.com/yotoplay/twine-to-yoto/wiki).
 
 #### requirements
 

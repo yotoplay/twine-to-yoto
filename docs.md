@@ -2,6 +2,26 @@
 
 A command line to to help you convert twine -> twee documents to TweeJSON and to YotoJSON
 
+#### installation
+
+**macOS (Homebrew)**
+
+```bash
+brew tap yotoplay/tap
+brew install twine-to-yoto
+```
+
+**Windows (Scoop)**
+
+```powershell
+scoop bucket add yotoplay https://github.com/yotoplay/scoop-bucket
+scoop install twine2yoto
+```
+
+**Manual download**
+
+Grab the latest zip from the [releases page](https://github.com/yotoplay/twine-to-yoto/releases).
+
 #### requirements
 
 No configuration files needed! The tool will prompt you for your ElevenLabs API key when first needed for audio generation (requires `--auto` flag).

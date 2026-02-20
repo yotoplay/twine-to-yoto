@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.22.0...v1.23.0) (2026-02-20)
+
+
+### Features
+
+* add Scoop bucket for Windows package distribution ([17cd1c0](https://github.com/yotoplay/twine-to-yoto/commit/17cd1c0f8fdea4fef770e3194768b10c68f5d590))
+
 # [1.22.0](https://github.com/yotoplay/twine-to-yoto/compare/v1.21.1...v1.22.0) (2026-02-19)
 
 

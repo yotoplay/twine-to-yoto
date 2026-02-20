@@ -62,3 +62,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run update-homebrew.yml -f release_tag=${{ steps.after.outputs.tag }}
+
+      - name: Trigger Scoop bucket update
+        if: steps.before.outputs.tag != steps.after.outputs.tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run update-scoop.yml -f release_tag=${{ steps.after.outputs.tag }}

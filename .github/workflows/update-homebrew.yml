@@ -18,6 +18,7 @@ jobs:
   update-formula:
     name: Update Homebrew Formula
     runs-on: ubuntu-latest
+    environment: release
     steps:
       - name: Checkout homebrew-tap
         uses: actions/checkout@v4

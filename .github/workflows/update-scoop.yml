@@ -18,14 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout scoop-bucket
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: yotoplay/scoop-bucket
           token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
           path: scoop-bucket
 
       - name: Checkout twine-to-yoto (for scripts)
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: yotoplay/twine-to-yoto
           path: twine-to-yoto
